@@ -7,6 +7,7 @@ Power BI custom visual with **Dutch regional maps**: municipalities (gemeenten),
 ## Features
 
 - Choropleth maps for **gemeenten** and **provincies**
+- Match regions by **CBS statcode** (`GM0014`, `PV20`, …) — recommended — or by name
 - Mid-color / continuous color scale with legend
 - Region labels and values (toggleable)
 - Latitude / longitude **points** with category colors and legend

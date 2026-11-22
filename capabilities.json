@@ -16,7 +16,8 @@
       "displayName": "Regio",
       "name": "category",
       "kind": "Grouping",
-      "preferredTypes": [{ "text": true }]
+      "preferredTypes": [{ "text": true }],
+      "description": "CBS-statcode (bijv. GM0014, PV20) of regionsnaam. Statcodes worden aanbevolen."
     },
     {
       "displayName": "Waarde",

@@ -23,11 +23,11 @@
                       "Entity": "Gemeenten"
                     }
                   },
-                  "Property": "Gemeente"
+                  "Property": "Statcode"
                 }
               },
-              "queryRef": "Gemeenten.Gemeente",
-              "nativeQueryRef": "Gemeente",
+              "queryRef": "Gemeenten.Statcode",
+              "nativeQueryRef": "Statcode",
               "active": true
             }
           ]

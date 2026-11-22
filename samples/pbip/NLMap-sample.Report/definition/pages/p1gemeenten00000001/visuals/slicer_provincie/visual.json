@@ -20,13 +20,13 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Provincies"
+                      "Entity": "Gemeenten"
                     }
                   },
                   "Property": "Provincie"
                 }
               },
-              "queryRef": "Provincies.Provincie",
+              "queryRef": "Gemeenten.Provincie",
               "nativeQueryRef": "Provincie",
               "active": true
             }

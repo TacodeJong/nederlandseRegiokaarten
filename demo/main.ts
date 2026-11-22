@@ -69,7 +69,7 @@ const categorical = view === "punten"
         values: [] as any[]
     }
     : {
-        categories: [category("category", view === "provincies" ? "Provincie" : "Gemeente", rows.map(row => row[view === "provincies" ? "Provincie" : "Gemeente"]))],
+        categories: [category("category", "Statcode", rows.map(row => row.Statcode))],
         values: [measure("measure", "Score", rows.map(row => Number(row.Score)))]
     };
 const objects: any = {

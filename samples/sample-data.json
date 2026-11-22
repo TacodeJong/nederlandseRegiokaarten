@@ -1,1773 +1,2469 @@
 {
   "gemeenten": [
     {
+      "Statcode": "GM0518",
       "Gemeente": "'s-Gravenhage",
       "Provincie": "Zuid-Holland",
+      "ProvincieStatcode": "PV28",
       "Score": 65
     },
     {
+      "Statcode": "GM0796",
       "Gemeente": "'s-Hertogenbosch",
       "Provincie": "Noord-Brabant",
+      "ProvincieStatcode": "PV30",
       "Score": 60
     },
     {
+      "Statcode": "GM1680",
       "Gemeente": "Aa en Hunze",
       "Provincie": "Drenthe",
+      "ProvincieStatcode": "PV22",
       "Score": 111
     },
     {
+      "Statcode": "GM0358",
       "Gemeente": "Aalsmeer",
       "Provincie": "Noord-Holland",
+      "ProvincieStatcode": "PV27",
       "Score": 73
     },
     {
+      "Statcode": "GM0197",
       "Gemeente": "Aalten",
       "Provincie": "Gelderland",
+      "ProvincieStatcode": "PV25",
       "Score": 80
     },
     {
+      "Statcode": "GM0059",
       "Gemeente": "Achtkarspelen",
       "Provincie": "Fryslân",
+      "ProvincieStatcode": "PV21",
       "Score": 87
     },
     {
+      "Statcode": "GM0482",
       "Gemeente": "Alblasserdam",
       "Provincie": "Zuid-Holland",
+      "ProvincieStatcode": "PV28",
       "Score": 67
     },
     {
+      "Statcode": "GM0613",
       "Gemeente": "Albrandswaard",
       "Provincie": "Zuid-Holland",
+      "ProvincieStatcode": "PV28",
       "Score": 60
     },
     {
+      "Statcode": "GM0361",
       "Gemeente": "Alkmaar",
       "Provincie": "Noord-Holland",
+      "ProvincieStatcode": "PV27",
       "Score": 91
     },
     {
+      "Statcode": "GM0141",
       "Gemeente": "Almelo",
       "Provincie": "Overijssel",
+      "ProvincieStatcode": "PV23",
       "Score": 93
     },
     {
+      "Statcode": "GM0034",
       "Gemeente": "Almere",
       "Provincie": "Flevoland",
+      "ProvincieStatcode": "PV24",
       "Score": 102
     },
     {
+      "Statcode": "GM0484",
       "Gemeente": "Alphen aan den Rijn",
       "Provincie": "Zuid-Holland",
+      "ProvincieStatcode": "PV28",
       "Score": 78
     },
     {
+      "Statcode": "GM1723",
       "Gemeente": "Alphen-Chaam",
       "Provincie": "Noord-Brabant",
+      "ProvincieStatcode": "PV30",
       "Score": 80
     },
     {
+      "Statcode": "GM1959",
       "Gemeente": "Altena",
       "Provincie": "Noord-Brabant",
+      "ProvincieStatcode": "PV30",
       "Score": 60
     },
     {
+      "Statcode": "GM0060",
       "Gemeente": "Ameland",
       "Provincie": "Fryslân",
+      "ProvincieStatcode": "PV21",
       "Score": 107
     },
     {
+      "Statcode": "GM0307",
       "Gemeente": "Amersfoort",
       "Provincie": "Utrecht",
+      "ProvincieStatcode": "PV26",
       "Score": 85
     },
     {
+      "Statcode": "GM0362",
       "Gemeente": "Amstelveen",
       "Provincie": "Noord-Holland",
+      "ProvincieStatcode": "PV27",
       "Score": 96
     },
     {
+      "Statcode": "GM0363",
       "Gemeente": "Amsterdam",
       "Provincie": "Noord-Holland",
+      "ProvincieStatcode": "PV27",
       "Score": 78
     },
     {
+      "Statcode": "GM0200",
       "Gemeente": "Apeldoorn",
       "Provincie": "Gelderland",
+      "ProvincieStatcode": "PV25",
       "Score": 95
     },
     {
+      "Statcode": "GM0202",
       "Gemeente": "Arnhem",
       "Provincie": "Gelderland",
+      "ProvincieStatcode": "PV25",
       "Score": 63
     },
     {
+      "Statcode": "GM0106",
       "Gemeente": "Assen",
       "Provincie": "Drenthe",
+      "ProvincieStatcode": "PV22",
       "Score": 111
     },
     {
+      "Statcode": "GM0743",
       "Gemeente": "Asten",
       "Provincie": "Noord-Brabant",
+      "ProvincieStatcode": "PV30",
       "Score": 74
     },
     {
+      "Statcode": "GM0744",
       "Gemeente": "Baarle-Nassau",
       "Provincie": "Noord-Brabant",
+      "ProvincieStatcode": "PV30",
       "Score": 73
     },
     {
+      "Statcode": "GM0308",
       "Gemeente": "Baarn",
       "Provincie": "Utrecht",
+      "ProvincieStatcode": "PV26",
       "Score": 96
     },
     {
+      "Statcode": "GM0489",
       "Gemeente": "Barendrecht",
       "Provincie": "Zuid-Holland",
+      "ProvincieStatcode": "PV28",
       "Score": 82
     },
     {
+      "Statcode": "GM0203",
       "Gemeente": "Barneveld",
       "Provincie": "Gelderland",
+      "ProvincieStatcode": "PV25",
       "Score": 83
     },
     {
+      "Statcode": "GM0888",
       "Gemeente": "Beek",
       "Provincie": "Limburg",
+      "ProvincieStatcode": "PV31",
       "Score": 71
     },
     {
+      "Statcode": "GM1954",
       "Gemeente": "Beekdaelen",
       "Provincie": "Limburg",
+      "ProvincieStatcode": "PV31",
       "Score": 48
     },
     {
+      "Statcode": "GM0889",
       "Gemeente": "Beesel",
       "Provincie": "Limburg",
+      "ProvincieStatcode": "PV31",
       "Score": 72
     },
     {
+      "Statcode": "GM1945",
       "Gemeente": "Berg en Dal",
       "Provincie": "Gelderland",
+      "ProvincieStatcode": "PV25",
       "Score": 89
     },
     {
+      "Statcode": "GM1724",
       "Gemeente": "Bergeijk",
       "Provincie": "Noord-Brabant",
+      "ProvincieStatcode": "PV30",
       "Score": 53
     },
     {
+      "Statcode": "GM0893",
       "Gemeente": "Bergen (L.)",
       "Provincie": "Limburg",
+      "ProvincieStatcode": "PV31",
       "Score": 86
     },
     {
+      "Statcode": "GM0373",
       "Gemeente": "Bergen (NH.)",
       "Provincie": "Noord-Holland",
+      "ProvincieStatcode": "PV27",
       "Score": 81
     },
     {
+      "Statcode": "GM0748",
       "Gemeente": "Bergen op Zoom",
       "Provincie": "Noord-Brabant",
+      "ProvincieStatcode": "PV30",
       "Score": 66
     },
     {
+      "Statcode": "GM1859",
       "Gemeente": "Berkelland",
       "Provincie": "Gelderland",
+      "ProvincieStatcode": "PV25",
       "Score": 98
     },
     {
+      "Statcode": "GM1721",
       "Gemeente": "Bernheze",
       "Provincie": "Noord-Brabant",
+      "ProvincieStatcode": "PV30",
       "Score": 86
     },
     {
+      "Statcode": "GM0753",
       "Gemeente": "Best",
       "Provincie": "Noord-Brabant",
+      "ProvincieStatcode": "PV30",
       "Score": 68
     },
     {
+      "Statcode": "GM0209",
       "Gemeente": "Beuningen",
       "Provincie": "Gelderland",
+      "ProvincieStatcode": "PV25",
       "Score": 70
     },
     {
+      "Statcode": "GM0375",
       "Gemeente": "Beverwijk",
       "Provincie": "Noord-Holland",
+      "ProvincieStatcode": "PV27",
       "Score": 86
     },
     {
+      "Statcode": "GM1728",
       "Gemeente": "Bladel",
       "Provincie": "Noord-Brabant",
+      "ProvincieStatcode": "PV30",
       "Score": 65
     },
     {
+      "Statcode": "GM0376",
       "Gemeente": "Blaricum",
       "Provincie": "Noord-Holland",
+      "ProvincieStatcode": "PV27",
       "Score": 85
     },
     {
+      "Statcode": "GM0377",
       "Gemeente": "Bloemendaal",
       "Provincie": "Noord-Holland",
+      "ProvincieStatcode": "PV27",
       "Score": 81
     },
     {
+      "Statcode": "GM1901",
       "Gemeente": "Bodegraven-Reeuwijk",
       "Provincie": "Zuid-Holland",
+      "ProvincieStatcode": "PV28",
       "Score": 76
     },
     {
+      "Statcode": "GM0755",
       "Gemeente": "Boekel",
       "Provincie": "Noord-Brabant",
+      "ProvincieStatcode": "PV30",
       "Score": 85
     },
     {
+      "Statcode": "GM1681",
       "Gemeente": "Borger-Odoorn",
       "Provincie": "Drenthe",
+      "ProvincieStatcode": "PV22",
       "Score": 96
     },
     {
+      "Statcode": "GM0147",
       "Gemeente": "Borne",
       "Provincie": "Overijssel",
+      "ProvincieStatcode": "PV23",
       "Score": 87
     },
     {
+      "Statcode": "GM0654",
       "Gemeente": "Borsele",
       "Provincie": "Zeeland",
+      "ProvincieStatcode": "PV29",
       "Score": 83
     },
     {
+      "Statcode": "GM0757",
       "Gemeente": "Boxtel",
       "Provincie": "Noord-Brabant",
+      "ProvincieStatcode": "PV30",
       "Score": 89
     },
     {
+      "Statcode": "GM0758",
       "Gemeente": "Breda",
       "Provincie": "Noord-Brabant",
+      "ProvincieStatcode": "PV30",
       "Score": 65
     },
     {
+      "Statcode": "GM1876",
       "Gemeente": "Bronckhorst",
       "Provincie": "Gelderland",
+      "ProvincieStatcode": "PV25",
       "Score": 96
     },
     {
+      "Statcode": "GM0213",
       "Gemeente": "Brummen",
       "Provincie": "Gelderland",
+      "ProvincieStatcode": "PV25",
       "Score": 82
     },
     {
+      "Statcode": "GM0899",
       "Gemeente": "Brunssum",
       "Provincie": "Limburg",
+      "ProvincieStatcode": "PV31",
       "Score": 57
     },
     {
+      "Statcode": "GM0312",
       "Gemeente": "Bunnik",
       "Provincie": "Utrecht",
+      "ProvincieStatcode": "PV26",
       "Score": 67
     },
     {
+      "Statcode": "GM0313",
       "Gemeente": "Bunschoten",
       "Provincie": "Utrecht",
+      "ProvincieStatcode": "PV26",
       "Score": 88
     },
     {
+      "Statcode": "GM0214",
       "Gemeente": "Buren",
       "Provincie": "Gelderland",
+      "ProvincieStatcode": "PV25",
       "Score": 76
     },
     {
+      "Statcode": "GM0502",
       "Gemeente": "Capelle aan den IJssel",
       "Provincie": "Zuid-Holland",
+      "ProvincieStatcode": "PV28",
       "Score": 90
     },
     {
+      "Statcode": "GM0383",
       "Gemeente": "Castricum",
       "Provincie": "Noord-Holland",
+      "ProvincieStatcode": "PV27",
       "Score": 94
     },
     {
+      "Statcode": "GM0109",
       "Gemeente": "Coevorden",
       "Provincie": "Drenthe",
+      "ProvincieStatcode": "PV22",
       "Score": 85
     },
     {
+      "Statcode": "GM1706",
       "Gemeente": "Cranendonck",
       "Provincie": "Noord-Brabant",
+      "ProvincieStatcode": "PV30",
       "Score": 60
     },
     {
+      "Statcode": "GM0216",
       "Gemeente": "Culemborg",
       "Provincie": "Gelderland",
+      "ProvincieStatcode": "PV25",
       "Score": 84
     },
     {
+      "Statcode": "GM0148",
       "Gemeente": "Dalfsen",
       "Provincie": "Overijssel",
+      "ProvincieStatcode": "PV23",
       "Score": 83
     },
     {
+      "Statcode": "GM1891",
       "Gemeente": "Dantumadiel",
       "Provincie": "Fryslân",
+      "ProvincieStatcode": "PV21",
       "Score": 87
     },
     {
+      "Statcode": "GM0310",
       "Gemeente": "De Bilt",
       "Provincie": "Utrecht",
+      "ProvincieStatcode": "PV26",
       "Score": 77
     },
     {
+      "Statcode": "GM1940",
       "Gemeente": "De Fryske Marren",
       "Provincie": "Fryslân",
+      "ProvincieStatcode": "PV21",
       "Score": 112
     },
     {
+      "Statcode": "GM0736",
       "Gemeente": "De Ronde Venen",
       "Provincie": "Utrecht",
+      "ProvincieStatcode": "PV26",
       "Score": 83
     },
     {
+      "Statcode": "GM1690",
       "Gemeente": "De Wolden",
       "Provincie": "Drenthe",
+      "ProvincieStatcode": "PV22",
       "Score": 83
     },
     {
+      "Statcode": "GM0503",
       "Gemeente": "Delft",
       "Provincie": "Zuid-Holland",
+      "ProvincieStatcode": "PV28",
       "Score": 79
     },
     {
+      "Statcode": "GM0400",
       "Gemeente": "Den Helder",
       "Provincie": "Noord-Holland",
+      "ProvincieStatcode": "PV27",
       "Score": 97
     },
     {
+      "Statcode": "GM0762",
       "Gemeente": "Deurne",
       "Provincie": "Noord-Brabant",
+      "ProvincieStatcode": "PV30",
       "Score": 68
     },
     {
+      "Statcode": "GM0150",
       "Gemeente": "Deventer",
       "Provincie": "Overijssel",
+      "ProvincieStatcode": "PV23",
       "Score": 84
     },
     {
+      "Statcode": "GM0384",
       "Gemeente": "Diemen",
       "Provincie": "Noord-Holland",
+      "ProvincieStatcode": "PV27",
       "Score": 96
     },
     {
+      "Statcode": "GM1980",
       "Gemeente": "Dijk en Waard",
       "Provincie": "Noord-Holland",
+      "ProvincieStatcode": "PV27",
       "Score": 96
     },
     {
+      "Statcode": "GM1774",
       "Gemeente": "Dinkelland",
       "Provincie": "Overijssel",
+      "ProvincieStatcode": "PV23",
       "Score": 70
     },
     {
+      "Statcode": "GM0221",
       "Gemeente": "Doesburg",
       "Provincie": "Gelderland",
+      "ProvincieStatcode": "PV25",
       "Score": 84
     },
     {
+      "Statcode": "GM0222",
       "Gemeente": "Doetinchem",
       "Provincie": "Gelderland",
+      "ProvincieStatcode": "PV25",
       "Score": 77
     },
     {
+      "Statcode": "GM0766",
       "Gemeente": "Dongen",
       "Provincie": "Noord-Brabant",
+      "ProvincieStatcode": "PV30",
       "Score": 91
     },
     {
+      "Statcode": "GM0505",
       "Gemeente": "Dordrecht",
       "Provincie": "Zuid-Holland",
+      "ProvincieStatcode": "PV28",
       "Score": 60
     },
     {
+      "Statcode": "GM0498",
       "Gemeente": "Drechterland",
       "Provincie": "Noord-Holland",
+      "ProvincieStatcode": "PV27",
       "Score": 105
     },
     {
+      "Statcode": "GM1719",
       "Gemeente": "Drimmelen",
       "Provincie": "Noord-Brabant",
+      "ProvincieStatcode": "PV30",
       "Score": 84
     },
     {
+      "Statcode": "GM0303",
       "Gemeente": "Dronten",
       "Provincie": "Flevoland",
+      "ProvincieStatcode": "PV24",
       "Score": 83
     },
     {
+      "Statcode": "GM0225",
       "Gemeente": "Druten",
       "Provincie": "Gelderland",
+      "ProvincieStatcode": "PV25",
       "Score": 83
     },
     {
+      "Statcode": "GM0226",
       "Gemeente": "Duiven",
       "Provincie": "Gelderland",
+      "ProvincieStatcode": "PV25",
       "Score": 71
     },
     {
+      "Statcode": "GM1711",
       "Gemeente": "Echt-Susteren",
       "Provincie": "Limburg",
+      "ProvincieStatcode": "PV31",
       "Score": 71
     },
     {
+      "Statcode": "GM0385",
       "Gemeente": "Edam-Volendam",
       "Provincie": "Noord-Holland",
+      "ProvincieStatcode": "PV27",
       "Score": 83
     },
     {
+      "Statcode": "GM0228",
       "Gemeente": "Ede",
       "Provincie": "Gelderland",
+      "ProvincieStatcode": "PV25",
       "Score": 89
     },
     {
+      "Statcode": "GM0317",
       "Gemeente": "Eemnes",
       "Provincie": "Utrecht",
+      "ProvincieStatcode": "PV26",
       "Score": 85
     },
     {
+      "Statcode": "GM1979",
       "Gemeente": "Eemsdelta",
       "Provincie": "Groningen",
+      "ProvincieStatcode": "PV20",
       "Score": 115
     },
     {
+      "Statcode": "GM0770",
       "Gemeente": "Eersel",
       "Provincie": "Noord-Brabant",
+      "ProvincieStatcode": "PV30",
       "Score": 61
     },
     {
+      "Statcode": "GM1903",
       "Gemeente": "Eijsden-Margraten",
       "Provincie": "Limburg",
+      "ProvincieStatcode": "PV31",
       "Score": 41
     },
     {
+      "Statcode": "GM0772",
       "Gemeente": "Eindhoven",
       "Provincie": "Noord-Brabant",
+      "ProvincieStatcode": "PV30",
       "Score": 66
     },
     {
+      "Statcode": "GM0230",
       "Gemeente": "Elburg",
       "Provincie": "Gelderland",
+      "ProvincieStatcode": "PV25",
       "Score": 101
     },
     {
+      "Statcode": "GM0114",
       "Gemeente": "Emmen",
       "Provincie": "Drenthe",
+      "ProvincieStatcode": "PV22",
       "Score": 90
     },
     {
+      "Statcode": "GM0388",
       "Gemeente": "Enkhuizen",
       "Provincie": "Noord-Holland",
+      "ProvincieStatcode": "PV27",
       "Score": 82
     },
     {
+      "Statcode": "GM0153",
       "Gemeente": "Enschede",
       "Provincie": "Overijssel",
+      "ProvincieStatcode": "PV23",
       "Score": 92
     },
     {
+      "Statcode": "GM0232",
       "Gemeente": "Epe",
       "Provincie": "Gelderland",
+      "ProvincieStatcode": "PV25",
       "Score": 70
     },
     {
+      "Statcode": "GM0233",
       "Gemeente": "Ermelo",
       "Provincie": "Gelderland",
+      "ProvincieStatcode": "PV25",
       "Score": 98
     },
     {
+      "Statcode": "GM0777",
       "Gemeente": "Etten-Leur",
       "Provincie": "Noord-Brabant",
+      "ProvincieStatcode": "PV30",
       "Score": 58
     },
     {
+      "Statcode": "GM0779",
       "Gemeente": "Geertruidenberg",
       "Provincie": "Noord-Brabant",
+      "ProvincieStatcode": "PV30",
       "Score": 74
     },
     {
+      "Statcode": "GM1771",
       "Gemeente": "Geldrop-Mierlo",
       "Provincie": "Noord-Brabant",
+      "ProvincieStatcode": "PV30",
       "Score": 59
     },
     {
+      "Statcode": "GM1652",
       "Gemeente": "Gemert-Bakel",
       "Provincie": "Noord-Brabant",
+      "ProvincieStatcode": "PV30",
       "Score": 83
     },
     {
+      "Statcode": "GM0907",
       "Gemeente": "Gennep",
       "Provincie": "Limburg",
+      "ProvincieStatcode": "PV31",
       "Score": 86
     },
     {
+      "Statcode": "GM0784",
       "Gemeente": "Gilze en Rijen",
       "Provincie": "Noord-Brabant",
+      "ProvincieStatcode": "PV30",
       "Score": 87
     },
     {
+      "Statcode": "GM1924",
       "Gemeente": "Goeree-Overflakkee",
       "Provincie": "Zuid-Holland",
+      "ProvincieStatcode": "PV28",
       "Score": 59
     },
     {
+      "Statcode": "GM0664",
       "Gemeente": "Goes",
       "Provincie": "Zeeland",
+      "ProvincieStatcode": "PV29",
       "Score": 66
     },
     {
+      "Statcode": "GM0785",
       "Gemeente": "Goirle",
       "Provincie": "Noord-Brabant",
+      "ProvincieStatcode": "PV30",
       "Score": 64
     },
     {
+      "Statcode": "GM1942",
       "Gemeente": "Gooise Meren",
       "Provincie": "Noord-Holland",
+      "ProvincieStatcode": "PV27",
       "Score": 75
     },
     {
+      "Statcode": "GM0512",
       "Gemeente": "Gorinchem",
       "Provincie": "Zuid-Holland",
+      "ProvincieStatcode": "PV28",
       "Score": 82
     },
     {
+      "Statcode": "GM0513",
       "Gemeente": "Gouda",
       "Provincie": "Zuid-Holland",
+      "ProvincieStatcode": "PV28",
       "Score": 70
     },
     {
+      "Statcode": "GM0014",
       "Gemeente": "Groningen",
       "Provincie": "Groningen",
+      "ProvincieStatcode": "PV20",
       "Score": 113
     },
     {
+      "Statcode": "GM1729",
       "Gemeente": "Gulpen-Wittem",
       "Provincie": "Limburg",
+      "ProvincieStatcode": "PV31",
       "Score": 59
     },
     {
+      "Statcode": "GM0158",
       "Gemeente": "Haaksbergen",
       "Provincie": "Overijssel",
+      "ProvincieStatcode": "PV23",
       "Score": 77
     },
     {
+      "Statcode": "GM0392",
       "Gemeente": "Haarlem",
       "Provincie": "Noord-Holland",
+      "ProvincieStatcode": "PV27",
       "Score": 102
     },
     {
+      "Statcode": "GM0394",
       "Gemeente": "Haarlemmermeer",
       "Provincie": "Noord-Holland",
+      "ProvincieStatcode": "PV27",
       "Score": 88
     },
     {
+      "Statcode": "GM1655",
       "Gemeente": "Halderberge",
       "Provincie": "Noord-Brabant",
+      "ProvincieStatcode": "PV30",
       "Score": 55
     },
     {
+      "Statcode": "GM0160",
       "Gemeente": "Hardenberg",
       "Provincie": "Overijssel",
+      "ProvincieStatcode": "PV23",
       "Score": 84
     },
     {
+      "Statcode": "GM0243",
       "Gemeente": "Harderwijk",
       "Provincie": "Gelderland",
+      "ProvincieStatcode": "PV25",
       "Score": 73
     },
     {
+      "Statcode": "GM0523",
       "Gemeente": "Hardinxveld-Giessendam",
       "Provincie": "Zuid-Holland",
+      "ProvincieStatcode": "PV28",
       "Score": 71
     },
     {
+      "Statcode": "GM0072",
       "Gemeente": "Harlingen",
       "Provincie": "Fryslân",
+      "ProvincieStatcode": "PV21",
       "Score": 84
     },
     {
+      "Statcode": "GM0244",
       "Gemeente": "Hattem",
       "Provincie": "Gelderland",
+      "ProvincieStatcode": "PV25",
       "Score": 101
     },
     {
+      "Statcode": "GM0396",
       "Gemeente": "Heemskerk",
       "Provincie": "Noord-Holland",
+      "ProvincieStatcode": "PV27",
       "Score": 83
     },
     {
+      "Statcode": "GM0397",
       "Gemeente": "Heemstede",
       "Provincie": "Noord-Holland",
+      "ProvincieStatcode": "PV27",
       "Score": 75
     },
     {
+      "Statcode": "GM0246",
       "Gemeente": "Heerde",
       "Provincie": "Gelderland",
+      "ProvincieStatcode": "PV25",
       "Score": 104
     },
     {
+      "Statcode": "GM0074",
       "Gemeente": "Heerenveen",
       "Provincie": "Fryslân",
+      "ProvincieStatcode": "PV21",
       "Score": 85
     },
     {
+      "Statcode": "GM0917",
       "Gemeente": "Heerlen",
       "Provincie": "Limburg",
+      "ProvincieStatcode": "PV31",
       "Score": 57
     },
     {
+      "Statcode": "GM1658",
       "Gemeente": "Heeze-Leende",
       "Provincie": "Noord-Brabant",
+      "ProvincieStatcode": "PV30",
       "Score": 84
     },
     {
+      "Statcode": "GM0399",
       "Gemeente": "Heiloo",
       "Provincie": "Noord-Holland",
+      "ProvincieStatcode": "PV27",
       "Score": 100
     },
     {
+      "Statcode": "GM0163",
       "Gemeente": "Hellendoorn",
       "Provincie": "Overijssel",
+      "ProvincieStatcode": "PV23",
       "Score": 98
     },
     {
+      "Statcode": "GM0794",
       "Gemeente": "Helmond",
       "Provincie": "Noord-Brabant",
+      "ProvincieStatcode": "PV30",
       "Score": 54
     },
     {
+      "Statcode": "GM0531",
       "Gemeente": "Hendrik-Ido-Ambacht",
       "Provincie": "Zuid-Holland",
+      "ProvincieStatcode": "PV28",
       "Score": 94
     },
     {
+      "Statcode": "GM0164",
       "Gemeente": "Hengelo",
       "Provincie": "Overijssel",
+      "ProvincieStatcode": "PV23",
       "Score": 80
     },
     {
+      "Statcode": "GM1966",
       "Gemeente": "Het Hogeland",
       "Provincie": "Groningen",
+      "ProvincieStatcode": "PV20",
       "Score": 96
     },
     {
+      "Statcode": "GM0252",
       "Gemeente": "Heumen",
       "Provincie": "Gelderland",
+      "ProvincieStatcode": "PV25",
       "Score": 75
     },
     {
+      "Statcode": "GM0797",
       "Gemeente": "Heusden",
       "Provincie": "Noord-Brabant",
+      "ProvincieStatcode": "PV30",
       "Score": 59
     },
     {
+      "Statcode": "GM0534",
       "Gemeente": "Hillegom",
       "Provincie": "Zuid-Holland",
+      "ProvincieStatcode": "PV28",
       "Score": 87
     },
     {
+      "Statcode": "GM0798",
       "Gemeente": "Hilvarenbeek",
       "Provincie": "Noord-Brabant",
+      "ProvincieStatcode": "PV30",
       "Score": 71
     },
     {
+      "Statcode": "GM0402",
       "Gemeente": "Hilversum",
       "Provincie": "Noord-Holland",
+      "ProvincieStatcode": "PV27",
       "Score": 101
     },
     {
+      "Statcode": "GM1963",
       "Gemeente": "Hoeksche Waard",
       "Provincie": "Zuid-Holland",
+      "ProvincieStatcode": "PV28",
       "Score": 63
     },
     {
+      "Statcode": "GM1735",
       "Gemeente": "Hof van Twente",
       "Provincie": "Overijssel",
+      "ProvincieStatcode": "PV23",
       "Score": 71
     },
     {
+      "Statcode": "GM1911",
       "Gemeente": "Hollands Kroon",
       "Provincie": "Noord-Holland",
+      "ProvincieStatcode": "PV27",
       "Score": 106
     },
     {
+      "Statcode": "GM0118",
       "Gemeente": "Hoogeveen",
       "Provincie": "Drenthe",
+      "ProvincieStatcode": "PV22",
       "Score": 99
     },
     {
+      "Statcode": "GM0405",
       "Gemeente": "Hoorn",
       "Provincie": "Noord-Holland",
+      "ProvincieStatcode": "PV27",
       "Score": 94
     },
     {
+      "Statcode": "GM1507",
       "Gemeente": "Horst aan de Maas",
       "Provincie": "Limburg",
+      "ProvincieStatcode": "PV31",
       "Score": 87
     },
     {
+      "Statcode": "GM0321",
       "Gemeente": "Houten",
       "Provincie": "Utrecht",
+      "ProvincieStatcode": "PV26",
       "Score": 89
     },
     {
+      "Statcode": "GM0406",
       "Gemeente": "Huizen",
       "Provincie": "Noord-Holland",
+      "ProvincieStatcode": "PV27",
       "Score": 79
     },
     {
+      "Statcode": "GM0677",
       "Gemeente": "Hulst",
       "Provincie": "Zeeland",
+      "ProvincieStatcode": "PV29",
       "Score": 76
     },
     {
+      "Statcode": "GM0353",
       "Gemeente": "IJsselstein",
       "Provincie": "Utrecht",
+      "ProvincieStatcode": "PV26",
       "Score": 98
     },
     {
+      "Statcode": "GM1884",
       "Gemeente": "Kaag en Braassem",
       "Provincie": "Zuid-Holland",
+      "ProvincieStatcode": "PV28",
       "Score": 95
     },
     {
+      "Statcode": "GM0166",
       "Gemeente": "Kampen",
       "Provincie": "Overijssel",
+      "ProvincieStatcode": "PV23",
       "Score": 73
     },
     {
+      "Statcode": "GM0678",
       "Gemeente": "Kapelle",
       "Provincie": "Zeeland",
+      "ProvincieStatcode": "PV29",
       "Score": 79
     },
     {
+      "Statcode": "GM0537",
       "Gemeente": "Katwijk",
       "Provincie": "Zuid-Holland",
+      "ProvincieStatcode": "PV28",
       "Score": 73
     },
     {
+      "Statcode": "GM0928",
       "Gemeente": "Kerkrade",
       "Provincie": "Limburg",
+      "ProvincieStatcode": "PV31",
       "Score": 60
     },
     {
+      "Statcode": "GM1598",
       "Gemeente": "Koggenland",
       "Provincie": "Noord-Holland",
+      "ProvincieStatcode": "PV27",
       "Score": 88
     },
     {
+      "Statcode": "GM0542",
       "Gemeente": "Krimpen aan den IJssel",
       "Provincie": "Zuid-Holland",
+      "ProvincieStatcode": "PV28",
       "Score": 63
     },
     {
+      "Statcode": "GM1931",
       "Gemeente": "Krimpenerwaard",
       "Provincie": "Zuid-Holland",
+      "ProvincieStatcode": "PV28",
       "Score": 81
     },
     {
+      "Statcode": "GM1659",
       "Gemeente": "Laarbeek",
       "Provincie": "Noord-Brabant",
+      "ProvincieStatcode": "PV30",
       "Score": 63
     },
     {
+      "Statcode": "GM1982",
       "Gemeente": "Land van Cuijk",
       "Provincie": "Noord-Brabant",
+      "ProvincieStatcode": "PV30",
       "Score": 83
     },
     {
+      "Statcode": "GM0882",
       "Gemeente": "Landgraaf",
       "Provincie": "Limburg",
+      "ProvincieStatcode": "PV31",
       "Score": 64
     },
     {
+      "Statcode": "GM0415",
       "Gemeente": "Landsmeer",
       "Provincie": "Noord-Holland",
+      "ProvincieStatcode": "PV27",
       "Score": 95
     },
     {
+      "Statcode": "GM1621",
       "Gemeente": "Lansingerland",
       "Provincie": "Zuid-Holland",
+      "ProvincieStatcode": "PV28",
       "Score": 67
     },
     {
+      "Statcode": "GM0417",
       "Gemeente": "Laren",
       "Provincie": "Noord-Holland",
+      "ProvincieStatcode": "PV27",
       "Score": 90
     },
     {
+      "Statcode": "GM0080",
       "Gemeente": "Leeuwarden",
       "Provincie": "Fryslân",
+      "ProvincieStatcode": "PV21",
       "Score": 112
     },
     {
+      "Statcode": "GM0546",
       "Gemeente": "Leiden",
       "Provincie": "Zuid-Holland",
+      "ProvincieStatcode": "PV28",
       "Score": 68
     },
     {
+      "Statcode": "GM0547",
       "Gemeente": "Leiderdorp",
       "Provincie": "Zuid-Holland",
+      "ProvincieStatcode": "PV28",
       "Score": 85
     },
     {
+      "Statcode": "GM1916",
       "Gemeente": "Leidschendam-Voorburg",
       "Provincie": "Zuid-Holland",
+      "ProvincieStatcode": "PV28",
       "Score": 73
     },
     {
+      "Statcode": "GM0995",
       "Gemeente": "Lelystad",
       "Provincie": "Flevoland",
+      "ProvincieStatcode": "PV24",
       "Score": 74
     },
     {
+      "Statcode": "GM1640",
       "Gemeente": "Leudal",
       "Provincie": "Limburg",
+      "ProvincieStatcode": "PV31",
       "Score": 50
     },
     {
+      "Statcode": "GM0327",
       "Gemeente": "Leusden",
       "Provincie": "Utrecht",
+      "ProvincieStatcode": "PV26",
       "Score": 77
     },
     {
+      "Statcode": "GM1705",
       "Gemeente": "Lingewaard",
       "Provincie": "Gelderland",
+      "ProvincieStatcode": "PV25",
       "Score": 74
     },
     {
+      "Statcode": "GM0553",
       "Gemeente": "Lisse",
       "Provincie": "Zuid-Holland",
+      "ProvincieStatcode": "PV28",
       "Score": 87
     },
     {
+      "Statcode": "GM0262",
       "Gemeente": "Lochem",
       "Provincie": "Gelderland",
+      "ProvincieStatcode": "PV25",
       "Score": 81
     },
     {
+      "Statcode": "GM0809",
       "Gemeente": "Loon op Zand",
       "Provincie": "Noord-Brabant",
+      "ProvincieStatcode": "PV30",
       "Score": 83
     },
     {
+      "Statcode": "GM0331",
       "Gemeente": "Lopik",
       "Provincie": "Utrecht",
+      "ProvincieStatcode": "PV26",
       "Score": 94
     },
     {
+      "Statcode": "GM0168",
       "Gemeente": "Losser",
       "Provincie": "Overijssel",
+      "ProvincieStatcode": "PV23",
       "Score": 69
     },
     {
+      "Statcode": "GM0263",
       "Gemeente": "Maasdriel",
       "Provincie": "Gelderland",
+      "ProvincieStatcode": "PV25",
       "Score": 80
     },
     {
+      "Statcode": "GM1641",
       "Gemeente": "Maasgouw",
       "Provincie": "Limburg",
+      "ProvincieStatcode": "PV31",
       "Score": 67
     },
     {
+      "Statcode": "GM1991",
       "Gemeente": "Maashorst",
       "Provincie": "Noord-Brabant",
+      "ProvincieStatcode": "PV30",
       "Score": 82
     },
     {
+      "Statcode": "GM0556",
       "Gemeente": "Maassluis",
       "Provincie": "Zuid-Holland",
+      "ProvincieStatcode": "PV28",
       "Score": 66
     },
     {
+      "Statcode": "GM0935",
       "Gemeente": "Maastricht",
       "Provincie": "Limburg",
+      "ProvincieStatcode": "PV31",
       "Score": 76
     },
     {
+      "Statcode": "GM0420",
       "Gemeente": "Medemblik",
       "Provincie": "Noord-Holland",
+      "ProvincieStatcode": "PV27",
       "Score": 94
     },
     {
+      "Statcode": "GM0938",
       "Gemeente": "Meerssen",
       "Provincie": "Limburg",
+      "ProvincieStatcode": "PV31",
       "Score": 69
     },
     {
+      "Statcode": "GM1948",
       "Gemeente": "Meierijstad",
       "Provincie": "Noord-Brabant",
+      "ProvincieStatcode": "PV30",
       "Score": 66
     },
     {
+      "Statcode": "GM0119",
       "Gemeente": "Meppel",
       "Provincie": "Drenthe",
+      "ProvincieStatcode": "PV22",
       "Score": 91
     },
     {
+      "Statcode": "GM0687",
       "Gemeente": "Middelburg",
       "Provincie": "Zeeland",
+      "ProvincieStatcode": "PV29",
       "Score": 82
     },
     {
+      "Statcode": "GM1842",
       "Gemeente": "Midden-Delfland",
       "Provincie": "Zuid-Holland",
+      "ProvincieStatcode": "PV28",
       "Score": 84
     },
     {
+      "Statcode": "GM1731",
       "Gemeente": "Midden-Drenthe",
       "Provincie": "Drenthe",
+      "ProvincieStatcode": "PV22",
       "Score": 92
     },
     {
+      "Statcode": "GM1952",
       "Gemeente": "Midden-Groningen",
       "Provincie": "Groningen",
+      "ProvincieStatcode": "PV20",
       "Score": 91
     },
     {
+      "Statcode": "GM1709",
       "Gemeente": "Moerdijk",
       "Provincie": "Noord-Brabant",
+      "ProvincieStatcode": "PV30",
       "Score": 67
     },
     {
+      "Statcode": "GM1978",
       "Gemeente": "Molenlanden",
       "Provincie": "Zuid-Holland",
+      "ProvincieStatcode": "PV28",
       "Score": 95
     },
     {
+      "Statcode": "GM1955",
       "Gemeente": "Montferland",
       "Provincie": "Gelderland",
+      "ProvincieStatcode": "PV25",
       "Score": 78
     },
     {
+      "Statcode": "GM0335",
       "Gemeente": "Montfoort",
       "Provincie": "Utrecht",
+      "ProvincieStatcode": "PV26",
       "Score": 95
     },
     {
+      "Statcode": "GM0944",
       "Gemeente": "Mook en Middelaar",
       "Provincie": "Limburg",
+      "ProvincieStatcode": "PV31",
       "Score": 60
     },
     {
+      "Statcode": "GM1740",
       "Gemeente": "Neder-Betuwe",
       "Provincie": "Gelderland",
+      "ProvincieStatcode": "PV25",
       "Score": 71
     },
     {
+      "Statcode": "GM0946",
       "Gemeente": "Nederweert",
       "Provincie": "Limburg",
+      "ProvincieStatcode": "PV31",
       "Score": 81
     },
     {
+      "Statcode": "GM0356",
       "Gemeente": "Nieuwegein",
       "Provincie": "Utrecht",
+      "ProvincieStatcode": "PV26",
       "Score": 98
     },
     {
+      "Statcode": "GM0569",
       "Gemeente": "Nieuwkoop",
       "Provincie": "Zuid-Holland",
+      "ProvincieStatcode": "PV28",
       "Score": 79
     },
     {
+      "Statcode": "GM0267",
       "Gemeente": "Nijkerk",
       "Provincie": "Gelderland",
+      "ProvincieStatcode": "PV25",
       "Score": 95
     },
     {
+      "Statcode": "GM0268",
       "Gemeente": "Nijmegen",
       "Provincie": "Gelderland",
+      "ProvincieStatcode": "PV25",
       "Score": 74
     },
     {
+      "Statcode": "GM1930",
       "Gemeente": "Nissewaard",
       "Provincie": "Zuid-Holland",
+      "ProvincieStatcode": "PV28",
       "Score": 65
     },
     {
+      "Statcode": "GM1970",
       "Gemeente": "Noardeast-Fryslân",
       "Provincie": "Fryslân",
+      "ProvincieStatcode": "PV21",
       "Score": 95
     },
     {
+      "Statcode": "GM1695",
       "Gemeente": "Noord-Beveland",
       "Provincie": "Zeeland",
+      "ProvincieStatcode": "PV29",
       "Score": 88
     },
     {
+      "Statcode": "GM1699",
       "Gemeente": "Noordenveld",
       "Provincie": "Drenthe",
+      "ProvincieStatcode": "PV22",
       "Score": 87
     },
     {
+      "Statcode": "GM0171",
       "Gemeente": "Noordoostpolder",
       "Provincie": "Flevoland",
+      "ProvincieStatcode": "PV24",
       "Score": 102
     },
     {
+      "Statcode": "GM0575",
       "Gemeente": "Noordwijk",
       "Provincie": "Zuid-Holland",
+      "ProvincieStatcode": "PV28",
       "Score": 95
     },
     {
+      "Statcode": "GM0820",
       "Gemeente": "Nuenen, Gerwen en Nederwetten",
       "Provincie": "Noord-Brabant",
+      "ProvincieStatcode": "PV30",
       "Score": 86
     },
     {
+      "Statcode": "GM0302",
       "Gemeente": "Nunspeet",
       "Provincie": "Gelderland",
+      "ProvincieStatcode": "PV25",
       "Score": 91
     },
     {
+      "Statcode": "GM0579",
       "Gemeente": "Oegstgeest",
       "Provincie": "Zuid-Holland",
+      "ProvincieStatcode": "PV28",
       "Score": 95
     },
     {
+      "Statcode": "GM0823",
       "Gemeente": "Oirschot",
       "Provincie": "Noord-Brabant",
+      "ProvincieStatcode": "PV30",
       "Score": 70
     },
     {
+      "Statcode": "GM0824",
       "Gemeente": "Oisterwijk",
       "Provincie": "Noord-Brabant",
+      "ProvincieStatcode": "PV30",
       "Score": 88
     },
     {
+      "Statcode": "GM1895",
       "Gemeente": "Oldambt",
       "Provincie": "Groningen",
+      "ProvincieStatcode": "PV20",
       "Score": 90
     },
     {
+      "Statcode": "GM0269",
       "Gemeente": "Oldebroek",
       "Provincie": "Gelderland",
+      "ProvincieStatcode": "PV25",
       "Score": 105
     },
     {
+      "Statcode": "GM0173",
       "Gemeente": "Oldenzaal",
       "Provincie": "Overijssel",
+      "ProvincieStatcode": "PV23",
       "Score": 82
     },
     {
+      "Statcode": "GM1773",
       "Gemeente": "Olst-Wijhe",
       "Provincie": "Overijssel",
+      "ProvincieStatcode": "PV23",
       "Score": 80
     },
     {
+      "Statcode": "GM0175",
       "Gemeente": "Ommen",
       "Provincie": "Overijssel",
+      "ProvincieStatcode": "PV23",
       "Score": 88
     },
     {
+      "Statcode": "GM1586",
       "Gemeente": "Oost Gelre",
       "Provincie": "Gelderland",
+      "ProvincieStatcode": "PV25",
       "Score": 94
     },
     {
+      "Statcode": "GM0826",
       "Gemeente": "Oosterhout",
       "Provincie": "Noord-Brabant",
+      "ProvincieStatcode": "PV30",
       "Score": 59
     },
     {
+      "Statcode": "GM0085",
       "Gemeente": "Ooststellingwerf",
       "Provincie": "Fryslân",
+      "ProvincieStatcode": "PV21",
       "Score": 84
     },
     {
+      "Statcode": "GM0431",
       "Gemeente": "Oostzaan",
       "Provincie": "Noord-Holland",
+      "ProvincieStatcode": "PV27",
       "Score": 100
     },
     {
+      "Statcode": "GM0432",
       "Gemeente": "Opmeer",
       "Provincie": "Noord-Holland",
+      "ProvincieStatcode": "PV27",
       "Score": 75
     },
     {
+      "Statcode": "GM0086",
       "Gemeente": "Opsterland",
       "Provincie": "Fryslân",
+      "ProvincieStatcode": "PV21",
       "Score": 94
     },
     {
+      "Statcode": "GM0828",
       "Gemeente": "Oss",
       "Provincie": "Noord-Brabant",
+      "ProvincieStatcode": "PV30",
       "Score": 60
     },
     {
+      "Statcode": "GM1509",
       "Gemeente": "Oude IJsselstreek",
       "Provincie": "Gelderland",
+      "ProvincieStatcode": "PV25",
       "Score": 78
     },
     {
+      "Statcode": "GM0437",
       "Gemeente": "Ouder-Amstel",
       "Provincie": "Noord-Holland",
+      "ProvincieStatcode": "PV27",
       "Score": 75
     },
     {
+      "Statcode": "GM0589",
       "Gemeente": "Oudewater",
       "Provincie": "Utrecht",
+      "ProvincieStatcode": "PV26",
       "Score": 64
     },
     {
+      "Statcode": "GM1734",
       "Gemeente": "Overbetuwe",
       "Provincie": "Gelderland",
+      "ProvincieStatcode": "PV25",
       "Score": 68
     },
     {
+      "Statcode": "GM0590",
       "Gemeente": "Papendrecht",
       "Provincie": "Zuid-Holland",
+      "ProvincieStatcode": "PV28",
       "Score": 64
     },
     {
+      "Statcode": "GM1894",
       "Gemeente": "Peel en Maas",
       "Provincie": "Limburg",
+      "ProvincieStatcode": "PV31",
       "Score": 75
     },
     {
+      "Statcode": "GM0765",
       "Gemeente": "Pekela",
       "Provincie": "Groningen",
+      "ProvincieStatcode": "PV20",
       "Score": 92
     },
     {
+      "Statcode": "GM1926",
       "Gemeente": "Pijnacker-Nootdorp",
       "Provincie": "Zuid-Holland",
+      "ProvincieStatcode": "PV28",
       "Score": 81
     },
     {
+      "Statcode": "GM0439",
       "Gemeente": "Purmerend",
       "Provincie": "Noord-Holland",
+      "ProvincieStatcode": "PV27",
       "Score": 87
     },
     {
+      "Statcode": "GM0273",
       "Gemeente": "Putten",
       "Provincie": "Gelderland",
+      "ProvincieStatcode": "PV25",
       "Score": 76
     },
     {
+      "Statcode": "GM0177",
       "Gemeente": "Raalte",
       "Provincie": "Overijssel",
+      "ProvincieStatcode": "PV23",
       "Score": 96
     },
     {
+      "Statcode": "GM0703",
       "Gemeente": "Reimerswaal",
       "Provincie": "Zeeland",
+      "ProvincieStatcode": "PV29",
       "Score": 73
     },
     {
+      "Statcode": "GM0274",
       "Gemeente": "Renkum",
       "Provincie": "Gelderland",
+      "ProvincieStatcode": "PV25",
       "Score": 65
     },
     {
+      "Statcode": "GM0339",
       "Gemeente": "Renswoude",
       "Provincie": "Utrecht",
+      "ProvincieStatcode": "PV26",
       "Score": 82
     },
     {
+      "Statcode": "GM1667",
       "Gemeente": "Reusel-De Mierden",
       "Provincie": "Noord-Brabant",
+      "ProvincieStatcode": "PV30",
       "Score": 73
     },
     {
+      "Statcode": "GM0275",
       "Gemeente": "Rheden",
       "Provincie": "Gelderland",
+      "ProvincieStatcode": "PV25",
       "Score": 76
     },
     {
+      "Statcode": "GM0340",
       "Gemeente": "Rhenen",
       "Provincie": "Utrecht",
+      "ProvincieStatcode": "PV26",
       "Score": 92
     },
     {
+      "Statcode": "GM0597",
       "Gemeente": "Ridderkerk",
       "Provincie": "Zuid-Holland",
+      "ProvincieStatcode": "PV28",
       "Score": 95
     },
     {
+      "Statcode": "GM1742",
       "Gemeente": "Rijssen-Holten",
       "Provincie": "Overijssel",
+      "ProvincieStatcode": "PV23",
       "Score": 70
     },
     {
+      "Statcode": "GM0603",
       "Gemeente": "Rijswijk",
       "Provincie": "Zuid-Holland",
+      "ProvincieStatcode": "PV28",
       "Score": 97
     },
     {
+      "Statcode": "GM1669",
       "Gemeente": "Roerdalen",
       "Provincie": "Limburg",
+      "ProvincieStatcode": "PV31",
       "Score": 57
     },
     {
+      "Statcode": "GM0957",
       "Gemeente": "Roermond",
       "Provincie": "Limburg",
+      "ProvincieStatcode": "PV31",
       "Score": 75
     },
     {
+      "Statcode": "GM1674",
       "Gemeente": "Roosendaal",
       "Provincie": "Noord-Brabant",
+      "ProvincieStatcode": "PV30",
       "Score": 77
     },
     {
+      "Statcode": "GM0599",
       "Gemeente": "Rotterdam",
       "Provincie": "Zuid-Holland",
+      "ProvincieStatcode": "PV28",
       "Score": 81
     },
     {
+      "Statcode": "GM0277",
       "Gemeente": "Rozendaal",
       "Provincie": "Gelderland",
+      "ProvincieStatcode": "PV25",
       "Score": 87
     },
     {
+      "Statcode": "GM0840",
       "Gemeente": "Rucphen",
       "Provincie": "Noord-Brabant",
+      "ProvincieStatcode": "PV30",
       "Score": 54
     },
     {
+      "Statcode": "GM0441",
       "Gemeente": "Schagen",
       "Provincie": "Noord-Holland",
+      "ProvincieStatcode": "PV27",
       "Score": 78
     },
     {
+      "Statcode": "GM0279",
       "Gemeente": "Scherpenzeel",
       "Provincie": "Gelderland",
+      "ProvincieStatcode": "PV25",
       "Score": 67
     },
     {
+      "Statcode": "GM0606",
       "Gemeente": "Schiedam",
       "Provincie": "Zuid-Holland",
+      "ProvincieStatcode": "PV28",
       "Score": 81
     },
     {
+      "Statcode": "GM0088",
       "Gemeente": "Schiermonnikoog",
       "Provincie": "Fryslân",
+      "ProvincieStatcode": "PV21",
       "Score": 95
     },
     {
+      "Statcode": "GM1676",
       "Gemeente": "Schouwen-Duiveland",
       "Provincie": "Zeeland",
+      "ProvincieStatcode": "PV29",
       "Score": 64
     },
     {
+      "Statcode": "GM0965",
       "Gemeente": "Simpelveld",
       "Provincie": "Limburg",
+      "ProvincieStatcode": "PV31",
       "Score": 59
     },
     {
+      "Statcode": "GM0845",
       "Gemeente": "Sint-Michielsgestel",
       "Provincie": "Noord-Brabant",
+      "ProvincieStatcode": "PV30",
       "Score": 62
     },
     {
+      "Statcode": "GM1883",
       "Gemeente": "Sittard-Geleen",
       "Provincie": "Limburg",
+      "ProvincieStatcode": "PV31",
       "Score": 78
     },
     {
+      "Statcode": "GM0610",
       "Gemeente": "Sliedrecht",
       "Provincie": "Zuid-Holland",
+      "ProvincieStatcode": "PV28",
       "Score": 68
     },
     {
+      "Statcode": "GM1714",
       "Gemeente": "Sluis",
       "Provincie": "Zeeland",
+      "ProvincieStatcode": "PV29",
       "Score": 72
     },
     {
+      "Statcode": "GM0090",
       "Gemeente": "Smallingerland",
       "Provincie": "Fryslân",
+      "ProvincieStatcode": "PV21",
       "Score": 91
     },
     {
+      "Statcode": "GM0342",
       "Gemeente": "Soest",
       "Provincie": "Utrecht",
+      "ProvincieStatcode": "PV26",
       "Score": 75
     },
     {
+      "Statcode": "GM0847",
       "Gemeente": "Someren",
       "Provincie": "Noord-Brabant",
+      "ProvincieStatcode": "PV30",
       "Score": 64
     },
     {
+      "Statcode": "GM0848",
       "Gemeente": "Son en Breugel",
       "Provincie": "Noord-Brabant",
+      "ProvincieStatcode": "PV30",
       "Score": 57
     },
     {
+      "Statcode": "GM0037",
       "Gemeente": "Stadskanaal",
       "Provincie": "Groningen",
+      "ProvincieStatcode": "PV20",
       "Score": 93
     },
     {
+      "Statcode": "GM0180",
       "Gemeente": "Staphorst",
       "Provincie": "Overijssel",
+      "ProvincieStatcode": "PV23",
       "Score": 89
     },
     {
+      "Statcode": "GM0532",
       "Gemeente": "Stede Broec",
       "Provincie": "Noord-Holland",
+      "ProvincieStatcode": "PV27",
       "Score": 79
     },
     {
+      "Statcode": "GM0851",
       "Gemeente": "Steenbergen",
       "Provincie": "Noord-Brabant",
+      "ProvincieStatcode": "PV30",
       "Score": 79
     },
     {
+      "Statcode": "GM1708",
       "Gemeente": "Steenwijkerland",
       "Provincie": "Overijssel",
+      "ProvincieStatcode": "PV23",
       "Score": 107
     },
     {
+      "Statcode": "GM0971",
       "Gemeente": "Stein",
       "Provincie": "Limburg",
+      "ProvincieStatcode": "PV31",
       "Score": 72
     },
     {
+      "Statcode": "GM1904",
       "Gemeente": "Stichtse Vecht",
       "Provincie": "Utrecht",
+      "ProvincieStatcode": "PV26",
       "Score": 98
     },
     {
+      "Statcode": "GM1900",
       "Gemeente": "Súdwest-Fryslân",
       "Provincie": "Fryslân",
+      "ProvincieStatcode": "PV21",
       "Score": 113
     },
     {
+      "Statcode": "GM0715",
       "Gemeente": "Terneuzen",
       "Provincie": "Zeeland",
+      "ProvincieStatcode": "PV29",
       "Score": 67
     },
     {
+      "Statcode": "GM0093",
       "Gemeente": "Terschelling",
       "Provincie": "Fryslân",
+      "ProvincieStatcode": "PV21",
       "Score": 108
     },
     {
+      "Statcode": "GM0448",
       "Gemeente": "Texel",
       "Provincie": "Noord-Holland",
+      "ProvincieStatcode": "PV27",
       "Score": 102
     },
     {
+      "Statcode": "GM1525",
       "Gemeente": "Teylingen",
       "Provincie": "Zuid-Holland",
+      "ProvincieStatcode": "PV28",
       "Score": 92
     },
     {
+      "Statcode": "GM0716",
       "Gemeente": "Tholen",
       "Provincie": "Zeeland",
+      "ProvincieStatcode": "PV29",
       "Score": 89
     },
     {
+      "Statcode": "GM0281",
       "Gemeente": "Tiel",
       "Provincie": "Gelderland",
+      "ProvincieStatcode": "PV25",
       "Score": 63
     },
     {
+      "Statcode": "GM0855",
       "Gemeente": "Tilburg",
       "Provincie": "Noord-Brabant",
+      "ProvincieStatcode": "PV30",
       "Score": 64
     },
     {
+      "Statcode": "GM0183",
       "Gemeente": "Tubbergen",
       "Provincie": "Overijssel",
+      "ProvincieStatcode": "PV23",
       "Score": 94
     },
     {
+      "Statcode": "GM1700",
       "Gemeente": "Twenterand",
       "Provincie": "Overijssel",
+      "ProvincieStatcode": "PV23",
       "Score": 71
     },
     {
+      "Statcode": "GM1730",
       "Gemeente": "Tynaarlo",
       "Provincie": "Drenthe",
+      "ProvincieStatcode": "PV22",
       "Score": 87
     },
     {
+      "Statcode": "GM0737",
       "Gemeente": "Tytsjerksteradiel",
       "Provincie": "Fryslân",
+      "ProvincieStatcode": "PV21",
       "Score": 94
     },
     {
+      "Statcode": "GM0450",
       "Gemeente": "Uitgeest",
       "Provincie": "Noord-Holland",
+      "ProvincieStatcode": "PV27",
       "Score": 100
     },
     {
+      "Statcode": "GM0451",
       "Gemeente": "Uithoorn",
       "Provincie": "Noord-Holland",
+      "ProvincieStatcode": "PV27",
       "Score": 70
     },
     {
+      "Statcode": "GM0184",
       "Gemeente": "Urk",
       "Provincie": "Flevoland",
+      "ProvincieStatcode": "PV24",
       "Score": 88
     },
     {
+      "Statcode": "GM0344",
       "Gemeente": "Utrecht",
       "Provincie": "Utrecht",
+      "ProvincieStatcode": "PV26",
       "Score": 87
     },
     {
+      "Statcode": "GM1581",
       "Gemeente": "Utrechtse Heuvelrug",
       "Provincie": "Utrecht",
+      "ProvincieStatcode": "PV26",
       "Score": 65
     },
     {
+      "Statcode": "GM0981",
       "Gemeente": "Vaals",
       "Provincie": "Limburg",
+      "ProvincieStatcode": "PV31",
       "Score": 58
     },
     {
+      "Statcode": "GM0994",
       "Gemeente": "Valkenburg aan de Geul",
       "Provincie": "Limburg",
+      "ProvincieStatcode": "PV31",
       "Score": 44
     },
     {
+      "Statcode": "GM0858",
       "Gemeente": "Valkenswaard",
       "Provincie": "Noord-Brabant",
+      "ProvincieStatcode": "PV30",
       "Score": 54
     },
     {
+      "Statcode": "GM0047",
       "Gemeente": "Veendam",
       "Provincie": "Groningen",
+      "ProvincieStatcode": "PV20",
       "Score": 88
     },
     {
+      "Statcode": "GM0345",
       "Gemeente": "Veenendaal",
       "Provincie": "Utrecht",
+      "ProvincieStatcode": "PV26",
       "Score": 80
     },
     {
+      "Statcode": "GM0717",
       "Gemeente": "Veere",
       "Provincie": "Zeeland",
+      "ProvincieStatcode": "PV29",
       "Score": 66
     },
     {
+      "Statcode": "GM0861",
       "Gemeente": "Veldhoven",
       "Provincie": "Noord-Brabant",
+      "ProvincieStatcode": "PV30",
       "Score": 65
     },
     {
+      "Statcode": "GM0453",
       "Gemeente": "Velsen",
       "Provincie": "Noord-Holland",
+      "ProvincieStatcode": "PV27",
       "Score": 100
     },
     {
+      "Statcode": "GM0983",
       "Gemeente": "Venlo",
       "Provincie": "Limburg",
+      "ProvincieStatcode": "PV31",
       "Score": 85
     },
     {
+      "Statcode": "GM0984",
       "Gemeente": "Venray",
       "Provincie": "Limburg",
+      "ProvincieStatcode": "PV31",
       "Score": 87
     },
     {
+      "Statcode": "GM1961",
       "Gemeente": "Vijfheerenlanden",
       "Provincie": "Utrecht",
+      "ProvincieStatcode": "PV26",
       "Score": 93
     },
     {
+      "Statcode": "GM0622",
       "Gemeente": "Vlaardingen",
       "Provincie": "Zuid-Holland",
+      "ProvincieStatcode": "PV28",
       "Score": 73
     },
     {
+      "Statcode": "GM0096",
       "Gemeente": "Vlieland",
       "Provincie": "Fryslân",
+      "ProvincieStatcode": "PV21",
       "Score": 106
     },
     {
+      "Statcode": "GM0718",
       "Gemeente": "Vlissingen",
       "Provincie": "Zeeland",
+      "ProvincieStatcode": "PV29",
       "Score": 75
     },
     {
+      "Statcode": "GM0986",
       "Gemeente": "Voerendaal",
       "Provincie": "Limburg",
+      "ProvincieStatcode": "PV31",
       "Score": 59
     },
     {
+      "Statcode": "GM1992",
       "Gemeente": "Voorne aan Zee",
       "Provincie": "Zuid-Holland",
+      "ProvincieStatcode": "PV28",
       "Score": 80
     },
     {
+      "Statcode": "GM0626",
       "Gemeente": "Voorschoten",
       "Provincie": "Zuid-Holland",
+      "ProvincieStatcode": "PV28",
       "Score": 76
     },
     {
+      "Statcode": "GM0285",
       "Gemeente": "Voorst",
       "Provincie": "Gelderland",
+      "ProvincieStatcode": "PV25",
       "Score": 92
     },
     {
+      "Statcode": "GM0865",
       "Gemeente": "Vught",
       "Provincie": "Noord-Brabant",
+      "ProvincieStatcode": "PV30",
       "Score": 66
     },
     {
+      "Statcode": "GM1949",
       "Gemeente": "Waadhoeke",
       "Provincie": "Fryslân",
+      "ProvincieStatcode": "PV21",
       "Score": 113
     },
     {
+      "Statcode": "GM0866",
       "Gemeente": "Waalre",
       "Provincie": "Noord-Brabant",
+      "ProvincieStatcode": "PV30",
       "Score": 64
     },
     {
+      "Statcode": "GM0867",
       "Gemeente": "Waalwijk",
       "Provincie": "Noord-Brabant",
+      "ProvincieStatcode": "PV30",
       "Score": 59
     },
     {
+      "Statcode": "GM0627",
       "Gemeente": "Waddinxveen",
       "Provincie": "Zuid-Holland",
+      "ProvincieStatcode": "PV28",
       "Score": 92
     },
     {
+      "Statcode": "GM0289",
       "Gemeente": "Wageningen",
       "Provincie": "Gelderland",
+      "ProvincieStatcode": "PV25",
       "Score": 89
     },
     {
+      "Statcode": "GM0629",
       "Gemeente": "Wassenaar",
       "Provincie": "Zuid-Holland",
+      "ProvincieStatcode": "PV28",
       "Score": 83
     },
     {
+      "Statcode": "GM0852",
       "Gemeente": "Waterland",
       "Provincie": "Noord-Holland",
+      "ProvincieStatcode": "PV27",
       "Score": 85
     },
     {
+      "Statcode": "GM0988",
       "Gemeente": "Weert",
       "Provincie": "Limburg",
+      "ProvincieStatcode": "PV31",
       "Score": 64
     },
     {
+      "Statcode": "GM1960",
       "Gemeente": "West Betuwe",
       "Provincie": "Gelderland",
+      "ProvincieStatcode": "PV25",
       "Score": 87
     },
     {
+      "Statcode": "GM0668",
       "Gemeente": "West Maas en Waal",
       "Provincie": "Gelderland",
+      "ProvincieStatcode": "PV25",
       "Score": 93
     },
     {
+      "Statcode": "GM1969",
       "Gemeente": "Westerkwartier",
       "Provincie": "Groningen",
+      "ProvincieStatcode": "PV20",
       "Score": 108
     },
     {
+      "Statcode": "GM1701",
       "Gemeente": "Westerveld",
       "Provincie": "Drenthe",
+      "ProvincieStatcode": "PV22",
       "Score": 85
     },
     {
+      "Statcode": "GM0293",
       "Gemeente": "Westervoort",
       "Provincie": "Gelderland",
+      "ProvincieStatcode": "PV25",
       "Score": 92
     },
     {
+      "Statcode": "GM1950",
       "Gemeente": "Westerwolde",
       "Provincie": "Groningen",
+      "ProvincieStatcode": "PV20",
       "Score": 83
     },
     {
+      "Statcode": "GM1783",
       "Gemeente": "Westland",
       "Provincie": "Zuid-Holland",
+      "ProvincieStatcode": "PV28",
       "Score": 81
     },
     {
+      "Statcode": "GM0098",
       "Gemeente": "Weststellingwerf",
       "Provincie": "Fryslân",
+      "ProvincieStatcode": "PV21",
       "Score": 91
     },
     {
+      "Statcode": "GM0189",
       "Gemeente": "Wierden",
       "Provincie": "Overijssel",
+      "ProvincieStatcode": "PV23",
       "Score": 89
     },
     {
+      "Statcode": "GM0296",
       "Gemeente": "Wijchen",
       "Provincie": "Gelderland",
+      "ProvincieStatcode": "PV25",
       "Score": 80
     },
     {
+      "Statcode": "GM1696",
       "Gemeente": "Wijdemeren",
       "Provincie": "Noord-Holland",
+      "ProvincieStatcode": "PV27",
       "Score": 88
     },
     {
+      "Statcode": "GM0352",
       "Gemeente": "Wijk bij Duurstede",
       "Provincie": "Utrecht",
+      "ProvincieStatcode": "PV26",
       "Score": 92
     },
     {
+      "Statcode": "GM0294",
       "Gemeente": "Winterswijk",
       "Provincie": "Gelderland",
+      "ProvincieStatcode": "PV25",
       "Score": 96
     },
     {
+      "Statcode": "GM0873",
       "Gemeente": "Woensdrecht",
       "Provincie": "Noord-Brabant",
+      "ProvincieStatcode": "PV30",
       "Score": 68
     },
     {
+      "Statcode": "GM0632",
       "Gemeente": "Woerden",
       "Provincie": "Utrecht",
+      "ProvincieStatcode": "PV26",
       "Score": 76
     },
     {
+      "Statcode": "GM0880",
       "Gemeente": "Wormerland",
       "Provincie": "Noord-Holland",
+      "ProvincieStatcode": "PV27",
       "Score": 100
     },
     {
+      "Statcode": "GM0351",
       "Gemeente": "Woudenberg",
       "Provincie": "Utrecht",
+      "ProvincieStatcode": "PV26",
       "Score": 77
     },
     {
+      "Statcode": "GM0479",
       "Gemeente": "Zaanstad",
       "Provincie": "Noord-Holland",
+      "ProvincieStatcode": "PV27",
       "Score": 81
     },
     {
+      "Statcode": "GM0297",
       "Gemeente": "Zaltbommel",
       "Provincie": "Gelderland",
+      "ProvincieStatcode": "PV25",
       "Score": 85
     },
     {
+      "Statcode": "GM0473",
       "Gemeente": "Zandvoort",
       "Provincie": "Noord-Holland",
+      "ProvincieStatcode": "PV27",
       "Score": 69
     },
     {
+      "Statcode": "GM0050",
       "Gemeente": "Zeewolde",
       "Provincie": "Flevoland",
+      "ProvincieStatcode": "PV24",
       "Score": 80
     },
     {
+      "Statcode": "GM0355",
       "Gemeente": "Zeist",
       "Provincie": "Utrecht",
+      "ProvincieStatcode": "PV26",
       "Score": 72
     },
     {
+      "Statcode": "GM0299",
       "Gemeente": "Zevenaar",
       "Provincie": "Gelderland",
+      "ProvincieStatcode": "PV25",
       "Score": 81
     },
     {
+      "Statcode": "GM0637",
       "Gemeente": "Zoetermeer",
       "Provincie": "Zuid-Holland",
+      "ProvincieStatcode": "PV28",
       "Score": 69
     },
     {
+      "Statcode": "GM0638",
       "Gemeente": "Zoeterwoude",
       "Provincie": "Zuid-Holland",
+      "ProvincieStatcode": "PV28",
       "Score": 90
     },
     {
+      "Statcode": "GM1892",
       "Gemeente": "Zuidplas",
       "Provincie": "Zuid-Holland",
+      "ProvincieStatcode": "PV28",
       "Score": 68
     },
     {
+      "Statcode": "GM0879",
       "Gemeente": "Zundert",
       "Provincie": "Noord-Brabant",
+      "ProvincieStatcode": "PV30",
       "Score": 73
     },
     {
+      "Statcode": "GM0301",
       "Gemeente": "Zutphen",
       "Provincie": "Gelderland",
+      "ProvincieStatcode": "PV25",
       "Score": 75
     },
     {
+      "Statcode": "GM1896",
       "Gemeente": "Zwartewaterland",
       "Provincie": "Overijssel",
+      "ProvincieStatcode": "PV23",
       "Score": 101
     },
     {
+      "Statcode": "GM0642",
       "Gemeente": "Zwijndrecht",
       "Provincie": "Zuid-Holland",
+      "ProvincieStatcode": "PV28",
       "Score": 76
     },
     {
+      "Statcode": "GM0193",
       "Gemeente": "Zwolle",
       "Provincie": "Overijssel",
+      "ProvincieStatcode": "PV23",
       "Score": 92
     }
   ],
   "provincies": [
     {
+      "Statcode": "PV20",
       "Provincie": "Groningen",
       "Score": 97,
       "Gemeenten": 10
     },
     {
+      "Statcode": "PV21",
       "Provincie": "Fryslân",
       "Score": 98,
       "Gemeenten": 18
     },
     {
+      "Statcode": "PV22",
       "Provincie": "Drenthe",
       "Score": 93,
       "Gemeenten": 12
     },
     {
+      "Statcode": "PV23",
       "Provincie": "Overijssel",
       "Score": 85,
       "Gemeenten": 25
     },
     {
+      "Statcode": "PV24",
       "Provincie": "Flevoland",
       "Score": 88,
       "Gemeenten": 6
     },
     {
+      "Statcode": "PV25",
       "Provincie": "Gelderland",
       "Score": 83,
       "Gemeenten": 51
     },
     {
+      "Statcode": "PV26",
       "Provincie": "Utrecht",
       "Score": 84,
       "Gemeenten": 26
     },
     {
+      "Statcode": "PV27",
       "Provincie": "Noord-Holland",
       "Score": 88,
       "Gemeenten": 44
     },
     {
+      "Statcode": "PV28",
       "Provincie": "Zuid-Holland",
       "Score": 78,
       "Gemeenten": 50
     },
     {
+      "Statcode": "PV29",
       "Provincie": "Zeeland",
       "Score": 75,
       "Gemeenten": 13
     },
     {
+      "Statcode": "PV30",
       "Provincie": "Noord-Brabant",
       "Score": 69,
       "Gemeenten": 56
     },
     {
+      "Statcode": "PV31",
       "Provincie": "Limburg",
       "Score": 67,
       "Gemeenten": 31

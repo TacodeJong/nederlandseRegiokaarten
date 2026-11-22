@@ -23,11 +23,11 @@
                       "Entity": "Provincies"
                     }
                   },
-                  "Property": "Provincie"
+                  "Property": "Statcode"
                 }
               },
-              "queryRef": "Provincies.Provincie",
-              "nativeQueryRef": "Provincie",
+              "queryRef": "Provincies.Statcode",
+              "nativeQueryRef": "Statcode",
               "active": true
             }
           ]

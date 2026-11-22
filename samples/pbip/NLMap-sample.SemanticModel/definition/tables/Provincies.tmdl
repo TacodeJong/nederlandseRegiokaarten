@@ -5,6 +5,14 @@ table Provincies
 		formatString: #,0
 		lineageTag: 6a368d06-1f5e-7176-d316-3614b57ade02
 
+	column Statcode
+		dataType: string
+		lineageTag: 6152f122-f0ff-4f66-43db-d5cdfb52e9aa
+		summarizeBy: none
+		sourceColumn: Statcode
+
+		annotation SummarizationSetBy = Automatic
+
 	column Provincie
 		dataType: string
 		lineageTag: e11f0223-dfbf-cbb4-f317-9cad07dd530e
@@ -34,22 +42,11 @@ table Provincies
 		mode: import
 		source = ```
 				let
-				    Source = #table(type table [Provincie = text, Score = Int64.Type, Gemeenten = Int64.Type], {
-					{"Groningen", 97, 10},
-					{"Fryslân", 98, 18},
-					{"Drenthe", 93, 12},
-					{"Overijssel", 85, 25},
-					{"Flevoland", 88, 6},
-					{"Gelderland", 83, 51},
-					{"Utrecht", 84, 26},
-					{"Noord-Holland", 88, 44},
-					{"Zuid-Holland", 78, 50},
-					{"Zeeland", 75, 13},
-					{"Noord-Brabant", 69, 56},
-					{"Limburg", 67, 31}
-				})
+				    Source = Csv.Document(File.Contents("C:\\Users\\Taco\\Documents\\PowerBI Custom Visuals\\nederlandseRegiokaarten\\samples\\provincies-sample.csv"), [Delimiter=";", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers", {{"Statcode", type text}, {"Provincie", type text}, {"Score", Int64.Type}, {"Gemeenten", Int64.Type}})
 				in
-				    Source
+				    #"Changed Type"
 				```
 
 	annotation PBI_ResultType = Table

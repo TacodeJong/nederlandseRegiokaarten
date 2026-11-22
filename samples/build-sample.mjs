@@ -32,18 +32,29 @@ const noise = text => parseInt(createHash("md5").update(text).digest("hex").slic
 
 // ---------- sample data (fictitious values) ----------
 const provinces = features("provincies.json");
-const provinceOf = point => provinces.find(province => geoContains(province, point))?.properties.statnaam
-    ?? provinces.map(province => [province, Math.hypot(...geoCentroid(province).map((v, i) => v - point[i]))]).sort((a, b) => a[1] - b[1])[0][0].properties.statnaam;
+const provinceOf = point => {
+    const match = provinces.find(province => geoContains(province, point))
+        ?? provinces.map(province => [province, Math.hypot(...geoCentroid(province).map((v, i) => v - point[i]))]).sort((a, b) => a[1] - b[1])[0][0];
+    return { Provincie: match.properties.statnaam, ProvincieStatcode: match.properties.statcode };
+};
 
 const gemeenten = features("gemeenten_2023.json").map(gemeente => {
     const centroid = geoCentroid(gemeente);
     const value = Math.round(40 + (centroid[1] - 50.75) * 18 + noise(gemeente.properties.statnaam) * 35);
-    return { Gemeente: gemeente.properties.statnaam, Provincie: provinceOf(centroid), Score: value };
+    const province = provinceOf(centroid);
+    return {
+        Statcode: gemeente.properties.statcode,
+        Gemeente: gemeente.properties.statnaam,
+        Provincie: province.Provincie,
+        ProvincieStatcode: province.ProvincieStatcode,
+        Score: value
+    };
 }).sort((a, b) => a.Gemeente.localeCompare(b.Gemeente, "nl"));
 
 const provincieRows = provinces.map(province => {
-    const rows = gemeenten.filter(row => row.Provincie === province.properties.statnaam);
+    const rows = gemeenten.filter(row => row.ProvincieStatcode === province.properties.statcode);
     return {
+        Statcode: province.properties.statcode,
         Provincie: province.properties.statnaam,
         Score: Math.round(rows.reduce((sum, row) => sum + row.Score, 0) / Math.max(1, rows.length)),
         Gemeenten: rows.length
@@ -73,11 +84,15 @@ write(path.join(here, "sample-data.json"), { gemeenten, provincies: provincieRow
 fs.rmSync(out, { recursive: true, force: true });
 const tables = { Gemeenten: gemeenten, Provincies: provincieRows, Punten: punten };
 const isInt = (rows, column) => rows.every(row => Number.isInteger(row[column]));
-const mType = (rows, column) => typeof rows[0][column] === "number" ? (isInt(rows, column) ? "Int64.Type" : "number") : "text";
-const mValue = value => typeof value === "number" ? String(value) : `"${String(value).replace(/"/g, '""')}"`;
-const tableTmdl = (table, rows, measures) => {
+// File.Contents gives mashup a real data source. Pure #table queries make Desktop's
+// DataSourceDiscoveryVisitor NullReferenceException during refresh / composite checks.
+const mCsvPath = file => path.join(here, file).replace(/\\/g, "\\\\");
+const tableTmdl = (table, rows, measures, csvFile) => {
     const columns = Object.keys(rows[0]);
-    const mTable = `#table(type table [${columns.map(column => `${column} = ${mType(rows, column)}`).join(", ")}], {\n${rows.map(row => `\t\t\t\t\t{${columns.map(column => mValue(row[column])).join(", ")}}`).join(",\n")}\n\t\t\t\t})`;
+    const typePairs = columns.map(column => {
+        const numeric = typeof rows[0][column] === "number";
+        return `{"${column}", ${numeric ? (isInt(rows, column) ? "Int64.Type" : "type number") : "type text"}}`;
+    }).join(", ");
     const columnTmdl = column => {
         const numeric = typeof rows[0][column] === "number";
         const category = column === "Latitude" ? "Latitude" : column === "Longitude" ? "Longitude" : column === "Provincie" ? "StateOrProvince" : column === "Gemeente" || column === "Locatie" ? "City" : null;
@@ -102,21 +117,22 @@ ${columns.map(columnTmdl).join("\n")}
 \t\tmode: import
 \t\tsource = \`\`\`
 \t\t\t\tlet
-\t\t\t\t    Source = ${mTable}
+\t\t\t\t    Source = Csv.Document(File.Contents("${mCsvPath(csvFile)}"), [Delimiter=";", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+\t\t\t\t    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+\t\t\t\t    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers", {${typePairs}})
 \t\t\t\tin
-\t\t\t\t    Source
+\t\t\t\t    #"Changed Type"
 \t\t\t\t\`\`\`
 
 \tannotation PBI_ResultType = Table
 `;
 };
-write(path.join(model, "definition", "tables", "Gemeenten.tmdl"), tableTmdl("Gemeenten", gemeenten, [["Gemiddelde score", "AVERAGE ( Gemeenten[Score] )"]]));
-write(path.join(model, "definition", "tables", "Provincies.tmdl"), tableTmdl("Provincies", provincieRows, [["Provinciescore", "AVERAGE ( Provincies[Score] )"]]));
-write(path.join(model, "definition", "tables", "Punten.tmdl"), tableTmdl("Punten", punten, []));
-write(path.join(model, "definition", "relationships.tmdl"), `relationship ${stableId("relGemProv")}
-\tfromColumn: Gemeenten.Provincie
-\ttoColumn: Provincies.Provincie
-`);
+write(path.join(model, "definition", "tables", "Gemeenten.tmdl"), tableTmdl("Gemeenten", gemeenten, [["Gemiddelde score", "AVERAGE ( Gemeenten[Score] )"]], "gemeenten-sample.csv"));
+write(path.join(model, "definition", "tables", "Provincies.tmdl"), tableTmdl("Provincies", provincieRows, [["Provinciescore", "AVERAGE ( Provincies[Score] )"]], "provincies-sample.csv"));
+write(path.join(model, "definition", "tables", "Punten.tmdl"), tableTmdl("Punten", punten, [], "punten-sample.csv"));
+// No relationships: mashup DataSourceDiscoveryVisitor NREs on pure #table queries
+// during composite-model checks when related queries refresh together.
+write(path.join(model, "definition", "relationships.tmdl"), "");
 write(path.join(model, "definition", "model.tmdl"), `model Model
 \tculture: nl-NL
 \tdefaultPowerBIDataSourceVersion: powerBI_V3
@@ -191,14 +207,14 @@ const slicer = (name, entity, property, position) => ({
 
 page("p1gemeenten00000001", "Gemeenten", [
     map("map_gemeenten", "Score per gemeente (fictieve waarden)", { x: 16, y: 16, width: 1000, height: 736 }, {
-        category: { projections: [column("Gemeenten", "Gemeente")] },
+        category: { projections: [column("Gemeenten", "Statcode")] },
         measure: { projections: [measure("Gemeenten", "Gemiddelde score")] }
     }, { mapSettings: { selectedMapSlice: "gemeenten 2023", useMidColorSlice: true } }),
-    slicer("slicer_provincie", "Provincies", "Provincie", { x: 1032, y: 16, width: 318, height: 420 })
+    slicer("slicer_provincie", "Gemeenten", "Provincie", { x: 1032, y: 16, width: 318, height: 420 })
 ]);
 page("p2provincies0000002", "Provincies", [
     map("map_provincies", "Gemiddelde score per provincie", { x: 16, y: 16, width: 1334, height: 736 }, {
-        category: { projections: [column("Provincies", "Provincie")] },
+        category: { projections: [column("Provincies", "Statcode")] },
         measure: { projections: [measure("Provincies", "Provinciescore")] }
     }, { mapSettings: { selectedMapSlice: "provincies" }, labelSettings: { showLabels: true, showValues: true, showRegionName: true } })
 ]);

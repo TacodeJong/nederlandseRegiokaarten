@@ -1,3 +1,0 @@
-relationship dd4ed289-d1ed-db3b-3fb6-075fba30bd67
-	fromColumn: Gemeenten.Provincie
-	toColumn: Provincies.Provincie
