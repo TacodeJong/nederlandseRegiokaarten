@@ -22,10 +22,13 @@ Power BI custom visual with **Dutch regional maps**: municipalities (gemeenten),
 
 | File | Description |
 |------|-------------|
-| [`samples/gemeenten-sample.csv`](samples/gemeenten-sample.csv) | Scores per gemeente |
-| [`samples/provincies-sample.csv`](samples/provincies-sample.csv) | Scores per provincie |
+| [`samples/kaarten-sample.csv`](samples/kaarten-sample.csv) | Catalog of available map layers |
+| [`samples/gemeenten-sample.csv`](samples/gemeenten-sample.csv) | Scores per gemeente (statcode) |
+| [`samples/provincies-sample.csv`](samples/provincies-sample.csv) | Scores per provincie (statcode) |
 | [`samples/punten-sample.csv`](samples/punten-sample.csv) | Point locations |
 | [`samples/pbip/NLMap-sample.pbip`](samples/pbip/NLMap-sample.pbip) | Power BI Project with the visual embedded |
+
+The sample report opens on the **Kaarten** page with the full list of map layers (name, format setting, statcode prefix, region count).
 
 ## Screenshots
 

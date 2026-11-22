@@ -41,7 +41,7 @@ import { valueFormatter } from "powerbi-visuals-utils-formattingutils";
 import { VisualSettings } from "./settings";
 import { select as d3Select } from "d3-selection";
 import { ITooltipServiceWrapper, TooltipEventArgs, createTooltipServiceWrapper } from "powerbi-visuals-utils-tooltiputils";
-import { geoPath, geoMercator, GeoPermissibleObjects, geoContains } from "d3-geo";
+import { geoPath, geoMercator, GeoPermissibleObjects, geoContains, geoCentroid } from "d3-geo";
 import { feature } from "topojson-client";
 import * as topojson from 'topojson-client';
 
@@ -66,7 +66,26 @@ interface GeoJsonFeatureProperties {
     naam: string;
     rubriek: string;
     code: string;
+    /** Parent province CBS code (PV##), set on gemeente/wijk features so Filter can use PV statcodes. */
+    parentCode?: string;
+    parentNaam?: string;
 }
+
+const provinceFeatures = feature(provinciesTopojson as any, (provinciesTopojson as any).objects.gj).features;
+const resolveProvince = (geometry: any): { code: string; naam: string } | null => {
+    const centroid = geoCentroid(geometry);
+    const hit = provinceFeatures.find((province: any) => geoContains(province, centroid))
+        ?? provinceFeatures
+            .map((province: any) => [province, Math.hypot(...geoCentroid(province).map((v: number, i: number) => v - centroid[i]))] as const)
+            .sort((a, b) => a[1] - b[1])[0]?.[0];
+    if (!hit?.properties) {
+        return null;
+    }
+    return {
+        code: hit.properties.statcode || hit.properties.code || "",
+        naam: hit.properties.statnaam || hit.properties.naam || ""
+    };
+};
 
 // Define the interface for the GeoJSON feature
 interface GeoJsonFeature {
@@ -1730,7 +1749,7 @@ export class Visual implements IVisual {
         return normalized;
     }
 
-    private regionMatchesFilterValue(naam: any, code: any, filterValue: string): boolean {
+    private regionMatchesFilterValue(naam: any, code: any, filterValue: string, parentCode?: any, parentNaam?: any): boolean {
         const filter = this.normalizeRegionKey(filterValue);
         if (!filter) {
             return false;
@@ -1738,12 +1757,51 @@ export class Visual implements IVisual {
 
         const name = this.normalizeRegionKey(naam);
         const regionCode = this.normalizeRegionKey(code);
+        const parent = this.normalizeRegionKey(parentCode);
+        const parentName = this.normalizeRegionKey(parentNaam);
 
         return (
             name === filter ||
             this.regionCodesMatch(regionCode, filter) ||
+            this.regionCodesMatch(parent, filter) ||
+            parentName === filter ||
             (name.length > 0 && (name.includes(filter) || filter.includes(name)))
         );
+    }
+
+    /** ItemDropdown may surface either an IEnumMember or a raw string depending on how settings were persisted. */
+    private getSelectedMapValue(): string {
+        const slice = this.settings?.mapSettings?.mapSelectSettingsGroup?.selectedMapSlice?.value as any;
+        if (slice == null) {
+            return "provincies";
+        }
+        if (typeof slice === "string") {
+            return slice;
+        }
+        if (typeof slice.value === "string") {
+            return slice.value;
+        }
+        return "provincies";
+    }
+
+    private mapRegionProperties(originalProps: any, geometry?: any, withParentProvince = false): GeoJsonFeatureProperties {
+        const props: GeoJsonFeatureProperties = {
+            naam: originalProps?.statnaam || originalProps?.wijknaam || originalProps?.naam || "Unknown",
+            code: originalProps?.statcode || originalProps?.wijkcode || originalProps?.code || "N/A",
+            rubriek: originalProps?.rubriek || ""
+        };
+        if (withParentProvince && geometry) {
+            const province = resolveProvince(geometry);
+            if (province) {
+                props.parentCode = province.code;
+                props.parentNaam = province.naam;
+            }
+        } else if (originalProps?.gemeentecode) {
+            // Wijken topojson already carries the parent gemeente code.
+            props.parentCode = originalProps.gemeentecode;
+            props.parentNaam = originalProps.gemeentenaam || "";
+        }
+        return props;
     }
 
     /**
@@ -1804,7 +1862,7 @@ export class Visual implements IVisual {
      * are preferred over the fuzzy substring fallback, which is only scanned when
      * both lookups miss.
      */
-    private findRegionIndex(lookup: RegionLookup, naam: any, code: any): number {
+    private findRegionIndex(lookup: RegionLookup, naam: any, code: any, parentCode?: any, parentNaam?: any): number {
         const name = this.normalizeRegionKey(naam);
         if (name) {
             const byName = lookup.byName.get(name);
@@ -1818,6 +1876,22 @@ export class Visual implements IVisual {
             const byCode = lookup.byCode.get(this.canonicalRegionCode(regionCode));
             if (byCode !== undefined) {
                 return byCode;
+            }
+        }
+
+        // Allow PV## (or province name) to match gemeenten/wijken via parent province.
+        const parent = this.normalizeRegionKey(parentCode);
+        if (parent) {
+            const byParent = lookup.byCode.get(this.canonicalRegionCode(parent));
+            if (byParent !== undefined) {
+                return byParent;
+            }
+        }
+        const parentName = this.normalizeRegionKey(parentNaam);
+        if (parentName) {
+            const byParentName = lookup.byName.get(parentName);
+            if (byParentName !== undefined) {
+                return byParentName;
             }
         }
 
@@ -1864,7 +1938,7 @@ export class Visual implements IVisual {
             if (active.size > 0) {
                 const activeLookup = this.buildRegionLookup(Array.from(active));
                 const features = allFeatures.filter((feature: any) =>
-                    this.findRegionIndex(activeLookup, feature.properties?.naam, feature.properties?.code) !== -1
+                    this.findRegionIndex(activeLookup, feature.properties?.naam, feature.properties?.code, feature.properties?.parentCode, feature.properties?.parentNaam) !== -1
                 );
                 if (features.length > 0) {
                     return { geojson: { type: geojson.type, features }, restrict: true };
@@ -1876,7 +1950,7 @@ export class Visual implements IVisual {
         if (categoryValues.length > 0 && categoryValues.length < allFeatures.length) {
             const categoryLookup = this.buildRegionLookup(categoryValues);
             const features = allFeatures.filter((feature: any) =>
-                this.findRegionIndex(categoryLookup, feature.properties?.naam, feature.properties?.code) !== -1
+                this.findRegionIndex(categoryLookup, feature.properties?.naam, feature.properties?.code, feature.properties?.parentCode, feature.properties?.parentNaam) !== -1
             );
             if (features.length > 0 && features.length < allFeatures.length) {
                 return { geojson: { type: geojson.type, features }, restrict: true };
@@ -2233,7 +2307,7 @@ export class Visual implements IVisual {
         if (categoryValues && categoryValues.length > 0) {
             const detectedMapType = this.detectMapTypeFromStatcode(categoryValues);
             if (detectedMapType) {
-                const currentMapValue = this.settings.mapSettings.mapSelectSettingsGroup.selectedMapSlice.value.value;
+                const currentMapValue = this.getSelectedMapValue();
                 if (currentMapValue !== detectedMapType) {
                     // Find the matching map option
                     const mapOptions = [
@@ -2251,7 +2325,7 @@ export class Visual implements IVisual {
                     ];
                     const matchingOption = mapOptions.find(opt => opt.value === detectedMapType);
                     if (matchingOption) {
-                        this.settings.mapSettings.mapSelectSettingsGroup.selectedMapSlice.value = matchingOption;
+                        this.settings.mapSettings.mapSelectSettingsGroup.selectedMapSlice.value = matchingOption as any;
                         this.logDebugMessage(`Auto-detected map type: ${detectedMapType} from statcode`);
                     }
                 }
@@ -2259,7 +2333,7 @@ export class Visual implements IVisual {
         }
 
         let geojson;
-        const mapKey = this.settings.mapSettings.mapSelectSettingsGroup.selectedMapSlice.value.value as string;
+        const mapKey = this.getSelectedMapValue();
         // Converting TopoJSON to GeoJSON decodes every arc (up to 3 MB for gemeenten), so do it
         // once per map and hand out shallow per-update copies: update() mutates value /
         // tooltipData / selectionId on each feature, but never geometry or properties.
@@ -2292,137 +2366,71 @@ export class Visual implements IVisual {
         //     //     console.error("Error parsing custom TopoJSON:", error);
         //     // }
         // } else {
-            switch (this.settings.mapSettings.mapSelectSettingsGroup.selectedMapSlice.value.value) {
+            switch (mapKey) {
                 case "provincies":
                     geojson = feature(provinciesTopojson, provinciesTopojson.objects.gj);
                 geojson.features.forEach((feature) => {
-                    const originalProps = feature.properties;
-                    feature.properties = {
-                        naam: originalProps?.statnaam || "Unknown",
-                        code: originalProps?.statcode || "N/A",
-                        rubriek: originalProps?.rubriek || ""
-                    };
+                    feature.properties = this.mapRegionProperties(feature.properties, feature);
                 });
                 break;
             case "gemeenten 2023":
                 geojson = feature(gemeentenTopojson_2023, gemeentenTopojson_2023.objects.gj);
                 geojson.features.forEach((feature) => {
-                    const originalProps = feature.properties;
-                    feature.properties = {
-                        naam: originalProps?.statnaam || "Unknown",
-                        code: originalProps?.statcode || "N/A",
-                        rubriek: originalProps?.rubriek || ""
-                    };
+                    feature.properties = this.mapRegionProperties(feature.properties, feature, true);
                 });
                 break;
             case "gemeenten 2021":
                 geojson = feature(gemeentenTopojson_2021, gemeentenTopojson_2021.objects.gj);
                 geojson.features.forEach((feature) => {
-                    const originalProps = feature.properties;
-                    feature.properties = {
-                        naam: originalProps?.statnaam || "Unknown",
-                        code: originalProps?.statcode || "N/A",
-                        rubriek: originalProps?.rubriek || ""
-                    };
+                    feature.properties = this.mapRegionProperties(feature.properties, feature, true);
                 });
                 break;
             case "gemeenten 2020":
                 geojson = feature(gemeentenTopojson_2020, gemeentenTopojson_2020.objects.gj);
                 geojson.features.forEach((feature) => {
-                    const originalProps = feature.properties;
-                    feature.properties = {
-                        naam: originalProps?.statnaam || "Unknown",
-                        code: originalProps?.statcode || "N/A",
-                        rubriek: originalProps?.rubriek || ""
-                    };
+                    feature.properties = this.mapRegionProperties(feature.properties, feature, true);
                 });
                 break;
             case "gemeenten 2019":
                 geojson = feature(gemeentenTopojson_2019, gemeentenTopojson_2019.objects.gj);
                 geojson.features.forEach((feature) => {
-                    const originalProps = feature.properties;
-                    feature.properties = {
-                        naam: originalProps?.statnaam || "Unknown",
-                        code: originalProps?.statcode || "N/A",
-                        rubriek: originalProps?.rubriek || ""
-                    };
+                    feature.properties = this.mapRegionProperties(feature.properties, feature, true);
                 });
                 break;
             case "gemeenten 2016":
                 geojson = feature(gemeentenTopojson_2016, gemeentenTopojson_2016.objects.gj);
                 geojson.features.forEach((feature) => {
-                    const originalProps = feature.properties;
-                    feature.properties = {
-                        naam: originalProps?.statnaam || "Unknown",
-                        code: originalProps?.statcode || "N/A",
-                        rubriek: originalProps?.rubriek || ""
-                    };
+                    feature.properties = this.mapRegionProperties(feature.properties, feature, true);
                 });
                 break;
             case "gemeenten 2012":
                 geojson = feature(gemeentenTopojson_2012, gemeentenTopojson_2012.objects.gj);
                 geojson.features.forEach((feature) => {
-                    const originalProps = feature.properties;
-                    feature.properties = {
-                        naam: originalProps?.statnaam || "Unknown",
-                        code: originalProps?.statcode || "N/A",
-                        rubriek: originalProps?.rubriek || ""
-                    };
+                    feature.properties = this.mapRegionProperties(feature.properties, feature, true);
                 });
                 break;
             case "wijken":
                 geojson = feature(wijkenTopojson, wijkenTopojson.objects.gj);
                 geojson.features.forEach((feature) => {
-                    const originalProps = feature.properties;
-                    feature.properties = {
-                        naam: originalProps?.wijknaam || "Unknown",
-                        code: originalProps?.wijkcode || "N/A",
-                        rubriek: originalProps?.rubriek || ""
-                    };
+                    feature.properties = this.mapRegionProperties(feature.properties, feature);
                 });
                 break;
             case "ggdregios":
                 geojson = feature(ggdregiosTopojson, ggdregiosTopojson.objects.gj);
                 geojson.features.forEach((feature) => {
-                    const originalProps = feature.properties;
-                    feature.properties = {
-                        naam: originalProps?.statnaam || "Unknown",
-                        code: originalProps?.statcode || "N/A",
-                        rubriek: originalProps?.rubriek || ""
-                    };
+                    feature.properties = this.mapRegionProperties(feature.properties, feature);
                 });
                 break;
-            // case "werkgebieden":
-            //     geojson = feature(KONwerkGebiedenTopojson, KONwerkGebiedenTopojson.objects.gj);
-            //     geojson.features.forEach((feature) => {
-            //         const originalProps = feature.properties;
-            //         feature.properties = {
-            //             naam: originalProps?.naam || "Unknown",
-            //             code: originalProps?.code.toString() || "N/A",
-            //             rubriek: originalProps?.rubriek || ""
-            //         };
-            //     });
-            //     break;
             case "politieregios":
                 geojson = feature(politieregiosTopojson, politieregiosTopojson.objects.gj);
                 geojson.features.forEach((feature) => {
-                    const originalProps = feature.properties;
-                    feature.properties = {
-                        naam: originalProps?.statnaam || "Unknown",
-                        code: originalProps?.statcode || "N/A",
-                        rubriek: originalProps?.rubriek || ""
-                    };
+                    feature.properties = this.mapRegionProperties(feature.properties, feature);
                 });
                 break;
             case "veiligheidsregios":
                 geojson = feature(veiligheidsregiosTopojson, veiligheidsregiosTopojson.objects.gj);
                 geojson.features.forEach((feature) => {
-                    const originalProps = feature.properties;
-                    feature.properties = {
-                        naam: originalProps?.statnaam || "Unknown",
-                        code: originalProps?.statcode || "N/A",
-                        rubriek: originalProps?.rubriek || ""
-                    };
+                    feature.properties = this.mapRegionProperties(feature.properties, feature);
                 });
                 break;
             }
@@ -2439,7 +2447,7 @@ export class Visual implements IVisual {
             const originalCount = geojson.features.length;
             const filterLookup = this.buildRegionLookup(this.filterValues);
             geojson.features = geojson.features.filter(feature =>
-                this.findRegionIndex(filterLookup, feature.properties?.naam, feature.properties?.code) !== -1
+                this.findRegionIndex(filterLookup, feature.properties?.naam, feature.properties?.code, feature.properties?.parentCode, feature.properties?.parentNaam) !== -1
             );
             this.logDebugMessage(`Filtered from ${originalCount} to ${geojson.features.length} features`);
         }
@@ -2458,7 +2466,7 @@ export class Visual implements IVisual {
         const currentViewportSize = {width, height};
         this.lastViewportSize = currentViewportSize;
         const projectionKey = [
-            this.settings.mapSettings.mapSelectSettingsGroup.selectedMapSlice.value.value,
+            mapKey,
             currentFeatureCount,
             this.filterValues.join("|"),
             width,
@@ -2663,7 +2671,7 @@ export class Visual implements IVisual {
             const regionKey = d.properties.code || d.properties.naam;
             
             const matchedCategoryIndex = categoryLookup
-                ? this.findRegionIndex(categoryLookup, d.properties.naam, d.properties.code)
+                ? this.findRegionIndex(categoryLookup, d.properties.naam, d.properties.code, d.properties.parentCode, d.properties.parentNaam)
                 : -1;
             const categoryIndexForData = matchedCategoryIndex;
             
@@ -3088,7 +3096,7 @@ export class Visual implements IVisual {
                 return;
             }
             const categoryColumn = selectionCategoryColumn;
-            const categoryIndex = this.findRegionIndex(selectionLookup, feature.properties.naam, feature.properties.code);
+            const categoryIndex = this.findRegionIndex(selectionLookup, feature.properties.naam, feature.properties.code, feature.properties.parentCode, feature.properties.parentNaam);
             if (categoryIndex !== -1) {
                 const selectionId = this.host.createSelectionIdBuilder()
                     .withCategory(categoryColumn, categoryIndex)

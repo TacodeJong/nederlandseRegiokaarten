@@ -1,0 +1,143 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "table_kaarten",
+  "position": {
+    "x": 16,
+    "y": 16,
+    "width": 1334,
+    "height": 736,
+    "z": 0,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Kaarten"
+                    }
+                  },
+                  "Property": "Volgnummer"
+                }
+              },
+              "queryRef": "Kaarten.Volgnummer",
+              "nativeQueryRef": "Volgnummer",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Kaarten"
+                    }
+                  },
+                  "Property": "Kaart"
+                }
+              },
+              "queryRef": "Kaarten.Kaart",
+              "nativeQueryRef": "Kaart",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Kaarten"
+                    }
+                  },
+                  "Property": "Instelling"
+                }
+              },
+              "queryRef": "Kaarten.Instelling",
+              "nativeQueryRef": "Instelling",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Kaarten"
+                    }
+                  },
+                  "Property": "StatcodePrefix"
+                }
+              },
+              "queryRef": "Kaarten.StatcodePrefix",
+              "nativeQueryRef": "StatcodePrefix",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Kaarten"
+                    }
+                  },
+                  "Property": "Regios"
+                }
+              },
+              "queryRef": "Kaarten.Regios",
+              "nativeQueryRef": "Regios",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Kaarten"
+                    }
+                  },
+                  "Property": "VoorbeeldStatcode"
+                }
+              },
+              "queryRef": "Kaarten.VoorbeeldStatcode",
+              "nativeQueryRef": "VoorbeeldStatcode",
+              "active": true
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Beschikbare kaarten in Nederlandse Regiokaarten'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

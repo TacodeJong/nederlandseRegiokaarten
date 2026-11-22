@@ -71,6 +71,30 @@ const punten = [...capitals.map(city => [city, "Provinciehoofdstad"]), ...extraP
     return { Locatie: city, Type: type, Latitude: Number(lat.toFixed(5)), Longitude: Number(lon.toFixed(5)) };
 });
 
+const mapCatalog = [
+    ["Provincies", "provincies", "provincies.json", "PV"],
+    ["Wijken", "wijken", "wijken.json", "WK"],
+    ["Gemeenten 2023", "gemeenten 2023", "gemeenten_2023.json", "GM"],
+    ["Gemeenten 2021", "gemeenten 2021", "gemeenten_2021.json", "GM"],
+    ["Gemeenten 2020", "gemeenten 2020", "gemeenten_2020.json", "GM"],
+    ["Gemeenten 2019", "gemeenten 2019", "gemeenten_2019.json", "GM"],
+    ["Gemeenten 2016", "gemeenten 2016", "gemeenten_2016.json", "GM"],
+    ["Gemeenten 2012", "gemeenten 2012", "gemeenten_2012.json", "GM"],
+    ["GGD Regios", "ggdregios", "ggdregios.json", "GG"],
+    ["Veiligheidsregios", "veiligheidsregios", "veiligheidsregios.json", "VR"],
+    ["Politieregios", "politieregios", "politieregios.json", "PO"]
+].map(([kaart, instelling, file, prefix], index) => {
+    const regions = features(file);
+    return {
+        Volgnummer: index + 1,
+        Kaart: kaart,
+        Instelling: instelling,
+        StatcodePrefix: prefix,
+        Regios: regions.length,
+        VoorbeeldStatcode: regions[0]?.properties?.statcode || ""
+    };
+});
+
 const csv = rows => {
     const columns = Object.keys(rows[0]);
     return [columns.join(";"), ...rows.map(row => columns.map(column => row[column]).join(";"))].join("\n") + "\n";
@@ -78,11 +102,12 @@ const csv = rows => {
 write(path.join(here, "gemeenten-sample.csv"), csv(gemeenten));
 write(path.join(here, "provincies-sample.csv"), csv(provincieRows));
 write(path.join(here, "punten-sample.csv"), csv(punten));
-write(path.join(here, "sample-data.json"), { gemeenten, provincies: provincieRows, punten });
+write(path.join(here, "kaarten-sample.csv"), csv(mapCatalog));
+write(path.join(here, "sample-data.json"), { gemeenten, provincies: provincieRows, punten, kaarten: mapCatalog });
 
 // ---------- semantic model ----------
 fs.rmSync(out, { recursive: true, force: true });
-const tables = { Gemeenten: gemeenten, Provincies: provincieRows, Punten: punten };
+const tables = { Kaarten: mapCatalog, Gemeenten: gemeenten, Provincies: provincieRows, Punten: punten };
 const isInt = (rows, column) => rows.every(row => Number.isInteger(row[column]));
 // File.Contents gives mashup a real data source. Pure #table queries make Desktop's
 // DataSourceDiscoveryVisitor NullReferenceException during refresh / composite checks.
@@ -127,6 +152,7 @@ ${columns.map(columnTmdl).join("\n")}
 \tannotation PBI_ResultType = Table
 `;
 };
+write(path.join(model, "definition", "tables", "Kaarten.tmdl"), tableTmdl("Kaarten", mapCatalog, [], "kaarten-sample.csv"));
 write(path.join(model, "definition", "tables", "Gemeenten.tmdl"), tableTmdl("Gemeenten", gemeenten, [["Gemiddelde score", "AVERAGE ( Gemeenten[Score] )"]], "gemeenten-sample.csv"));
 write(path.join(model, "definition", "tables", "Provincies.tmdl"), tableTmdl("Provincies", provincieRows, [["Provinciescore", "AVERAGE ( Provincies[Score] )"]], "provincies-sample.csv"));
 write(path.join(model, "definition", "tables", "Punten.tmdl"), tableTmdl("Punten", punten, [], "punten-sample.csv"));
@@ -204,13 +230,27 @@ const slicer = (name, entity, property, position) => ({
     name, type: "slicer", title: property, position,
     query: { Values: { projections: [column(entity, property)] } }
 });
+const tableVisual = (name, titleText, position, entity, properties) => ({
+    name, type: "tableEx", title: titleText, position,
+    query: { Values: { projections: properties.map(property => column(entity, property)) } }
+});
 
+page("p0kaarten0000000000", "Kaarten", [
+    tableVisual(
+        "table_kaarten",
+        "Beschikbare kaarten in Nederlandse Regiokaarten",
+        { x: 16, y: 16, width: 1334, height: 736 },
+        "Kaarten",
+        ["Volgnummer", "Kaart", "Instelling", "StatcodePrefix", "Regios", "VoorbeeldStatcode"]
+    )
+]);
 page("p1gemeenten00000001", "Gemeenten", [
     map("map_gemeenten", "Score per gemeente (fictieve waarden)", { x: 16, y: 16, width: 1000, height: 736 }, {
         category: { projections: [column("Gemeenten", "Statcode")] },
-        measure: { projections: [measure("Gemeenten", "Gemiddelde score")] }
+        measure: { projections: [measure("Gemeenten", "Gemiddelde score")] },
+        filter: { projections: [column("Gemeenten", "ProvincieStatcode")] }
     }, { mapSettings: { selectedMapSlice: "gemeenten 2023", useMidColorSlice: true } }),
-    slicer("slicer_provincie", "Gemeenten", "Provincie", { x: 1032, y: 16, width: 318, height: 420 })
+    slicer("slicer_provincie", "Gemeenten", "ProvincieStatcode", { x: 1032, y: 16, width: 318, height: 420 })
 ]);
 page("p2provincies0000002", "Provincies", [
     map("map_provincies", "Gemiddelde score per provincie", { x: 16, y: 16, width: 1334, height: 736 }, {
@@ -229,7 +269,7 @@ page("p3punten000000000003", "Punten", [
 
 write(path.join(report, "definition", "pages", "pages.json"), {
     $schema: "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/pagesMetadata/1.0.0/schema.json",
-    pageOrder: pages, activePageName: pages[0]
+    pageOrder: pages, activePageName: "p0kaarten0000000000"
 });
 write(path.join(report, "definition", "version.json"), {
     $schema: "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/versionMetadata/1.0.0/schema.json",

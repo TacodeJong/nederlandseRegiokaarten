@@ -23,11 +23,11 @@
                       "Entity": "Gemeenten"
                     }
                   },
-                  "Property": "Provincie"
+                  "Property": "ProvincieStatcode"
                 }
               },
-              "queryRef": "Gemeenten.Provincie",
-              "nativeQueryRef": "Provincie",
+              "queryRef": "Gemeenten.ProvincieStatcode",
+              "nativeQueryRef": "ProvincieStatcode",
               "active": true
             }
           ]
@@ -48,7 +48,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Provincie'"
+                  "Value": "'ProvincieStatcode'"
                 }
               }
             },

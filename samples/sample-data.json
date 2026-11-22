@@ -2686,5 +2686,95 @@
       "Latitude": 51.28789,
       "Longitude": 3.84592
     }
+  ],
+  "kaarten": [
+    {
+      "Volgnummer": 1,
+      "Kaart": "Provincies",
+      "Instelling": "provincies",
+      "StatcodePrefix": "PV",
+      "Regios": 12,
+      "VoorbeeldStatcode": "PV20"
+    },
+    {
+      "Volgnummer": 2,
+      "Kaart": "Wijken",
+      "Instelling": "wijken",
+      "StatcodePrefix": "WK",
+      "Regios": 3352,
+      "VoorbeeldStatcode": ""
+    },
+    {
+      "Volgnummer": 3,
+      "Kaart": "Gemeenten 2023",
+      "Instelling": "gemeenten 2023",
+      "StatcodePrefix": "GM",
+      "Regios": 342,
+      "VoorbeeldStatcode": "GM0014"
+    },
+    {
+      "Volgnummer": 4,
+      "Kaart": "Gemeenten 2021",
+      "Instelling": "gemeenten 2021",
+      "StatcodePrefix": "GM",
+      "Regios": 352,
+      "VoorbeeldStatcode": "GM0014"
+    },
+    {
+      "Volgnummer": 5,
+      "Kaart": "Gemeenten 2020",
+      "Instelling": "gemeenten 2020",
+      "StatcodePrefix": "GM",
+      "Regios": 355,
+      "VoorbeeldStatcode": "GM0003"
+    },
+    {
+      "Volgnummer": 6,
+      "Kaart": "Gemeenten 2019",
+      "Instelling": "gemeenten 2019",
+      "StatcodePrefix": "GM",
+      "Regios": 390,
+      "VoorbeeldStatcode": "GM0003"
+    },
+    {
+      "Volgnummer": 7,
+      "Kaart": "Gemeenten 2016",
+      "Instelling": "gemeenten 2016",
+      "StatcodePrefix": "GM",
+      "Regios": 390,
+      "VoorbeeldStatcode": "GM0003"
+    },
+    {
+      "Volgnummer": 8,
+      "Kaart": "Gemeenten 2012",
+      "Instelling": "gemeenten 2012",
+      "StatcodePrefix": "GM",
+      "Regios": 390,
+      "VoorbeeldStatcode": "GM0003"
+    },
+    {
+      "Volgnummer": 9,
+      "Kaart": "GGD Regios",
+      "Instelling": "ggdregios",
+      "StatcodePrefix": "GG",
+      "Regios": 25,
+      "VoorbeeldStatcode": "GG0111"
+    },
+    {
+      "Volgnummer": 10,
+      "Kaart": "Veiligheidsregios",
+      "Instelling": "veiligheidsregios",
+      "StatcodePrefix": "VR",
+      "Regios": 25,
+      "VoorbeeldStatcode": "VR01"
+    },
+    {
+      "Volgnummer": 11,
+      "Kaart": "Politieregios",
+      "Instelling": "politieregios",
+      "StatcodePrefix": "PO",
+      "Regios": 10,
+      "VoorbeeldStatcode": "PO1"
+    }
   ]
 }

@@ -1,0 +1,64 @@
+table Kaarten
+	lineageTag: de08c7bf-9b6c-4a46-fef7-c4966c4ac956
+
+
+	column Volgnummer
+		dataType: int64
+		lineageTag: 9fdb9d83-1ae9-b243-62e1-3e79d7691016
+		summarizeBy: sum
+		sourceColumn: Volgnummer
+
+		annotation SummarizationSetBy = Automatic
+
+	column Kaart
+		dataType: string
+		lineageTag: 9065a931-ea06-96b4-6028-51e8fe0838b2
+		summarizeBy: none
+		sourceColumn: Kaart
+
+		annotation SummarizationSetBy = Automatic
+
+	column Instelling
+		dataType: string
+		lineageTag: 2c1c0677-a748-564e-2d2b-dde2144fa8d4
+		summarizeBy: none
+		sourceColumn: Instelling
+
+		annotation SummarizationSetBy = Automatic
+
+	column StatcodePrefix
+		dataType: string
+		lineageTag: 65809ba4-b60a-c96e-c701-0a341756c5b2
+		summarizeBy: none
+		sourceColumn: StatcodePrefix
+
+		annotation SummarizationSetBy = Automatic
+
+	column Regios
+		dataType: int64
+		lineageTag: 808156eb-f137-01ba-526b-f3d33809d7f5
+		summarizeBy: sum
+		sourceColumn: Regios
+
+		annotation SummarizationSetBy = Automatic
+
+	column VoorbeeldStatcode
+		dataType: string
+		lineageTag: f3f55ac7-069b-562f-85c5-8b5d366c0fe0
+		summarizeBy: none
+		sourceColumn: VoorbeeldStatcode
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Kaarten = m
+		mode: import
+		source = ```
+				let
+				    Source = Csv.Document(File.Contents("C:\\Users\\Taco\\Documents\\PowerBI Custom Visuals\\nederlandseRegiokaarten\\samples\\kaarten-sample.csv"), [Delimiter=";", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers", {{"Volgnummer", Int64.Type}, {"Kaart", type text}, {"Instelling", type text}, {"StatcodePrefix", type text}, {"Regios", Int64.Type}, {"VoorbeeldStatcode", type text}})
+				in
+				    #"Changed Type"
+				```
+
+	annotation PBI_ResultType = Table
