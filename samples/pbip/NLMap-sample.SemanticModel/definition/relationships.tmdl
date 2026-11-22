@@ -1,0 +1,4 @@
+relationship Locaties_GGD
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Locaties.GGDStatcode
+	toColumn: GGD.Statcode

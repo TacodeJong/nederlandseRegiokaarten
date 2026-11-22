@@ -8,9 +8,11 @@ model Model
 
 annotation __PBI_TimeIntelligenceEnabled = 0
 
-annotation PBI_QueryOrder = ["Kaarten","Gemeenten","Provincies","Punten"]
+annotation PBI_QueryOrder = ["Kaarten","Gemeenten","Provincies","Punten","GGD","Locaties"]
 
 ref table Kaarten
 ref table Gemeenten
 ref table Provincies
 ref table Punten
+ref table GGD
+ref table Locaties

@@ -37,13 +37,29 @@ table Punten
 
 		annotation SummarizationSetBy = Automatic
 
+	column Statcode
+		dataType: string
+		lineageTag: a9f9e8e9-850e-0001-9b09-141f2473aef9
+		summarizeBy: none
+		sourceColumn: Statcode
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProvincieStatcode
+		dataType: string
+		lineageTag: ae234591-cf9a-7676-71ac-e59157e99442
+		summarizeBy: none
+		sourceColumn: ProvincieStatcode
+
+		annotation SummarizationSetBy = Automatic
+
 	partition Punten = m
 		mode: import
 		source = ```
 				let
 				    Source = Csv.Document(File.Contents("C:\\Users\\Taco\\Documents\\PowerBI Custom Visuals\\nederlandseRegiokaarten\\samples\\punten-sample.csv"), [Delimiter=";", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
 				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
-				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers", {{"Locatie", type text}, {"Type", type text}, {"Latitude", type number}, {"Longitude", type number}})
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers", {{"Locatie", type text}, {"Type", type text}, {"Latitude", type number}, {"Longitude", type number}, {"Statcode", type text}, {"ProvincieStatcode", type text}}, "en-US")
 				in
 				    #"Changed Type"
 				```

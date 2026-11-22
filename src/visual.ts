@@ -66,6 +66,9 @@ interface GeoJsonFeatureProperties {
     naam: string;
     rubriek: string;
     code: string;
+    /** Extra CBS codes from topojson (e.g. wijken.gemeentecode) that Filter/Regio may use. */
+    matchCodes?: string[];
+    matchNames?: string[];
 }
 
 // Define the interface for the GeoJSON feature
@@ -142,6 +145,8 @@ export class Visual implements IVisual {
     private host: powerbi.extensibility.visual.IVisualHost;
     private currentFieldSet: string = ""; // Cache for current field set
     private filterValues: string[] = [];
+    /** True after the basemap was trimmed by Filter or point-mode Regio this update. */
+    private mapWasRegionFiltered: boolean = false;
     private formattingSettingsService: FormattingSettingsService;
     private dataViews: powerbi.DataView[];
     private viewport: powerbi.IViewport;
@@ -1730,7 +1735,36 @@ export class Visual implements IVisual {
         return normalized;
     }
 
-    private regionMatchesFilterValue(naam: any, code: any, filterValue: string): boolean {
+    /**
+     * Map topojson feature properties onto the fields the visual matches on.
+     * Code/naam come from CBS statcode/statnaam (or wijkcode/wijknaam). Parent
+     * gemeente codes on wijken are kept as matchCodes because they exist in the file.
+     */
+    private mapTopojsonProperties(originalProps: any): GeoJsonFeatureProperties {
+        const props: GeoJsonFeatureProperties = {
+            naam: originalProps?.statnaam || originalProps?.wijknaam || originalProps?.naam || "Unknown",
+            code: originalProps?.statcode || originalProps?.wijkcode || originalProps?.code || "N/A",
+            rubriek: originalProps?.rubriek || ""
+        };
+
+        const matchCodes: string[] = [];
+        const matchNames: string[] = [];
+        if (originalProps?.gemeentecode) {
+            matchCodes.push(String(originalProps.gemeentecode));
+        }
+        if (originalProps?.gemeentenaam) {
+            matchNames.push(String(originalProps.gemeentenaam));
+        }
+        if (matchCodes.length > 0) {
+            props.matchCodes = matchCodes;
+        }
+        if (matchNames.length > 0) {
+            props.matchNames = matchNames;
+        }
+        return props;
+    }
+
+    private regionMatchesFilterValue(naam: any, code: any, filterValue: string, matchCodes?: string[], matchNames?: string[]): boolean {
         const filter = this.normalizeRegionKey(filterValue);
         if (!filter) {
             return false;
@@ -1738,12 +1772,25 @@ export class Visual implements IVisual {
 
         const name = this.normalizeRegionKey(naam);
         const regionCode = this.normalizeRegionKey(code);
-
-        return (
+        if (
             name === filter ||
             this.regionCodesMatch(regionCode, filter) ||
             (name.length > 0 && (name.includes(filter) || filter.includes(name)))
-        );
+        ) {
+            return true;
+        }
+
+        for (const extraCode of matchCodes || []) {
+            if (this.regionCodesMatch(this.normalizeRegionKey(extraCode), filter)) {
+                return true;
+            }
+        }
+        for (const extraName of matchNames || []) {
+            if (this.normalizeRegionKey(extraName) === filter) {
+                return true;
+            }
+        }
+        return false;
     }
 
     /**
@@ -1802,25 +1849,30 @@ export class Visual implements IVisual {
     /**
      * Index of the first value matching this region, or -1. Exact name and code hits
      * are preferred over the fuzzy substring fallback, which is only scanned when
-     * both lookups miss.
+     * both lookups miss. Extra topojson codes/names (matchCodes/matchNames) count too.
      */
-    private findRegionIndex(lookup: RegionLookup, naam: any, code: any): number {
+    private findRegionIndex(lookup: RegionLookup, naam: any, code: any, matchCodes?: string[], matchNames?: string[]): number {
+        for (const candidateName of [naam, ...(matchNames || [])]) {
+            const name = this.normalizeRegionKey(candidateName);
+            if (name) {
+                const byName = lookup.byName.get(name);
+                if (byName !== undefined) {
+                    return byName;
+                }
+            }
+        }
+
+        for (const candidateCode of [code, ...(matchCodes || [])]) {
+            const regionCode = this.normalizeRegionKey(candidateCode);
+            if (regionCode) {
+                const byCode = lookup.byCode.get(this.canonicalRegionCode(regionCode));
+                if (byCode !== undefined) {
+                    return byCode;
+                }
+            }
+        }
+
         const name = this.normalizeRegionKey(naam);
-        if (name) {
-            const byName = lookup.byName.get(name);
-            if (byName !== undefined) {
-                return byName;
-            }
-        }
-
-        const regionCode = this.normalizeRegionKey(code);
-        if (regionCode) {
-            const byCode = lookup.byCode.get(this.canonicalRegionCode(regionCode));
-            if (byCode !== undefined) {
-                return byCode;
-            }
-        }
-
         if (name) {
             for (let i = 0; i < lookup.normalized.length; i++) {
                 const candidate = lookup.normalized[i];
@@ -1831,6 +1883,59 @@ export class Visual implements IVisual {
         }
 
         return -1;
+    }
+
+    private findFeatureRegionIndex(lookup: RegionLookup, feature: any): number {
+        const props = feature?.properties || {};
+        return this.findRegionIndex(lookup, props.naam, props.code, props.matchCodes, props.matchNames);
+    }
+
+    /**
+     * Filter well keys, or Regio keys when they form a region subset (slicer / points).
+     * Prefer Filter for an explicit region scope; Regio alone is enough when Power BI
+     * already reduced the rows (do not put the same column in both wells).
+     */
+    private getMapRegionFilterKeys(categoryValues: any[], _pointsActive: boolean): { keys: string[], fromFilterWell: boolean } {
+        if (this.filterValues.length > 0) {
+            return { keys: this.filterValues, fromFilterWell: true };
+        }
+        if (categoryValues.length > 0) {
+            const keys = Array.from(new Set(
+                categoryValues
+                    .map(value => (value == null ? "" : String(value).trim()))
+                    .filter(value => value.length > 0)
+            ));
+            return { keys, fromFilterWell: false };
+        }
+        return { keys: [], fromFilterWell: false };
+    }
+
+    /**
+     * Trim geojson to regions whose topojson statcode/name matches the filter keys.
+     * Never blanks the map when nothing matches (wrong code level for the selected map).
+     */
+    private applyRegionFilterToGeojson(geojson: any, keys: string[], requireSubset: boolean): boolean {
+        if (!geojson?.features?.length || keys.length === 0) {
+            return false;
+        }
+
+        const originalCount = geojson.features.length;
+        const filterLookup = this.buildRegionLookup(keys);
+        const filtered = geojson.features.filter((feature: any) =>
+            this.findFeatureRegionIndex(filterLookup, feature) !== -1
+        );
+
+        if (filtered.length === 0) {
+            this.logDebugMessage(`Region filter matched no topojson features for: ${keys.join(", ")}`);
+            return false;
+        }
+        if (requireSubset && filtered.length >= originalCount) {
+            return false;
+        }
+
+        geojson.features = filtered;
+        this.logDebugMessage(`Filtered from ${originalCount} to ${geojson.features.length} features`);
+        return true;
     }
 
     /**
@@ -1848,8 +1953,8 @@ export class Visual implements IVisual {
             return { geojson, restrict: false };
         }
 
-        // Filter well already trimmed geojson.features
-        if (this.filterValues.length > 0) {
+        // Filter well / point-mode Regio already trimmed geojson.features
+        if (this.filterValues.length > 0 || this.mapWasRegionFiltered) {
             return { geojson, restrict: true };
         }
 
@@ -1864,7 +1969,7 @@ export class Visual implements IVisual {
             if (active.size > 0) {
                 const activeLookup = this.buildRegionLookup(Array.from(active));
                 const features = allFeatures.filter((feature: any) =>
-                    this.findRegionIndex(activeLookup, feature.properties?.naam, feature.properties?.code) !== -1
+                    this.findFeatureRegionIndex(activeLookup, feature) !== -1
                 );
                 if (features.length > 0) {
                     return { geojson: { type: geojson.type, features }, restrict: true };
@@ -1876,7 +1981,7 @@ export class Visual implements IVisual {
         if (categoryValues.length > 0 && categoryValues.length < allFeatures.length) {
             const categoryLookup = this.buildRegionLookup(categoryValues);
             const features = allFeatures.filter((feature: any) =>
-                this.findRegionIndex(categoryLookup, feature.properties?.naam, feature.properties?.code) !== -1
+                this.findFeatureRegionIndex(categoryLookup, feature) !== -1
             );
             if (features.length > 0 && features.length < allFeatures.length) {
                 return { geojson: { type: geojson.type, features }, restrict: true };
@@ -2229,9 +2334,12 @@ export class Visual implements IVisual {
             this.logDebugMessage(`Using cached scale: min=${this.scaleMin}, max=${this.scaleMax}`);
         }
 
-        // Auto-detect map type from statcode if category values are available
-        if (categoryValues && categoryValues.length > 0) {
-            const detectedMapType = this.detectMapTypeFromStatcode(categoryValues);
+        // Auto-detect map type from CBS statcodes in Regio or Filter (topojson prefixes)
+        const detectSource = (categoryValues && categoryValues.length > 0)
+            ? categoryValues
+            : this.filterValues;
+        if (detectSource && detectSource.length > 0) {
+            const detectedMapType = this.detectMapTypeFromStatcode(detectSource);
             if (detectedMapType) {
                 const currentMapValue = this.settings.mapSettings.mapSelectSettingsGroup.selectedMapSlice.value.value;
                 if (currentMapValue !== detectedMapType) {
@@ -2295,134 +2403,74 @@ export class Visual implements IVisual {
             switch (this.settings.mapSettings.mapSelectSettingsGroup.selectedMapSlice.value.value) {
                 case "provincies":
                     geojson = feature(provinciesTopojson, provinciesTopojson.objects.gj);
-                geojson.features.forEach((feature) => {
-                    const originalProps = feature.properties;
-                    feature.properties = {
-                        naam: originalProps?.statnaam || "Unknown",
-                        code: originalProps?.statcode || "N/A",
-                        rubriek: originalProps?.rubriek || ""
-                    };
-                });
-                break;
+                    geojson.features.forEach((feature) => {
+                        feature.properties = this.mapTopojsonProperties(feature.properties);
+                    });
+                    break;
             case "gemeenten 2023":
                 geojson = feature(gemeentenTopojson_2023, gemeentenTopojson_2023.objects.gj);
                 geojson.features.forEach((feature) => {
-                    const originalProps = feature.properties;
-                    feature.properties = {
-                        naam: originalProps?.statnaam || "Unknown",
-                        code: originalProps?.statcode || "N/A",
-                        rubriek: originalProps?.rubriek || ""
-                    };
+                    feature.properties = this.mapTopojsonProperties(feature.properties);
                 });
                 break;
             case "gemeenten 2021":
                 geojson = feature(gemeentenTopojson_2021, gemeentenTopojson_2021.objects.gj);
                 geojson.features.forEach((feature) => {
-                    const originalProps = feature.properties;
-                    feature.properties = {
-                        naam: originalProps?.statnaam || "Unknown",
-                        code: originalProps?.statcode || "N/A",
-                        rubriek: originalProps?.rubriek || ""
-                    };
+                    feature.properties = this.mapTopojsonProperties(feature.properties);
                 });
                 break;
             case "gemeenten 2020":
                 geojson = feature(gemeentenTopojson_2020, gemeentenTopojson_2020.objects.gj);
                 geojson.features.forEach((feature) => {
-                    const originalProps = feature.properties;
-                    feature.properties = {
-                        naam: originalProps?.statnaam || "Unknown",
-                        code: originalProps?.statcode || "N/A",
-                        rubriek: originalProps?.rubriek || ""
-                    };
+                    feature.properties = this.mapTopojsonProperties(feature.properties);
                 });
                 break;
             case "gemeenten 2019":
                 geojson = feature(gemeentenTopojson_2019, gemeentenTopojson_2019.objects.gj);
                 geojson.features.forEach((feature) => {
-                    const originalProps = feature.properties;
-                    feature.properties = {
-                        naam: originalProps?.statnaam || "Unknown",
-                        code: originalProps?.statcode || "N/A",
-                        rubriek: originalProps?.rubriek || ""
-                    };
+                    feature.properties = this.mapTopojsonProperties(feature.properties);
                 });
                 break;
             case "gemeenten 2016":
                 geojson = feature(gemeentenTopojson_2016, gemeentenTopojson_2016.objects.gj);
                 geojson.features.forEach((feature) => {
-                    const originalProps = feature.properties;
-                    feature.properties = {
-                        naam: originalProps?.statnaam || "Unknown",
-                        code: originalProps?.statcode || "N/A",
-                        rubriek: originalProps?.rubriek || ""
-                    };
+                    feature.properties = this.mapTopojsonProperties(feature.properties);
                 });
                 break;
             case "gemeenten 2012":
                 geojson = feature(gemeentenTopojson_2012, gemeentenTopojson_2012.objects.gj);
                 geojson.features.forEach((feature) => {
-                    const originalProps = feature.properties;
-                    feature.properties = {
-                        naam: originalProps?.statnaam || "Unknown",
-                        code: originalProps?.statcode || "N/A",
-                        rubriek: originalProps?.rubriek || ""
-                    };
+                    feature.properties = this.mapTopojsonProperties(feature.properties);
                 });
                 break;
             case "wijken":
                 geojson = feature(wijkenTopojson, wijkenTopojson.objects.gj);
                 geojson.features.forEach((feature) => {
-                    const originalProps = feature.properties;
-                    feature.properties = {
-                        naam: originalProps?.wijknaam || "Unknown",
-                        code: originalProps?.wijkcode || "N/A",
-                        rubriek: originalProps?.rubriek || ""
-                    };
+                    feature.properties = this.mapTopojsonProperties(feature.properties);
                 });
                 break;
             case "ggdregios":
                 geojson = feature(ggdregiosTopojson, ggdregiosTopojson.objects.gj);
                 geojson.features.forEach((feature) => {
-                    const originalProps = feature.properties;
-                    feature.properties = {
-                        naam: originalProps?.statnaam || "Unknown",
-                        code: originalProps?.statcode || "N/A",
-                        rubriek: originalProps?.rubriek || ""
-                    };
+                    feature.properties = this.mapTopojsonProperties(feature.properties);
                 });
                 break;
             // case "werkgebieden":
             //     geojson = feature(KONwerkGebiedenTopojson, KONwerkGebiedenTopojson.objects.gj);
             //     geojson.features.forEach((feature) => {
-            //         const originalProps = feature.properties;
-            //         feature.properties = {
-            //             naam: originalProps?.naam || "Unknown",
-            //             code: originalProps?.code.toString() || "N/A",
-            //             rubriek: originalProps?.rubriek || ""
-            //         };
+            //         feature.properties = this.mapTopojsonProperties(feature.properties);
             //     });
             //     break;
             case "politieregios":
                 geojson = feature(politieregiosTopojson, politieregiosTopojson.objects.gj);
                 geojson.features.forEach((feature) => {
-                    const originalProps = feature.properties;
-                    feature.properties = {
-                        naam: originalProps?.statnaam || "Unknown",
-                        code: originalProps?.statcode || "N/A",
-                        rubriek: originalProps?.rubriek || ""
-                    };
+                    feature.properties = this.mapTopojsonProperties(feature.properties);
                 });
                 break;
             case "veiligheidsregios":
                 geojson = feature(veiligheidsregiosTopojson, veiligheidsregiosTopojson.objects.gj);
                 geojson.features.forEach((feature) => {
-                    const originalProps = feature.properties;
-                    feature.properties = {
-                        naam: originalProps?.statnaam || "Unknown",
-                        code: originalProps?.statcode || "N/A",
-                        rubriek: originalProps?.rubriek || ""
-                    };
+                    feature.properties = this.mapTopojsonProperties(feature.properties);
                 });
                 break;
             }
@@ -2433,15 +2481,16 @@ export class Visual implements IVisual {
         }
         // }
 
-        // Apply filter if a filter value is set
-        if (this.filterValues.length > 0) {
-            this.logDebugMessage(`Applying filter with values: ${this.filterValues.join(", ")}`);
-            const originalCount = geojson.features.length;
-            const filterLookup = this.buildRegionLookup(this.filterValues);
-            geojson.features = geojson.features.filter(feature =>
-                this.findRegionIndex(filterLookup, feature.properties?.naam, feature.properties?.code) !== -1
+        // Filter well (always) or Regio with points/clusters: trim basemap to topojson-matched regions
+        this.mapWasRegionFiltered = false;
+        const mapRegionFilter = this.getMapRegionFilterKeys(categoryValues as any[], pointData.length > 0);
+        if (mapRegionFilter.keys.length > 0) {
+            this.logDebugMessage(`Applying region filter with values: ${mapRegionFilter.keys.join(", ")}`);
+            this.mapWasRegionFiltered = this.applyRegionFilterToGeojson(
+                geojson,
+                mapRegionFilter.keys,
+                !mapRegionFilter.fromFilterWell
             );
-            this.logDebugMessage(`Filtered from ${originalCount} to ${geojson.features.length} features`);
         }
 
         // Extract regions from the loaded map to use as category values
@@ -2608,9 +2657,24 @@ export class Visual implements IVisual {
             original: value,
             lower: value.toLowerCase()
         }));
-        // Create sets for existing names and codes
-        const existingNames = new Set(geojson.features.map(feature => feature.properties.naam.toLowerCase()));
-        const existingCodes = new Set(geojson.features.map(feature => feature.properties.code.toLowerCase()));
+        // Create sets for existing names and codes (including topojson matchCodes/matchNames)
+        const existingNames = new Set<string>();
+        const existingCodes = new Set<string>();
+        for (const feature of geojson.features) {
+            const props = feature.properties;
+            if (props?.naam) {
+                existingNames.add(props.naam.toLowerCase());
+            }
+            for (const name of props?.matchNames || []) {
+                existingNames.add(String(name).toLowerCase());
+            }
+            if (props?.code) {
+                existingCodes.add(props.code.toLowerCase());
+            }
+            for (const code of props?.matchCodes || []) {
+                existingCodes.add(String(code).toLowerCase());
+            }
+        }
 
         // Identify missing features based on filter values
         const missingFeatures = filterValueMap.filter(filterValue => 
@@ -2663,7 +2727,7 @@ export class Visual implements IVisual {
             const regionKey = d.properties.code || d.properties.naam;
             
             const matchedCategoryIndex = categoryLookup
-                ? this.findRegionIndex(categoryLookup, d.properties.naam, d.properties.code)
+                ? this.findFeatureRegionIndex(categoryLookup, d)
                 : -1;
             const categoryIndexForData = matchedCategoryIndex;
             
@@ -3088,7 +3152,7 @@ export class Visual implements IVisual {
                 return;
             }
             const categoryColumn = selectionCategoryColumn;
-            const categoryIndex = this.findRegionIndex(selectionLookup, feature.properties.naam, feature.properties.code);
+            const categoryIndex = this.findFeatureRegionIndex(selectionLookup, feature);
             if (categoryIndex !== -1) {
                 const selectionId = this.host.createSelectionIdBuilder()
                     .withCategory(categoryColumn, categoryIndex)

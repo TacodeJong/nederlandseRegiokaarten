@@ -4,7 +4,9 @@
     "p0kaarten0000000000",
     "p1gemeenten00000001",
     "p2provincies0000002",
-    "p3punten000000000003"
+    "p3punten000000000003",
+    "p4puntdata0000000004",
+    "p5clusters0000000005"
   ],
-  "activePageName": "p0kaarten0000000000"
+  "activePageName": "p4puntdata0000000004"
 }

@@ -1,0 +1,15 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.0.0/schema.json",
+  "name": "p4puntdata0000000004",
+  "displayName": "Puntdata",
+  "displayOption": "FitToPage",
+  "height": 768,
+  "width": 1366,
+  "visualInteractions": [
+    {
+      "source": "table_status_punten",
+      "target": "map_puntdata",
+      "type": "DataFilter"
+    }
+  ]
+}

@@ -53,7 +53,7 @@ table Gemeenten
 				let
 				    Source = Csv.Document(File.Contents("C:\\Users\\Taco\\Documents\\PowerBI Custom Visuals\\nederlandseRegiokaarten\\samples\\gemeenten-sample.csv"), [Delimiter=";", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
 				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
-				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers", {{"Statcode", type text}, {"Gemeente", type text}, {"Provincie", type text}, {"ProvincieStatcode", type text}, {"Score", Int64.Type}})
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers", {{"Statcode", type text}, {"Gemeente", type text}, {"Provincie", type text}, {"ProvincieStatcode", type text}, {"Score", Int64.Type}}, "en-US")
 				in
 				    #"Changed Type"
 				```

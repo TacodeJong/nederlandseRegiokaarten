@@ -1,0 +1,32 @@
+table GGD
+	lineageTag: 90f2002b-d16f-7706-aa85-5d6678bc354f
+
+
+	column Statcode
+		dataType: string
+		lineageTag: ee21d7ce-6c26-a6a1-56a0-87cedbed8c47
+		summarizeBy: none
+		sourceColumn: Statcode
+
+		annotation SummarizationSetBy = Automatic
+
+	column GGD
+		dataType: string
+		lineageTag: fd3c46f9-47dd-dbf6-1af4-bd3d8c9ff2b7
+		summarizeBy: none
+		sourceColumn: GGD
+
+		annotation SummarizationSetBy = Automatic
+
+	partition GGD = m
+		mode: import
+		source = ```
+				let
+				    Source = Csv.Document(File.Contents("C:\\Users\\Taco\\Documents\\PowerBI Custom Visuals\\nederlandseRegiokaarten\\samples\\ggd-sample.csv"), [Delimiter=";", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers", {{"Statcode", type text}, {"GGD", type text}}, "en-US")
+				in
+				    #"Changed Type"
+				```
+
+	annotation PBI_ResultType = Table

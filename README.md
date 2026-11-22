@@ -11,6 +11,7 @@ Power BI custom visual with **Dutch regional maps**: municipalities (gemeenten),
 - Mid-color / continuous color scale with legend
 - Region labels and values (toggleable)
 - Latitude / longitude **points** with category colors and legend
+- **Filter** on regions (CBS `statcode` from the topojson) while showing points or cluster bubbles
 - Built-in CBS-style region geometry (no external basemap required)
 
 ## Install
@@ -26,9 +27,13 @@ Power BI custom visual with **Dutch regional maps**: municipalities (gemeenten),
 | [`samples/gemeenten-sample.csv`](samples/gemeenten-sample.csv) | Scores per gemeente (statcode) |
 | [`samples/provincies-sample.csv`](samples/provincies-sample.csv) | Scores per provincie (statcode) |
 | [`samples/punten-sample.csv`](samples/punten-sample.csv) | Point locations |
+| [`samples/ggd-sample.csv`](samples/ggd-sample.csv) | GGD regions (CBS `GG####` from topojson) |
+| [`samples/locaties-sample.csv`](samples/locaties-sample.csv) | Fictitious locations linked to GGD |
 | [`samples/pbip/NLMap-sample.pbip`](samples/pbip/NLMap-sample.pbip) | Power BI Project with the visual embedded |
 
-The sample report opens on the **Kaarten** page with the full list of map layers (name, format setting, statcode prefix, region count).
+The sample report opens on **Puntdata**: GGD basemap + locations (status legend) + GGD slicer. **Clusterbubbles** is the same setup with clustering on. Locaties relate to GGD on `GGDStatcode` → `Statcode`, so the slicer filters points without putting GGD fields in the visual wells.
+
+> Fictitious demo data only. Do not publish real organisational `.pbix` files (e.g. production Koeltorens) to this public repo.
 
 ## Screenshots
 

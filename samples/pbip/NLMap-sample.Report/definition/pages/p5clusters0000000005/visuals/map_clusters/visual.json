@@ -1,0 +1,292 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "map_clusters",
+  "position": {
+    "x": 28,
+    "y": 30,
+    "width": 715,
+    "height": 642,
+    "z": 0,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "nederlandseRegiokaarten8EDA3FD18CF8418282BDFCA73E3C5F4A",
+    "query": {
+      "queryState": {
+        "latitude": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Locaties"
+                    }
+                  },
+                  "Property": "Latitude"
+                }
+              },
+              "queryRef": "Locaties.Latitude",
+              "nativeQueryRef": "Latitude",
+              "active": true
+            }
+          ]
+        },
+        "longitude": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Locaties"
+                    }
+                  },
+                  "Property": "Longitude"
+                }
+              },
+              "queryRef": "Locaties.Longitude",
+              "nativeQueryRef": "Longitude",
+              "active": true
+            }
+          ]
+        },
+        "pointCategory": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Locaties"
+                    }
+                  },
+                  "Property": "Status"
+                }
+              },
+              "queryRef": "Locaties.Status",
+              "nativeQueryRef": "Status",
+              "active": true
+            }
+          ]
+        },
+        "pointTooltip": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Locaties"
+                    }
+                  },
+                  "Property": "Locatie"
+                }
+              },
+              "queryRef": "Locaties.Locatie",
+              "nativeQueryRef": "Locatie",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Locaties"
+                    }
+                  },
+                  "Property": "Type"
+                }
+              },
+              "queryRef": "Locaties.Type",
+              "nativeQueryRef": "Type",
+              "active": true
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "mapSettings": [
+        {
+          "properties": {
+            "selectedMapSlice": {
+              "expr": {
+                "Literal": {
+                  "Value": "'ggdregios'"
+                }
+              }
+            },
+            "showExtraFeatures": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "regionBorderThickness": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "pointSettings": [
+        {
+          "properties": {
+            "showPoints": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "pointSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "5D"
+                }
+              }
+            },
+            "useLegendColors": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "showPointLegend": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "pointLegendPosition": {
+              "expr": {
+                "Literal": {
+                  "Value": "'bottom-right'"
+                }
+              }
+            },
+            "enableClustering": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "pointOpacity": {
+              "expr": {
+                "Literal": {
+                  "Value": "100D"
+                }
+              }
+            },
+            "showClusterCount": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "minClusterSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "20D"
+                }
+              }
+            },
+            "maxClusterSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "20D"
+                }
+              }
+            },
+            "clusterBorderThickness": {
+              "expr": {
+                "Literal": {
+                  "Value": "4D"
+                }
+              }
+            },
+            "clusterCountSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "14D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "labelSettings": [
+        {
+          "properties": {
+            "showLabels": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "showValues": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "legendSettings": [
+        {
+          "properties": {
+            "showLegend": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Locaties per GGD-regio (clusters)'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

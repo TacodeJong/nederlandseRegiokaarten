@@ -68,7 +68,44 @@ const punten = [...capitals.map(city => [city, "Provinciehoofdstad"]), ...extraP
     const match = gemeenteFeatures.find(gemeente => gemeente.properties.statnaam === city);
     if (!match) throw new Error(`Unknown gemeente ${city}`);
     const [lon, lat] = geoCentroid(match);
-    return { Locatie: city, Type: type, Latitude: Number(lat.toFixed(5)), Longitude: Number(lon.toFixed(5)) };
+    const province = provinceOf([lon, lat]);
+    return {
+        Locatie: city,
+        Type: type,
+        Latitude: Number(lat.toFixed(5)),
+        Longitude: Number(lon.toFixed(5)),
+        // CBS codes from topojson so Filter can scope points/clusters to regions
+        Statcode: match.properties.statcode,
+        ProvincieStatcode: province.ProvincieStatcode
+    };
+});
+
+// GGD + locaties: public stand-in for the Koeltorens-style demo (points/clusters on GGD map).
+// Fictitious locations only — do not publish real org pbix data to the public repo.
+const ggdFeatures = features("ggdregios.json");
+const ggd = ggdFeatures.map(feature => ({
+    Statcode: feature.properties.statcode,
+    GGD: feature.properties.statnaam
+})).sort((a, b) => a.GGD.localeCompare(b.GGD, "nl"));
+
+const statuses = ["GEACCEPTEERD", "NIEUW", "AFGEWEZEN"];
+const locaties = ggdFeatures.flatMap((feature) => {
+    const [lon0, lat0] = geoCentroid(feature);
+    return [0, 1, 2].map(offset => {
+        const jitter = (noise(`${feature.properties.statcode}-${offset}`) - 0.5) * 0.18;
+        const lon = lon0 + jitter;
+        const lat = lat0 + (noise(`${feature.properties.statcode}-y-${offset}`) - 0.5) * 0.12;
+        const inside = geoContains(feature, [lon, lat]) ? [lon, lat] : [lon0, lat0];
+        return {
+            Locatie: `Locatie ${feature.properties.statcode}-${offset + 1}`,
+            Type: offset === 2 ? "type_afgewezen" : offset === 1 ? "type_nieuw" : "type_geaccepteerd",
+            Status: statuses[offset % statuses.length],
+            Latitude: Number(inside[1].toFixed(5)),
+            Longitude: Number(inside[0].toFixed(5)),
+            GGDStatcode: feature.properties.statcode,
+            GGD: feature.properties.statnaam
+        };
+    });
 });
 
 const mapCatalog = [
@@ -91,7 +128,7 @@ const mapCatalog = [
         Instelling: instelling,
         StatcodePrefix: prefix,
         Regios: regions.length,
-        VoorbeeldStatcode: regions[0]?.properties?.statcode || ""
+        VoorbeeldStatcode: regions[0]?.properties?.statcode || regions[0]?.properties?.wijkcode || ""
     };
 });
 
@@ -102,12 +139,14 @@ const csv = rows => {
 write(path.join(here, "gemeenten-sample.csv"), csv(gemeenten));
 write(path.join(here, "provincies-sample.csv"), csv(provincieRows));
 write(path.join(here, "punten-sample.csv"), csv(punten));
+write(path.join(here, "ggd-sample.csv"), csv(ggd));
+write(path.join(here, "locaties-sample.csv"), csv(locaties));
 write(path.join(here, "kaarten-sample.csv"), csv(mapCatalog));
-write(path.join(here, "sample-data.json"), { gemeenten, provincies: provincieRows, punten, kaarten: mapCatalog });
+write(path.join(here, "sample-data.json"), { gemeenten, provincies: provincieRows, punten, ggd, locaties, kaarten: mapCatalog });
 
 // ---------- semantic model ----------
 fs.rmSync(out, { recursive: true, force: true });
-const tables = { Kaarten: mapCatalog, Gemeenten: gemeenten, Provincies: provincieRows, Punten: punten };
+const tables = { Kaarten: mapCatalog, Gemeenten: gemeenten, Provincies: provincieRows, Punten: punten, GGD: ggd, Locaties: locaties };
 const isInt = (rows, column) => rows.every(row => Number.isInteger(row[column]));
 // File.Contents gives mashup a real data source. Pure #table queries make Desktop's
 // DataSourceDiscoveryVisitor NullReferenceException during refresh / composite checks.
@@ -144,7 +183,7 @@ ${columns.map(columnTmdl).join("\n")}
 \t\t\t\tlet
 \t\t\t\t    Source = Csv.Document(File.Contents("${mCsvPath(csvFile)}"), [Delimiter=";", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
 \t\t\t\t    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
-\t\t\t\t    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers", {${typePairs}})
+\t\t\t\t    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers", {${typePairs}}, "en-US")
 \t\t\t\tin
 \t\t\t\t    #"Changed Type"
 \t\t\t\t\`\`\`
@@ -156,9 +195,14 @@ write(path.join(model, "definition", "tables", "Kaarten.tmdl"), tableTmdl("Kaart
 write(path.join(model, "definition", "tables", "Gemeenten.tmdl"), tableTmdl("Gemeenten", gemeenten, [["Gemiddelde score", "AVERAGE ( Gemeenten[Score] )"]], "gemeenten-sample.csv"));
 write(path.join(model, "definition", "tables", "Provincies.tmdl"), tableTmdl("Provincies", provincieRows, [["Provinciescore", "AVERAGE ( Provincies[Score] )"]], "provincies-sample.csv"));
 write(path.join(model, "definition", "tables", "Punten.tmdl"), tableTmdl("Punten", punten, [], "punten-sample.csv"));
-// No relationships: mashup DataSourceDiscoveryVisitor NREs on pure #table queries
-// during composite-model checks when related queries refresh together.
-write(path.join(model, "definition", "relationships.tmdl"), "");
+write(path.join(model, "definition", "tables", "GGD.tmdl"), tableTmdl("GGD", ggd, [], "ggd-sample.csv"));
+write(path.join(model, "definition", "tables", "Locaties.tmdl"), tableTmdl("Locaties", locaties, [], "locaties-sample.csv"));
+// Locaties → GGD so a GGD slicer filters points/clusters without putting GGD in the visual wells.
+write(path.join(model, "definition", "relationships.tmdl"), `relationship Locaties_GGD
+\tjoinOnDateBehavior: datePartOnly
+\tfromColumn: Locaties.GGDStatcode
+\ttoColumn: GGD.Statcode
+`);
 write(path.join(model, "definition", "model.tmdl"), `model Model
 \tculture: nl-NL
 \tdefaultPowerBIDataSourceVersion: powerBI_V3
@@ -205,12 +249,13 @@ const measure = (entity, property) => ({ field: { Measure: { Expression: { Sourc
 const title = text => ({ title: [{ properties: { show: literal(true), text: literal(text), fontSize: literal(12) } }] });
 
 const pages = [];
-const page = (id, displayName, visuals) => {
+const page = (id, displayName, visuals, interactions = []) => {
     pages.push(id);
     const folder = path.join(report, "definition", "pages", id);
     write(path.join(folder, "page.json"), {
         $schema: "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.0.0/schema.json",
-        name: id, displayName, displayOption: "FitToPage", height: 768, width: 1366
+        name: id, displayName, displayOption: "FitToPage", height: 768, width: 1366,
+        ...(interactions.length ? { visualInteractions: interactions } : {})
     });
     visuals.forEach((visual, index) => write(path.join(folder, "visuals", visual.name, "visual.json"), {
         $schema: "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
@@ -247,8 +292,9 @@ page("p0kaarten0000000000", "Kaarten", [
 page("p1gemeenten00000001", "Gemeenten", [
     map("map_gemeenten", "Score per gemeente (fictieve waarden)", { x: 16, y: 16, width: 1000, height: 736 }, {
         category: { projections: [column("Gemeenten", "Statcode")] },
-        measure: { projections: [measure("Gemeenten", "Gemiddelde score")] },
-        filter: { projections: [column("Gemeenten", "ProvincieStatcode")] }
+        measure: { projections: [measure("Gemeenten", "Gemiddelde score")] }
+        // Filter uses topojson codes for the selected map (GM## here). Province slicer
+        // still filters the data rows via ProvincieStatcode on the same table.
     }, { mapSettings: { selectedMapSlice: "gemeenten 2023", useMidColorSlice: true } }),
     slicer("slicer_provincie", "Gemeenten", "ProvincieStatcode", { x: 1032, y: 16, width: 318, height: 420 })
 ]);
@@ -259,17 +305,57 @@ page("p2provincies0000002", "Provincies", [
     }, { mapSettings: { selectedMapSlice: "provincies" }, labelSettings: { showLabels: true, showValues: true, showRegionName: true } })
 ]);
 page("p3punten000000000003", "Punten", [
-    map("map_punten", "Locaties als punten op de kaart", { x: 16, y: 16, width: 1334, height: 736 }, {
+    map("map_punten", "Locaties als punten op de kaart", { x: 16, y: 16, width: 1000, height: 736 }, {
         latitude: { projections: [column("Punten", "Latitude")] },
         longitude: { projections: [column("Punten", "Longitude")] },
         pointCategory: { projections: [column("Punten", "Type")] },
-        pointTooltip: { projections: [column("Punten", "Locatie")] }
-    }, { mapSettings: { selectedMapSlice: "provincies" }, pointSettings: { showPoints: true, useLegendColors: true, showPointLegend: true, pointSize: 8 } })
+        pointTooltip: { projections: [column("Punten", "Locatie")] },
+        // ProvincieStatcode matches provincies topojson.statcode (PV##)
+        filter: { projections: [column("Punten", "ProvincieStatcode")] }
+    }, { mapSettings: { selectedMapSlice: "provincies" }, pointSettings: { showPoints: true, useLegendColors: true, showPointLegend: true, pointSize: 8 } }),
+    slicer("slicer_punten_pv", "Punten", "ProvincieStatcode", { x: 1032, y: 16, width: 318, height: 420 })
 ]);
+
+// Showcase pages (Koeltorens-style): GGD basemap + points/clusters, GGD slicer via relationship
+const ggdPointQuery = {
+    latitude: { projections: [column("Locaties", "Latitude")] },
+    longitude: { projections: [column("Locaties", "Longitude")] },
+    pointCategory: { projections: [column("Locaties", "Status")] },
+    pointTooltip: { projections: [column("Locaties", "Locatie"), column("Locaties", "Type")] }
+};
+const ggdPointSettings = {
+    mapSettings: { selectedMapSlice: "ggdregios", showExtraFeatures: false, regionBorderThickness: 1 },
+    pointSettings: {
+        showPoints: true, pointSize: 5, useLegendColors: true, showPointLegend: true,
+        pointLegendPosition: "bottom-right", enableClustering: false, pointOpacity: 100
+    },
+    labelSettings: { showLabels: false, showValues: false },
+    legendSettings: { showLegend: false }
+};
+const ggdClusterSettings = {
+    ...ggdPointSettings,
+    pointSettings: {
+        ...ggdPointSettings.pointSettings,
+        enableClustering: true, showClusterCount: true, showPointLegend: false,
+        minClusterSize: 20, maxClusterSize: 20, clusterBorderThickness: 4, clusterCountSize: 14
+    }
+};
+
+page("p4puntdata0000000004", "Puntdata", [
+    map("map_puntdata", "Locaties per GGD-regio (fictieve data)", { x: 28, y: 30, width: 715, height: 642 }, ggdPointQuery, ggdPointSettings),
+    tableVisual("table_status_punten", "Status", { x: 774, y: 57, width: 156, height: 173 }, "Locaties", ["Status"]),
+    slicer("slicer_ggd_punten", "GGD", "GGD", { x: 1032, y: 57, width: 300, height: 420 })
+], [{ source: "table_status_punten", target: "map_puntdata", type: "DataFilter" }]);
+
+page("p5clusters0000000005", "Clusterbubbles", [
+    map("map_clusters", "Locaties per GGD-regio (clusters)", { x: 28, y: 30, width: 715, height: 642 }, ggdPointQuery, ggdClusterSettings),
+    tableVisual("table_status_clusters", "Status", { x: 752, y: 57, width: 156, height: 173 }, "Locaties", ["Status"]),
+    slicer("slicer_ggd_clusters", "GGD", "GGD", { x: 752, y: 249, width: 528, height: 423 })
+], [{ source: "table_status_clusters", target: "map_clusters", type: "DataFilter" }]);
 
 write(path.join(report, "definition", "pages", "pages.json"), {
     $schema: "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/pagesMetadata/1.0.0/schema.json",
-    pageOrder: pages, activePageName: "p0kaarten0000000000"
+    pageOrder: pages, activePageName: "p4puntdata0000000004"
 });
 write(path.join(report, "definition", "version.json"), {
     $schema: "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/versionMetadata/1.0.0/schema.json",
@@ -304,4 +390,4 @@ write(path.join(out, `${name}.pbip`), {
     artifacts: [{ report: { path: `${name}.Report` } }],
     settings: { enableAutoRecovery: true }
 });
-console.log(`Wrote ${path.join(out, name + ".pbip")} (${gemeenten.length} gemeenten, ${punten.length} punten)`);
+console.log(`Wrote ${path.join(out, name + ".pbip")} (${gemeenten.length} gemeenten, ${punten.length} punten, ${locaties.length} locaties / ${ggd.length} GGD)`);

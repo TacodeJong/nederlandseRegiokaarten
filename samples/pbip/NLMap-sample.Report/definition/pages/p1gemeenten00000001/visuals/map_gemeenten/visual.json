@@ -49,25 +49,6 @@
               "nativeQueryRef": "Gemiddelde score"
             }
           ]
-        },
-        "filter": {
-          "projections": [
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Gemeenten"
-                    }
-                  },
-                  "Property": "ProvincieStatcode"
-                }
-              },
-              "queryRef": "Gemeenten.ProvincieStatcode",
-              "nativeQueryRef": "ProvincieStatcode",
-              "active": true
-            }
-          ]
         }
       }
     },

@@ -2474,217 +2474,1068 @@
       "Locatie": "Groningen",
       "Type": "Provinciehoofdstad",
       "Latitude": 53.21859,
-      "Longitude": 6.62065
+      "Longitude": 6.62065,
+      "Statcode": "GM0014",
+      "ProvincieStatcode": "PV20"
     },
     {
       "Locatie": "Leeuwarden",
       "Type": "Provinciehoofdstad",
       "Latitude": 53.17,
-      "Longitude": 5.79788
+      "Longitude": 5.79788,
+      "Statcode": "GM0080",
+      "ProvincieStatcode": "PV21"
     },
     {
       "Locatie": "Assen",
       "Type": "Provinciehoofdstad",
       "Latitude": 53.00126,
-      "Longitude": 6.5525
+      "Longitude": 6.5525,
+      "Statcode": "GM0106",
+      "ProvincieStatcode": "PV22"
     },
     {
       "Locatie": "Zwolle",
       "Type": "Provinciehoofdstad",
       "Latitude": 52.51863,
-      "Longitude": 6.11839
+      "Longitude": 6.11839,
+      "Statcode": "GM0193",
+      "ProvincieStatcode": "PV23"
     },
     {
       "Locatie": "Lelystad",
       "Type": "Provinciehoofdstad",
       "Latitude": 52.47809,
-      "Longitude": 5.47199
+      "Longitude": 5.47199,
+      "Statcode": "GM0995",
+      "ProvincieStatcode": "PV24"
     },
     {
       "Locatie": "Arnhem",
       "Type": "Provinciehoofdstad",
       "Latitude": 52.00106,
-      "Longitude": 5.89264
+      "Longitude": 5.89264,
+      "Statcode": "GM0202",
+      "ProvincieStatcode": "PV25"
     },
     {
       "Locatie": "Utrecht",
       "Type": "Provinciehoofdstad",
       "Latitude": 52.09115,
-      "Longitude": 5.07475
+      "Longitude": 5.07475,
+      "Statcode": "GM0344",
+      "ProvincieStatcode": "PV26"
     },
     {
       "Locatie": "Haarlem",
       "Type": "Provinciehoofdstad",
       "Latitude": 52.38343,
-      "Longitude": 4.64755
+      "Longitude": 4.64755,
+      "Statcode": "GM0392",
+      "ProvincieStatcode": "PV27"
     },
     {
       "Locatie": "'s-Gravenhage",
       "Type": "Provinciehoofdstad",
       "Latitude": 52.06856,
-      "Longitude": 4.3003
+      "Longitude": 4.3003,
+      "Statcode": "GM0518",
+      "ProvincieStatcode": "PV28"
     },
     {
       "Locatie": "Middelburg",
       "Type": "Provinciehoofdstad",
       "Latitude": 51.50184,
-      "Longitude": 3.64784
+      "Longitude": 3.64784,
+      "Statcode": "GM0687",
+      "ProvincieStatcode": "PV29"
     },
     {
       "Locatie": "'s-Hertogenbosch",
       "Type": "Provinciehoofdstad",
       "Latitude": 51.7168,
-      "Longitude": 5.35199
+      "Longitude": 5.35199,
+      "Statcode": "GM0796",
+      "ProvincieStatcode": "PV30"
     },
     {
       "Locatie": "Maastricht",
       "Type": "Provinciehoofdstad",
       "Latitude": 50.85298,
-      "Longitude": 5.6995
+      "Longitude": 5.6995,
+      "Statcode": "GM0935",
+      "ProvincieStatcode": "PV31"
     },
     {
       "Locatie": "Amsterdam",
       "Type": "Grote gemeente",
       "Latitude": 52.36502,
-      "Longitude": 4.90853
+      "Longitude": 4.90853,
+      "Statcode": "GM0363",
+      "ProvincieStatcode": "PV27"
     },
     {
       "Locatie": "Rotterdam",
       "Type": "Grote gemeente",
       "Latitude": 51.92693,
-      "Longitude": 4.30443
+      "Longitude": 4.30443,
+      "Statcode": "GM0599",
+      "ProvincieStatcode": "PV28"
     },
     {
       "Locatie": "Eindhoven",
       "Type": "Grote gemeente",
       "Latitude": 51.45014,
-      "Longitude": 5.45854
+      "Longitude": 5.45854,
+      "Statcode": "GM0772",
+      "ProvincieStatcode": "PV30"
     },
     {
       "Locatie": "Tilburg",
       "Type": "Grote gemeente",
       "Latitude": 51.58343,
-      "Longitude": 5.07737
+      "Longitude": 5.07737,
+      "Statcode": "GM0855",
+      "ProvincieStatcode": "PV30"
     },
     {
       "Locatie": "Almere",
       "Type": "Grote gemeente",
       "Latitude": 52.36718,
-      "Longitude": 5.24666
+      "Longitude": 5.24666,
+      "Statcode": "GM0034",
+      "ProvincieStatcode": "PV24"
     },
     {
       "Locatie": "Breda",
       "Type": "Grote gemeente",
       "Latitude": 51.58509,
-      "Longitude": 4.76148
+      "Longitude": 4.76148,
+      "Statcode": "GM0758",
+      "ProvincieStatcode": "PV30"
     },
     {
       "Locatie": "Nijmegen",
       "Type": "Grote gemeente",
       "Latitude": 51.83853,
-      "Longitude": 5.83683
+      "Longitude": 5.83683,
+      "Statcode": "GM0268",
+      "ProvincieStatcode": "PV25"
     },
     {
       "Locatie": "Apeldoorn",
       "Type": "Grote gemeente",
       "Latitude": 52.18985,
-      "Longitude": 5.92194
+      "Longitude": 5.92194,
+      "Statcode": "GM0200",
+      "ProvincieStatcode": "PV25"
     },
     {
       "Locatie": "Enschede",
       "Type": "Grote gemeente",
       "Latitude": 52.22079,
-      "Longitude": 6.87777
+      "Longitude": 6.87777,
+      "Statcode": "GM0153",
+      "ProvincieStatcode": "PV23"
     },
     {
       "Locatie": "Amersfoort",
       "Type": "Grote gemeente",
       "Latitude": 52.17361,
-      "Longitude": 5.38468
+      "Longitude": 5.38468,
+      "Statcode": "GM0307",
+      "ProvincieStatcode": "PV26"
     },
     {
       "Locatie": "Zaanstad",
       "Type": "Grote gemeente",
       "Latitude": 52.46292,
-      "Longitude": 4.77302
+      "Longitude": 4.77302,
+      "Statcode": "GM0479",
+      "ProvincieStatcode": "PV27"
     },
     {
       "Locatie": "Haarlemmermeer",
       "Type": "Grote gemeente",
       "Latitude": 52.30809,
-      "Longitude": 4.68646
+      "Longitude": 4.68646,
+      "Statcode": "GM0394",
+      "ProvincieStatcode": "PV27"
     },
     {
       "Locatie": "Den Helder",
       "Type": "Grote gemeente",
       "Latitude": 52.92261,
-      "Longitude": 4.75402
+      "Longitude": 4.75402,
+      "Statcode": "GM0400",
+      "ProvincieStatcode": "PV27"
     },
     {
       "Locatie": "Emmen",
       "Type": "Grote gemeente",
       "Latitude": 52.74964,
-      "Longitude": 6.96192
+      "Longitude": 6.96192,
+      "Statcode": "GM0114",
+      "ProvincieStatcode": "PV22"
     },
     {
       "Locatie": "Venlo",
       "Type": "Grote gemeente",
       "Latitude": 51.39094,
-      "Longitude": 6.15911
+      "Longitude": 6.15911,
+      "Statcode": "GM0983",
+      "ProvincieStatcode": "PV31"
     },
     {
       "Locatie": "Deventer",
       "Type": "Grote gemeente",
       "Latitude": 52.26824,
-      "Longitude": 6.23575
+      "Longitude": 6.23575,
+      "Statcode": "GM0150",
+      "ProvincieStatcode": "PV23"
     },
     {
       "Locatie": "Leiden",
       "Type": "Grote gemeente",
       "Latitude": 52.15498,
-      "Longitude": 4.48512
+      "Longitude": 4.48512,
+      "Statcode": "GM0546",
+      "ProvincieStatcode": "PV28"
     },
     {
       "Locatie": "Dordrecht",
       "Type": "Grote gemeente",
       "Latitude": 51.78205,
-      "Longitude": 4.70953
+      "Longitude": 4.70953,
+      "Statcode": "GM0505",
+      "ProvincieStatcode": "PV28"
     },
     {
       "Locatie": "Alkmaar",
       "Type": "Grote gemeente",
       "Latitude": 52.60181,
-      "Longitude": 4.80331
+      "Longitude": 4.80331,
+      "Statcode": "GM0361",
+      "ProvincieStatcode": "PV27"
     },
     {
       "Locatie": "Hoorn",
       "Type": "Grote gemeente",
       "Latitude": 52.65612,
-      "Longitude": 5.07004
+      "Longitude": 5.07004,
+      "Statcode": "GM0405",
+      "ProvincieStatcode": "PV27"
     },
     {
       "Locatie": "Sittard-Geleen",
       "Type": "Grote gemeente",
       "Latitude": 51.00486,
-      "Longitude": 5.82821
+      "Longitude": 5.82821,
+      "Statcode": "GM1883",
+      "ProvincieStatcode": "PV31"
     },
     {
       "Locatie": "Heerenveen",
       "Type": "Grote gemeente",
       "Latitude": 52.996,
-      "Longitude": 5.97803
+      "Longitude": 5.97803,
+      "Statcode": "GM0074",
+      "ProvincieStatcode": "PV21"
     },
     {
       "Locatie": "Goes",
       "Type": "Grote gemeente",
       "Latitude": 51.51518,
-      "Longitude": 3.84493
+      "Longitude": 3.84493,
+      "Statcode": "GM0664",
+      "ProvincieStatcode": "PV29"
     },
     {
       "Locatie": "Terneuzen",
       "Type": "Grote gemeente",
       "Latitude": 51.28789,
-      "Longitude": 3.84592
+      "Longitude": 3.84592,
+      "Statcode": "GM0715",
+      "ProvincieStatcode": "PV29"
+    }
+  ],
+  "ggd": [
+    {
+      "Statcode": "GG4816",
+      "GGD": "Dienst Gezondheid & Jeugd ZHZ"
+    },
+    {
+      "Statcode": "GG3406",
+      "GGD": "GGD Amsterdam"
+    },
+    {
+      "Statcode": "GG5608",
+      "GGD": "GGD Brabant-Zuidoost"
+    },
+    {
+      "Statcode": "GG0706",
+      "GGD": "GGD Drenthe"
+    },
+    {
+      "Statcode": "GG2209",
+      "GGD": "GGD Flevoland"
+    },
+    {
+      "Statcode": "GG7206",
+      "GGD": "GGD Fryslân"
+    },
+    {
+      "Statcode": "GG2014",
+      "GGD": "GGD Gelderland-Zuid"
+    },
+    {
+      "Statcode": "GG3606",
+      "GGD": "GGD Gooi en Vechtstreek"
+    },
+    {
+      "Statcode": "GG0111",
+      "GGD": "GGD Groningen"
+    },
+    {
+      "Statcode": "GG7014",
+      "GGD": "GGD Haaglanden"
+    },
+    {
+      "Statcode": "GG5406",
+      "GGD": "GGD Hart voor Brabant"
+    },
+    {
+      "Statcode": "GG4506",
+      "GGD": "GGD Hollands-Midden"
+    },
+    {
+      "Statcode": "GG2707",
+      "GGD": "GGD Hollands-Noorden"
+    },
+    {
+      "Statcode": "GG1009",
+      "GGD": "GGD IJsselland"
+    },
+    {
+      "Statcode": "GG3109",
+      "GGD": "GGD Kennemerland"
+    },
+    {
+      "Statcode": "GG6011",
+      "GGD": "GGD Limburg-Noord"
+    },
+    {
+      "Statcode": "GG1413",
+      "GGD": "GGD Noord- en Oost-Gelderland"
+    },
+    {
+      "Statcode": "GG2514",
+      "GGD": "GGD Regio Utrecht"
+    },
+    {
+      "Statcode": "GG4607",
+      "GGD": "GGD Rotterdam-Rijnmond"
+    },
+    {
+      "Statcode": "GG1106",
+      "GGD": "GGD Twente"
+    },
+    {
+      "Statcode": "GG5206",
+      "GGD": "GGD West-Brabant"
+    },
+    {
+      "Statcode": "GG7306",
+      "GGD": "GGD Zaanstreek/Waterland"
+    },
+    {
+      "Statcode": "GG5006",
+      "GGD": "GGD Zeeland"
+    },
+    {
+      "Statcode": "GG6106",
+      "GGD": "GGD Zuid-Limburg"
+    },
+    {
+      "Statcode": "GG1911",
+      "GGD": "Veiligheids- en Gezondheidsregio Gelderland-Midden"
+    }
+  ],
+  "locaties": [
+    {
+      "Locatie": "Locatie GG0111-1",
+      "Type": "type_geaccepteerd",
+      "Status": "GEACCEPTEERD",
+      "Latitude": 53.17286,
+      "Longitude": 6.81151,
+      "GGDStatcode": "GG0111",
+      "GGD": "GGD Groningen"
+    },
+    {
+      "Locatie": "Locatie GG0111-2",
+      "Type": "type_nieuw",
+      "Status": "NIEUW",
+      "Latitude": 53.16225,
+      "Longitude": 6.81547,
+      "GGDStatcode": "GG0111",
+      "GGD": "GGD Groningen"
+    },
+    {
+      "Locatie": "Locatie GG0111-3",
+      "Type": "type_afgewezen",
+      "Status": "AFGEWEZEN",
+      "Latitude": 53.16745,
+      "Longitude": 6.78188,
+      "GGDStatcode": "GG0111",
+      "GGD": "GGD Groningen"
+    },
+    {
+      "Locatie": "Locatie GG0706-1",
+      "Type": "type_geaccepteerd",
+      "Status": "GEACCEPTEERD",
+      "Latitude": 52.9165,
+      "Longitude": 6.5399,
+      "GGDStatcode": "GG0706",
+      "GGD": "GGD Drenthe"
+    },
+    {
+      "Locatie": "Locatie GG0706-2",
+      "Type": "type_nieuw",
+      "Status": "NIEUW",
+      "Latitude": 52.91922,
+      "Longitude": 6.68271,
+      "GGDStatcode": "GG0706",
+      "GGD": "GGD Drenthe"
+    },
+    {
+      "Locatie": "Locatie GG0706-3",
+      "Type": "type_afgewezen",
+      "Status": "AFGEWEZEN",
+      "Latitude": 52.92111,
+      "Longitude": 6.56498,
+      "GGDStatcode": "GG0706",
+      "GGD": "GGD Drenthe"
+    },
+    {
+      "Locatie": "Locatie GG1009-1",
+      "Type": "type_geaccepteerd",
+      "Status": "GEACCEPTEERD",
+      "Latitude": 52.55469,
+      "Longitude": 6.22708,
+      "GGDStatcode": "GG1009",
+      "GGD": "GGD IJsselland"
+    },
+    {
+      "Locatie": "Locatie GG1009-2",
+      "Type": "type_nieuw",
+      "Status": "NIEUW",
+      "Latitude": 52.56152,
+      "Longitude": 6.30039,
+      "GGDStatcode": "GG1009",
+      "GGD": "GGD IJsselland"
+    },
+    {
+      "Locatie": "Locatie GG1009-3",
+      "Type": "type_afgewezen",
+      "Status": "AFGEWEZEN",
+      "Latitude": 52.59965,
+      "Longitude": 6.32355,
+      "GGDStatcode": "GG1009",
+      "GGD": "GGD IJsselland"
+    },
+    {
+      "Locatie": "Locatie GG1106-1",
+      "Type": "type_geaccepteerd",
+      "Status": "GEACCEPTEERD",
+      "Latitude": 52.36672,
+      "Longitude": 6.73858,
+      "GGDStatcode": "GG1106",
+      "GGD": "GGD Twente"
+    },
+    {
+      "Locatie": "Locatie GG1106-2",
+      "Type": "type_nieuw",
+      "Status": "NIEUW",
+      "Latitude": 52.36611,
+      "Longitude": 6.64648,
+      "GGDStatcode": "GG1106",
+      "GGD": "GGD Twente"
+    },
+    {
+      "Locatie": "Locatie GG1106-3",
+      "Type": "type_afgewezen",
+      "Status": "AFGEWEZEN",
+      "Latitude": 52.28386,
+      "Longitude": 6.68188,
+      "GGDStatcode": "GG1106",
+      "GGD": "GGD Twente"
+    },
+    {
+      "Locatie": "Locatie GG1413-1",
+      "Type": "type_geaccepteerd",
+      "Status": "GEACCEPTEERD",
+      "Latitude": 52.16932,
+      "Longitude": 6.22505,
+      "GGDStatcode": "GG1413",
+      "GGD": "GGD Noord- en Oost-Gelderland"
+    },
+    {
+      "Locatie": "Locatie GG1413-2",
+      "Type": "type_nieuw",
+      "Status": "NIEUW",
+      "Latitude": 52.2045,
+      "Longitude": 6.12446,
+      "GGDStatcode": "GG1413",
+      "GGD": "GGD Noord- en Oost-Gelderland"
+    },
+    {
+      "Locatie": "Locatie GG1413-3",
+      "Type": "type_afgewezen",
+      "Status": "AFGEWEZEN",
+      "Latitude": 52.11451,
+      "Longitude": 6.25702,
+      "GGDStatcode": "GG1413",
+      "GGD": "GGD Noord- en Oost-Gelderland"
+    },
+    {
+      "Locatie": "Locatie GG1911-1",
+      "Type": "type_geaccepteerd",
+      "Status": "GEACCEPTEERD",
+      "Latitude": 52.02362,
+      "Longitude": 5.74494,
+      "GGDStatcode": "GG1911",
+      "GGD": "Veiligheids- en Gezondheidsregio Gelderland-Midden"
+    },
+    {
+      "Locatie": "Locatie GG1911-2",
+      "Type": "type_nieuw",
+      "Status": "NIEUW",
+      "Latitude": 52.05488,
+      "Longitude": 5.74382,
+      "GGDStatcode": "GG1911",
+      "GGD": "Veiligheids- en Gezondheidsregio Gelderland-Midden"
+    },
+    {
+      "Locatie": "Locatie GG1911-3",
+      "Type": "type_afgewezen",
+      "Status": "AFGEWEZEN",
+      "Latitude": 52.08407,
+      "Longitude": 5.80682,
+      "GGDStatcode": "GG1911",
+      "GGD": "Veiligheids- en Gezondheidsregio Gelderland-Midden"
+    },
+    {
+      "Locatie": "Locatie GG2014-1",
+      "Type": "type_geaccepteerd",
+      "Status": "GEACCEPTEERD",
+      "Latitude": 51.88873,
+      "Longitude": 5.42535,
+      "GGDStatcode": "GG2014",
+      "GGD": "GGD Gelderland-Zuid"
+    },
+    {
+      "Locatie": "Locatie GG2014-2",
+      "Type": "type_nieuw",
+      "Status": "NIEUW",
+      "Latitude": 51.88687,
+      "Longitude": 5.52253,
+      "GGDStatcode": "GG2014",
+      "GGD": "GGD Gelderland-Zuid"
+    },
+    {
+      "Locatie": "Locatie GG2014-3",
+      "Type": "type_afgewezen",
+      "Status": "AFGEWEZEN",
+      "Latitude": 51.85594,
+      "Longitude": 5.47465,
+      "GGDStatcode": "GG2014",
+      "GGD": "GGD Gelderland-Zuid"
+    },
+    {
+      "Locatie": "Locatie GG2209-1",
+      "Type": "type_geaccepteerd",
+      "Status": "GEACCEPTEERD",
+      "Latitude": 52.52349,
+      "Longitude": 5.64146,
+      "GGDStatcode": "GG2209",
+      "GGD": "GGD Flevoland"
+    },
+    {
+      "Locatie": "Locatie GG2209-2",
+      "Type": "type_nieuw",
+      "Status": "NIEUW",
+      "Latitude": 52.56223,
+      "Longitude": 5.59046,
+      "GGDStatcode": "GG2209",
+      "GGD": "GGD Flevoland"
+    },
+    {
+      "Locatie": "Locatie GG2209-3",
+      "Type": "type_afgewezen",
+      "Status": "AFGEWEZEN",
+      "Latitude": 52.47547,
+      "Longitude": 5.52283,
+      "GGDStatcode": "GG2209",
+      "GGD": "GGD Flevoland"
+    },
+    {
+      "Locatie": "Locatie GG2514-1",
+      "Type": "type_geaccepteerd",
+      "Status": "GEACCEPTEERD",
+      "Latitude": 52.04798,
+      "Longitude": 5.19871,
+      "GGDStatcode": "GG2514",
+      "GGD": "GGD Regio Utrecht"
+    },
+    {
+      "Locatie": "Locatie GG2514-2",
+      "Type": "type_nieuw",
+      "Status": "NIEUW",
+      "Latitude": 52.12156,
+      "Longitude": 5.12321,
+      "GGDStatcode": "GG2514",
+      "GGD": "GGD Regio Utrecht"
+    },
+    {
+      "Locatie": "Locatie GG2514-3",
+      "Type": "type_afgewezen",
+      "Status": "AFGEWEZEN",
+      "Latitude": 52.05008,
+      "Longitude": 5.11781,
+      "GGDStatcode": "GG2514",
+      "GGD": "GGD Regio Utrecht"
+    },
+    {
+      "Locatie": "Locatie GG2707-1",
+      "Type": "type_geaccepteerd",
+      "Status": "GEACCEPTEERD",
+      "Latitude": 52.78436,
+      "Longitude": 4.87669,
+      "GGDStatcode": "GG2707",
+      "GGD": "GGD Hollands-Noorden"
+    },
+    {
+      "Locatie": "Locatie GG2707-2",
+      "Type": "type_nieuw",
+      "Status": "NIEUW",
+      "Latitude": 52.71935,
+      "Longitude": 4.94713,
+      "GGDStatcode": "GG2707",
+      "GGD": "GGD Hollands-Noorden"
+    },
+    {
+      "Locatie": "Locatie GG2707-3",
+      "Type": "type_afgewezen",
+      "Status": "AFGEWEZEN",
+      "Latitude": 52.80884,
+      "Longitude": 4.83128,
+      "GGDStatcode": "GG2707",
+      "GGD": "GGD Hollands-Noorden"
+    },
+    {
+      "Locatie": "Locatie GG3109-1",
+      "Type": "type_geaccepteerd",
+      "Status": "GEACCEPTEERD",
+      "Latitude": 52.39686,
+      "Longitude": 4.69501,
+      "GGDStatcode": "GG3109",
+      "GGD": "GGD Kennemerland"
+    },
+    {
+      "Locatie": "Locatie GG3109-2",
+      "Type": "type_nieuw",
+      "Status": "NIEUW",
+      "Latitude": 52.38346,
+      "Longitude": 4.64148,
+      "GGDStatcode": "GG3109",
+      "GGD": "GGD Kennemerland"
+    },
+    {
+      "Locatie": "Locatie GG3109-3",
+      "Type": "type_afgewezen",
+      "Status": "AFGEWEZEN",
+      "Latitude": 52.33347,
+      "Longitude": 4.71383,
+      "GGDStatcode": "GG3109",
+      "GGD": "GGD Kennemerland"
+    },
+    {
+      "Locatie": "Locatie GG3406-1",
+      "Type": "type_geaccepteerd",
+      "Status": "GEACCEPTEERD",
+      "Latitude": 52.29502,
+      "Longitude": 4.9691,
+      "GGDStatcode": "GG3406",
+      "GGD": "GGD Amsterdam"
+    },
+    {
+      "Locatie": "Locatie GG3406-2",
+      "Type": "type_nieuw",
+      "Status": "NIEUW",
+      "Latitude": 52.38598,
+      "Longitude": 4.9001,
+      "GGDStatcode": "GG3406",
+      "GGD": "GGD Amsterdam"
+    },
+    {
+      "Locatie": "Locatie GG3406-3",
+      "Type": "type_afgewezen",
+      "Status": "AFGEWEZEN",
+      "Latitude": 52.30118,
+      "Longitude": 4.94645,
+      "GGDStatcode": "GG3406",
+      "GGD": "GGD Amsterdam"
+    },
+    {
+      "Locatie": "Locatie GG3606-1",
+      "Type": "type_geaccepteerd",
+      "Status": "GEACCEPTEERD",
+      "Latitude": 52.25116,
+      "Longitude": 5.14291,
+      "GGDStatcode": "GG3606",
+      "GGD": "GGD Gooi en Vechtstreek"
+    },
+    {
+      "Locatie": "Locatie GG3606-2",
+      "Type": "type_nieuw",
+      "Status": "NIEUW",
+      "Latitude": 52.25116,
+      "Longitude": 5.14291,
+      "GGDStatcode": "GG3606",
+      "GGD": "GGD Gooi en Vechtstreek"
+    },
+    {
+      "Locatie": "Locatie GG3606-3",
+      "Type": "type_afgewezen",
+      "Status": "AFGEWEZEN",
+      "Latitude": 52.19752,
+      "Longitude": 5.0889,
+      "GGDStatcode": "GG3606",
+      "GGD": "GGD Gooi en Vechtstreek"
+    },
+    {
+      "Locatie": "Locatie GG4506-1",
+      "Type": "type_geaccepteerd",
+      "Status": "GEACCEPTEERD",
+      "Latitude": 52.05759,
+      "Longitude": 4.69764,
+      "GGDStatcode": "GG4506",
+      "GGD": "GGD Hollands-Midden"
+    },
+    {
+      "Locatie": "Locatie GG4506-2",
+      "Type": "type_nieuw",
+      "Status": "NIEUW",
+      "Latitude": 52.13497,
+      "Longitude": 4.68545,
+      "GGDStatcode": "GG4506",
+      "GGD": "GGD Hollands-Midden"
+    },
+    {
+      "Locatie": "Locatie GG4506-3",
+      "Type": "type_afgewezen",
+      "Status": "AFGEWEZEN",
+      "Latitude": 52.08899,
+      "Longitude": 4.55736,
+      "GGDStatcode": "GG4506",
+      "GGD": "GGD Hollands-Midden"
+    },
+    {
+      "Locatie": "Locatie GG4607-1",
+      "Type": "type_geaccepteerd",
+      "Status": "GEACCEPTEERD",
+      "Latitude": 51.86709,
+      "Longitude": 4.19408,
+      "GGDStatcode": "GG4607",
+      "GGD": "GGD Rotterdam-Rijnmond"
+    },
+    {
+      "Locatie": "Locatie GG4607-2",
+      "Type": "type_nieuw",
+      "Status": "NIEUW",
+      "Latitude": 51.83749,
+      "Longitude": 4.3133,
+      "GGDStatcode": "GG4607",
+      "GGD": "GGD Rotterdam-Rijnmond"
+    },
+    {
+      "Locatie": "Locatie GG4607-3",
+      "Type": "type_afgewezen",
+      "Status": "AFGEWEZEN",
+      "Latitude": 51.90281,
+      "Longitude": 4.28132,
+      "GGDStatcode": "GG4607",
+      "GGD": "GGD Rotterdam-Rijnmond"
+    },
+    {
+      "Locatie": "Locatie GG4816-1",
+      "Type": "type_geaccepteerd",
+      "Status": "GEACCEPTEERD",
+      "Latitude": 51.79655,
+      "Longitude": 4.65387,
+      "GGDStatcode": "GG4816",
+      "GGD": "Dienst Gezondheid & Jeugd ZHZ"
+    },
+    {
+      "Locatie": "Locatie GG4816-2",
+      "Type": "type_nieuw",
+      "Status": "NIEUW",
+      "Latitude": 51.79971,
+      "Longitude": 4.57773,
+      "GGDStatcode": "GG4816",
+      "GGD": "Dienst Gezondheid & Jeugd ZHZ"
+    },
+    {
+      "Locatie": "Locatie GG4816-3",
+      "Type": "type_afgewezen",
+      "Status": "AFGEWEZEN",
+      "Latitude": 51.76967,
+      "Longitude": 4.6759,
+      "GGDStatcode": "GG4816",
+      "GGD": "Dienst Gezondheid & Jeugd ZHZ"
+    },
+    {
+      "Locatie": "Locatie GG5006-1",
+      "Type": "type_geaccepteerd",
+      "Status": "GEACCEPTEERD",
+      "Latitude": 51.42542,
+      "Longitude": 3.89183,
+      "GGDStatcode": "GG5006",
+      "GGD": "GGD Zeeland"
+    },
+    {
+      "Locatie": "Locatie GG5006-2",
+      "Type": "type_nieuw",
+      "Status": "NIEUW",
+      "Latitude": 51.43489,
+      "Longitude": 3.84049,
+      "GGDStatcode": "GG5006",
+      "GGD": "GGD Zeeland"
+    },
+    {
+      "Locatie": "Locatie GG5006-3",
+      "Type": "type_afgewezen",
+      "Status": "AFGEWEZEN",
+      "Latitude": 51.50866,
+      "Longitude": 3.89788,
+      "GGDStatcode": "GG5006",
+      "GGD": "GGD Zeeland"
+    },
+    {
+      "Locatie": "Locatie GG5206-1",
+      "Type": "type_geaccepteerd",
+      "Status": "GEACCEPTEERD",
+      "Latitude": 51.63011,
+      "Longitude": 4.67132,
+      "GGDStatcode": "GG5206",
+      "GGD": "GGD West-Brabant"
+    },
+    {
+      "Locatie": "Locatie GG5206-2",
+      "Type": "type_nieuw",
+      "Status": "NIEUW",
+      "Latitude": 51.6055,
+      "Longitude": 4.58406,
+      "GGDStatcode": "GG5206",
+      "GGD": "GGD West-Brabant"
+    },
+    {
+      "Locatie": "Locatie GG5206-3",
+      "Type": "type_afgewezen",
+      "Status": "AFGEWEZEN",
+      "Latitude": 51.58701,
+      "Longitude": 4.68689,
+      "GGDStatcode": "GG5206",
+      "GGD": "GGD West-Brabant"
+    },
+    {
+      "Locatie": "Locatie GG5406-1",
+      "Type": "type_geaccepteerd",
+      "Status": "GEACCEPTEERD",
+      "Latitude": 51.60081,
+      "Longitude": 5.38276,
+      "GGDStatcode": "GG5406",
+      "GGD": "GGD Hart voor Brabant"
+    },
+    {
+      "Locatie": "Locatie GG5406-2",
+      "Type": "type_nieuw",
+      "Status": "NIEUW",
+      "Latitude": 51.69487,
+      "Longitude": 5.38061,
+      "GGDStatcode": "GG5406",
+      "GGD": "GGD Hart voor Brabant"
+    },
+    {
+      "Locatie": "Locatie GG5406-3",
+      "Type": "type_afgewezen",
+      "Status": "AFGEWEZEN",
+      "Latitude": 51.61297,
+      "Longitude": 5.48507,
+      "GGDStatcode": "GG5406",
+      "GGD": "GGD Hart voor Brabant"
+    },
+    {
+      "Locatie": "Locatie GG5608-1",
+      "Type": "type_geaccepteerd",
+      "Status": "GEACCEPTEERD",
+      "Latitude": 51.40976,
+      "Longitude": 5.43049,
+      "GGDStatcode": "GG5608",
+      "GGD": "GGD Brabant-Zuidoost"
+    },
+    {
+      "Locatie": "Locatie GG5608-2",
+      "Type": "type_nieuw",
+      "Status": "NIEUW",
+      "Latitude": 51.45788,
+      "Longitude": 5.44412,
+      "GGDStatcode": "GG5608",
+      "GGD": "GGD Brabant-Zuidoost"
+    },
+    {
+      "Locatie": "Locatie GG5608-3",
+      "Type": "type_afgewezen",
+      "Status": "AFGEWEZEN",
+      "Latitude": 51.42722,
+      "Longitude": 5.47156,
+      "GGDStatcode": "GG5608",
+      "GGD": "GGD Brabant-Zuidoost"
+    },
+    {
+      "Locatie": "Locatie GG6011-1",
+      "Type": "type_geaccepteerd",
+      "Status": "GEACCEPTEERD",
+      "Latitude": 51.29146,
+      "Longitude": 5.90884,
+      "GGDStatcode": "GG6011",
+      "GGD": "GGD Limburg-Noord"
+    },
+    {
+      "Locatie": "Locatie GG6011-2",
+      "Type": "type_nieuw",
+      "Status": "NIEUW",
+      "Latitude": 51.36931,
+      "Longitude": 6.02016,
+      "GGDStatcode": "GG6011",
+      "GGD": "GGD Limburg-Noord"
+    },
+    {
+      "Locatie": "Locatie GG6011-3",
+      "Type": "type_afgewezen",
+      "Status": "AFGEWEZEN",
+      "Latitude": 51.32477,
+      "Longitude": 5.90942,
+      "GGDStatcode": "GG6011",
+      "GGD": "GGD Limburg-Noord"
+    },
+    {
+      "Locatie": "Locatie GG7014-1",
+      "Type": "type_geaccepteerd",
+      "Status": "GEACCEPTEERD",
+      "Latitude": 52.01338,
+      "Longitude": 4.41936,
+      "GGDStatcode": "GG7014",
+      "GGD": "GGD Haaglanden"
+    },
+    {
+      "Locatie": "Locatie GG7014-2",
+      "Type": "type_nieuw",
+      "Status": "NIEUW",
+      "Latitude": 51.98637,
+      "Longitude": 4.40039,
+      "GGDStatcode": "GG7014",
+      "GGD": "GGD Haaglanden"
+    },
+    {
+      "Locatie": "Locatie GG7014-3",
+      "Type": "type_afgewezen",
+      "Status": "AFGEWEZEN",
+      "Latitude": 51.99058,
+      "Longitude": 4.28905,
+      "GGDStatcode": "GG7014",
+      "GGD": "GGD Haaglanden"
+    },
+    {
+      "Locatie": "Locatie GG7206-1",
+      "Type": "type_geaccepteerd",
+      "Status": "GEACCEPTEERD",
+      "Latitude": 53.08535,
+      "Longitude": 5.91081,
+      "GGDStatcode": "GG7206",
+      "GGD": "GGD Fryslân"
+    },
+    {
+      "Locatie": "Locatie GG7206-2",
+      "Type": "type_nieuw",
+      "Status": "NIEUW",
+      "Latitude": 53.15286,
+      "Longitude": 5.77021,
+      "GGDStatcode": "GG7206",
+      "GGD": "GGD Fryslân"
+    },
+    {
+      "Locatie": "Locatie GG7206-3",
+      "Type": "type_afgewezen",
+      "Status": "AFGEWEZEN",
+      "Latitude": 53.13424,
+      "Longitude": 5.88416,
+      "GGDStatcode": "GG7206",
+      "GGD": "GGD Fryslân"
+    },
+    {
+      "Locatie": "Locatie GG7306-1",
+      "Type": "type_geaccepteerd",
+      "Status": "GEACCEPTEERD",
+      "Latitude": 52.51154,
+      "Longitude": 4.89807,
+      "GGDStatcode": "GG7306",
+      "GGD": "GGD Zaanstreek/Waterland"
+    },
+    {
+      "Locatie": "Locatie GG7306-2",
+      "Type": "type_nieuw",
+      "Status": "NIEUW",
+      "Latitude": 52.53686,
+      "Longitude": 4.84619,
+      "GGDStatcode": "GG7306",
+      "GGD": "GGD Zaanstreek/Waterland"
+    },
+    {
+      "Locatie": "Locatie GG7306-3",
+      "Type": "type_afgewezen",
+      "Status": "AFGEWEZEN",
+      "Latitude": 52.47394,
+      "Longitude": 4.9167,
+      "GGDStatcode": "GG7306",
+      "GGD": "GGD Zaanstreek/Waterland"
+    },
+    {
+      "Locatie": "Locatie GG6106-1",
+      "Type": "type_geaccepteerd",
+      "Status": "GEACCEPTEERD",
+      "Latitude": 50.84117,
+      "Longitude": 5.80186,
+      "GGDStatcode": "GG6106",
+      "GGD": "GGD Zuid-Limburg"
+    },
+    {
+      "Locatie": "Locatie GG6106-2",
+      "Type": "type_nieuw",
+      "Status": "NIEUW",
+      "Latitude": 50.85145,
+      "Longitude": 5.81431,
+      "GGDStatcode": "GG6106",
+      "GGD": "GGD Zuid-Limburg"
+    },
+    {
+      "Locatie": "Locatie GG6106-3",
+      "Type": "type_afgewezen",
+      "Status": "AFGEWEZEN",
+      "Latitude": 50.84646,
+      "Longitude": 5.87669,
+      "GGDStatcode": "GG6106",
+      "GGD": "GGD Zuid-Limburg"
     }
   ],
   "kaarten": [
@@ -2702,7 +3553,7 @@
       "Instelling": "wijken",
       "StatcodePrefix": "WK",
       "Regios": 3352,
-      "VoorbeeldStatcode": ""
+      "VoorbeeldStatcode": "WK001400"
     },
     {
       "Volgnummer": 3,

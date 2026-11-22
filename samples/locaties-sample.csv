@@ -1,0 +1,76 @@
+Locatie;Type;Status;Latitude;Longitude;GGDStatcode;GGD
+Locatie GG0111-1;type_geaccepteerd;GEACCEPTEERD;53.17286;6.81151;GG0111;GGD Groningen
+Locatie GG0111-2;type_nieuw;NIEUW;53.16225;6.81547;GG0111;GGD Groningen
+Locatie GG0111-3;type_afgewezen;AFGEWEZEN;53.16745;6.78188;GG0111;GGD Groningen
+Locatie GG0706-1;type_geaccepteerd;GEACCEPTEERD;52.9165;6.5399;GG0706;GGD Drenthe
+Locatie GG0706-2;type_nieuw;NIEUW;52.91922;6.68271;GG0706;GGD Drenthe
+Locatie GG0706-3;type_afgewezen;AFGEWEZEN;52.92111;6.56498;GG0706;GGD Drenthe
+Locatie GG1009-1;type_geaccepteerd;GEACCEPTEERD;52.55469;6.22708;GG1009;GGD IJsselland
+Locatie GG1009-2;type_nieuw;NIEUW;52.56152;6.30039;GG1009;GGD IJsselland
+Locatie GG1009-3;type_afgewezen;AFGEWEZEN;52.59965;6.32355;GG1009;GGD IJsselland
+Locatie GG1106-1;type_geaccepteerd;GEACCEPTEERD;52.36672;6.73858;GG1106;GGD Twente
+Locatie GG1106-2;type_nieuw;NIEUW;52.36611;6.64648;GG1106;GGD Twente
+Locatie GG1106-3;type_afgewezen;AFGEWEZEN;52.28386;6.68188;GG1106;GGD Twente
+Locatie GG1413-1;type_geaccepteerd;GEACCEPTEERD;52.16932;6.22505;GG1413;GGD Noord- en Oost-Gelderland
+Locatie GG1413-2;type_nieuw;NIEUW;52.2045;6.12446;GG1413;GGD Noord- en Oost-Gelderland
+Locatie GG1413-3;type_afgewezen;AFGEWEZEN;52.11451;6.25702;GG1413;GGD Noord- en Oost-Gelderland
+Locatie GG1911-1;type_geaccepteerd;GEACCEPTEERD;52.02362;5.74494;GG1911;Veiligheids- en Gezondheidsregio Gelderland-Midden
+Locatie GG1911-2;type_nieuw;NIEUW;52.05488;5.74382;GG1911;Veiligheids- en Gezondheidsregio Gelderland-Midden
+Locatie GG1911-3;type_afgewezen;AFGEWEZEN;52.08407;5.80682;GG1911;Veiligheids- en Gezondheidsregio Gelderland-Midden
+Locatie GG2014-1;type_geaccepteerd;GEACCEPTEERD;51.88873;5.42535;GG2014;GGD Gelderland-Zuid
+Locatie GG2014-2;type_nieuw;NIEUW;51.88687;5.52253;GG2014;GGD Gelderland-Zuid
+Locatie GG2014-3;type_afgewezen;AFGEWEZEN;51.85594;5.47465;GG2014;GGD Gelderland-Zuid
+Locatie GG2209-1;type_geaccepteerd;GEACCEPTEERD;52.52349;5.64146;GG2209;GGD Flevoland
+Locatie GG2209-2;type_nieuw;NIEUW;52.56223;5.59046;GG2209;GGD Flevoland
+Locatie GG2209-3;type_afgewezen;AFGEWEZEN;52.47547;5.52283;GG2209;GGD Flevoland
+Locatie GG2514-1;type_geaccepteerd;GEACCEPTEERD;52.04798;5.19871;GG2514;GGD Regio Utrecht
+Locatie GG2514-2;type_nieuw;NIEUW;52.12156;5.12321;GG2514;GGD Regio Utrecht
+Locatie GG2514-3;type_afgewezen;AFGEWEZEN;52.05008;5.11781;GG2514;GGD Regio Utrecht
+Locatie GG2707-1;type_geaccepteerd;GEACCEPTEERD;52.78436;4.87669;GG2707;GGD Hollands-Noorden
+Locatie GG2707-2;type_nieuw;NIEUW;52.71935;4.94713;GG2707;GGD Hollands-Noorden
+Locatie GG2707-3;type_afgewezen;AFGEWEZEN;52.80884;4.83128;GG2707;GGD Hollands-Noorden
+Locatie GG3109-1;type_geaccepteerd;GEACCEPTEERD;52.39686;4.69501;GG3109;GGD Kennemerland
+Locatie GG3109-2;type_nieuw;NIEUW;52.38346;4.64148;GG3109;GGD Kennemerland
+Locatie GG3109-3;type_afgewezen;AFGEWEZEN;52.33347;4.71383;GG3109;GGD Kennemerland
+Locatie GG3406-1;type_geaccepteerd;GEACCEPTEERD;52.29502;4.9691;GG3406;GGD Amsterdam
+Locatie GG3406-2;type_nieuw;NIEUW;52.38598;4.9001;GG3406;GGD Amsterdam
+Locatie GG3406-3;type_afgewezen;AFGEWEZEN;52.30118;4.94645;GG3406;GGD Amsterdam
+Locatie GG3606-1;type_geaccepteerd;GEACCEPTEERD;52.25116;5.14291;GG3606;GGD Gooi en Vechtstreek
+Locatie GG3606-2;type_nieuw;NIEUW;52.25116;5.14291;GG3606;GGD Gooi en Vechtstreek
+Locatie GG3606-3;type_afgewezen;AFGEWEZEN;52.19752;5.0889;GG3606;GGD Gooi en Vechtstreek
+Locatie GG4506-1;type_geaccepteerd;GEACCEPTEERD;52.05759;4.69764;GG4506;GGD Hollands-Midden
+Locatie GG4506-2;type_nieuw;NIEUW;52.13497;4.68545;GG4506;GGD Hollands-Midden
+Locatie GG4506-3;type_afgewezen;AFGEWEZEN;52.08899;4.55736;GG4506;GGD Hollands-Midden
+Locatie GG4607-1;type_geaccepteerd;GEACCEPTEERD;51.86709;4.19408;GG4607;GGD Rotterdam-Rijnmond
+Locatie GG4607-2;type_nieuw;NIEUW;51.83749;4.3133;GG4607;GGD Rotterdam-Rijnmond
+Locatie GG4607-3;type_afgewezen;AFGEWEZEN;51.90281;4.28132;GG4607;GGD Rotterdam-Rijnmond
+Locatie GG4816-1;type_geaccepteerd;GEACCEPTEERD;51.79655;4.65387;GG4816;Dienst Gezondheid & Jeugd ZHZ
+Locatie GG4816-2;type_nieuw;NIEUW;51.79971;4.57773;GG4816;Dienst Gezondheid & Jeugd ZHZ
+Locatie GG4816-3;type_afgewezen;AFGEWEZEN;51.76967;4.6759;GG4816;Dienst Gezondheid & Jeugd ZHZ
+Locatie GG5006-1;type_geaccepteerd;GEACCEPTEERD;51.42542;3.89183;GG5006;GGD Zeeland
+Locatie GG5006-2;type_nieuw;NIEUW;51.43489;3.84049;GG5006;GGD Zeeland
+Locatie GG5006-3;type_afgewezen;AFGEWEZEN;51.50866;3.89788;GG5006;GGD Zeeland
+Locatie GG5206-1;type_geaccepteerd;GEACCEPTEERD;51.63011;4.67132;GG5206;GGD West-Brabant
+Locatie GG5206-2;type_nieuw;NIEUW;51.6055;4.58406;GG5206;GGD West-Brabant
+Locatie GG5206-3;type_afgewezen;AFGEWEZEN;51.58701;4.68689;GG5206;GGD West-Brabant
+Locatie GG5406-1;type_geaccepteerd;GEACCEPTEERD;51.60081;5.38276;GG5406;GGD Hart voor Brabant
+Locatie GG5406-2;type_nieuw;NIEUW;51.69487;5.38061;GG5406;GGD Hart voor Brabant
+Locatie GG5406-3;type_afgewezen;AFGEWEZEN;51.61297;5.48507;GG5406;GGD Hart voor Brabant
+Locatie GG5608-1;type_geaccepteerd;GEACCEPTEERD;51.40976;5.43049;GG5608;GGD Brabant-Zuidoost
+Locatie GG5608-2;type_nieuw;NIEUW;51.45788;5.44412;GG5608;GGD Brabant-Zuidoost
+Locatie GG5608-3;type_afgewezen;AFGEWEZEN;51.42722;5.47156;GG5608;GGD Brabant-Zuidoost
+Locatie GG6011-1;type_geaccepteerd;GEACCEPTEERD;51.29146;5.90884;GG6011;GGD Limburg-Noord
+Locatie GG6011-2;type_nieuw;NIEUW;51.36931;6.02016;GG6011;GGD Limburg-Noord
+Locatie GG6011-3;type_afgewezen;AFGEWEZEN;51.32477;5.90942;GG6011;GGD Limburg-Noord
+Locatie GG7014-1;type_geaccepteerd;GEACCEPTEERD;52.01338;4.41936;GG7014;GGD Haaglanden
+Locatie GG7014-2;type_nieuw;NIEUW;51.98637;4.40039;GG7014;GGD Haaglanden
+Locatie GG7014-3;type_afgewezen;AFGEWEZEN;51.99058;4.28905;GG7014;GGD Haaglanden
+Locatie GG7206-1;type_geaccepteerd;GEACCEPTEERD;53.08535;5.91081;GG7206;GGD Fryslân
+Locatie GG7206-2;type_nieuw;NIEUW;53.15286;5.77021;GG7206;GGD Fryslân
+Locatie GG7206-3;type_afgewezen;AFGEWEZEN;53.13424;5.88416;GG7206;GGD Fryslân
+Locatie GG7306-1;type_geaccepteerd;GEACCEPTEERD;52.51154;4.89807;GG7306;GGD Zaanstreek/Waterland
+Locatie GG7306-2;type_nieuw;NIEUW;52.53686;4.84619;GG7306;GGD Zaanstreek/Waterland
+Locatie GG7306-3;type_afgewezen;AFGEWEZEN;52.47394;4.9167;GG7306;GGD Zaanstreek/Waterland
+Locatie GG6106-1;type_geaccepteerd;GEACCEPTEERD;50.84117;5.80186;GG6106;GGD Zuid-Limburg
+Locatie GG6106-2;type_nieuw;NIEUW;50.85145;5.81431;GG6106;GGD Zuid-Limburg
+Locatie GG6106-3;type_afgewezen;AFGEWEZEN;50.84646;5.87669;GG6106;GGD Zuid-Limburg

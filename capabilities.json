@@ -41,7 +41,8 @@
       "displayName": "Filter",
       "name": "filter",
       "kind": "Grouping",
-      "preferredTypes": [{ "text": true }]
+      "preferredTypes": [{ "text": true }],
+      "description": "Beperk de kaart (en punten/clusters) tot regio's via CBS-statcode uit de topojson (PV/GM/WK/…), passend bij de gekozen kaart."
     },
     {
       "displayName": "Latitude",

@@ -56,7 +56,7 @@ table Kaarten
 				let
 				    Source = Csv.Document(File.Contents("C:\\Users\\Taco\\Documents\\PowerBI Custom Visuals\\nederlandseRegiokaarten\\samples\\kaarten-sample.csv"), [Delimiter=";", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
 				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
-				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers", {{"Volgnummer", Int64.Type}, {"Kaart", type text}, {"Instelling", type text}, {"StatcodePrefix", type text}, {"Regios", Int64.Type}, {"VoorbeeldStatcode", type text}})
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers", {{"Volgnummer", Int64.Type}, {"Kaart", type text}, {"Instelling", type text}, {"StatcodePrefix", type text}, {"Regios", Int64.Type}, {"VoorbeeldStatcode", type text}}, "en-US")
 				in
 				    #"Changed Type"
 				```

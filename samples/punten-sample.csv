@@ -1,37 +1,37 @@
-Locatie;Type;Latitude;Longitude
-Groningen;Provinciehoofdstad;53.21859;6.62065
-Leeuwarden;Provinciehoofdstad;53.17;5.79788
-Assen;Provinciehoofdstad;53.00126;6.5525
-Zwolle;Provinciehoofdstad;52.51863;6.11839
-Lelystad;Provinciehoofdstad;52.47809;5.47199
-Arnhem;Provinciehoofdstad;52.00106;5.89264
-Utrecht;Provinciehoofdstad;52.09115;5.07475
-Haarlem;Provinciehoofdstad;52.38343;4.64755
-'s-Gravenhage;Provinciehoofdstad;52.06856;4.3003
-Middelburg;Provinciehoofdstad;51.50184;3.64784
-'s-Hertogenbosch;Provinciehoofdstad;51.7168;5.35199
-Maastricht;Provinciehoofdstad;50.85298;5.6995
-Amsterdam;Grote gemeente;52.36502;4.90853
-Rotterdam;Grote gemeente;51.92693;4.30443
-Eindhoven;Grote gemeente;51.45014;5.45854
-Tilburg;Grote gemeente;51.58343;5.07737
-Almere;Grote gemeente;52.36718;5.24666
-Breda;Grote gemeente;51.58509;4.76148
-Nijmegen;Grote gemeente;51.83853;5.83683
-Apeldoorn;Grote gemeente;52.18985;5.92194
-Enschede;Grote gemeente;52.22079;6.87777
-Amersfoort;Grote gemeente;52.17361;5.38468
-Zaanstad;Grote gemeente;52.46292;4.77302
-Haarlemmermeer;Grote gemeente;52.30809;4.68646
-Den Helder;Grote gemeente;52.92261;4.75402
-Emmen;Grote gemeente;52.74964;6.96192
-Venlo;Grote gemeente;51.39094;6.15911
-Deventer;Grote gemeente;52.26824;6.23575
-Leiden;Grote gemeente;52.15498;4.48512
-Dordrecht;Grote gemeente;51.78205;4.70953
-Alkmaar;Grote gemeente;52.60181;4.80331
-Hoorn;Grote gemeente;52.65612;5.07004
-Sittard-Geleen;Grote gemeente;51.00486;5.82821
-Heerenveen;Grote gemeente;52.996;5.97803
-Goes;Grote gemeente;51.51518;3.84493
-Terneuzen;Grote gemeente;51.28789;3.84592
+Locatie;Type;Latitude;Longitude;Statcode;ProvincieStatcode
+Groningen;Provinciehoofdstad;53.21859;6.62065;GM0014;PV20
+Leeuwarden;Provinciehoofdstad;53.17;5.79788;GM0080;PV21
+Assen;Provinciehoofdstad;53.00126;6.5525;GM0106;PV22
+Zwolle;Provinciehoofdstad;52.51863;6.11839;GM0193;PV23
+Lelystad;Provinciehoofdstad;52.47809;5.47199;GM0995;PV24
+Arnhem;Provinciehoofdstad;52.00106;5.89264;GM0202;PV25
+Utrecht;Provinciehoofdstad;52.09115;5.07475;GM0344;PV26
+Haarlem;Provinciehoofdstad;52.38343;4.64755;GM0392;PV27
+'s-Gravenhage;Provinciehoofdstad;52.06856;4.3003;GM0518;PV28
+Middelburg;Provinciehoofdstad;51.50184;3.64784;GM0687;PV29
+'s-Hertogenbosch;Provinciehoofdstad;51.7168;5.35199;GM0796;PV30
+Maastricht;Provinciehoofdstad;50.85298;5.6995;GM0935;PV31
+Amsterdam;Grote gemeente;52.36502;4.90853;GM0363;PV27
+Rotterdam;Grote gemeente;51.92693;4.30443;GM0599;PV28
+Eindhoven;Grote gemeente;51.45014;5.45854;GM0772;PV30
+Tilburg;Grote gemeente;51.58343;5.07737;GM0855;PV30
+Almere;Grote gemeente;52.36718;5.24666;GM0034;PV24
+Breda;Grote gemeente;51.58509;4.76148;GM0758;PV30
+Nijmegen;Grote gemeente;51.83853;5.83683;GM0268;PV25
+Apeldoorn;Grote gemeente;52.18985;5.92194;GM0200;PV25
+Enschede;Grote gemeente;52.22079;6.87777;GM0153;PV23
+Amersfoort;Grote gemeente;52.17361;5.38468;GM0307;PV26
+Zaanstad;Grote gemeente;52.46292;4.77302;GM0479;PV27
+Haarlemmermeer;Grote gemeente;52.30809;4.68646;GM0394;PV27
+Den Helder;Grote gemeente;52.92261;4.75402;GM0400;PV27
+Emmen;Grote gemeente;52.74964;6.96192;GM0114;PV22
+Venlo;Grote gemeente;51.39094;6.15911;GM0983;PV31
+Deventer;Grote gemeente;52.26824;6.23575;GM0150;PV23
+Leiden;Grote gemeente;52.15498;4.48512;GM0546;PV28
+Dordrecht;Grote gemeente;51.78205;4.70953;GM0505;PV28
+Alkmaar;Grote gemeente;52.60181;4.80331;GM0361;PV27
+Hoorn;Grote gemeente;52.65612;5.07004;GM0405;PV27
+Sittard-Geleen;Grote gemeente;51.00486;5.82821;GM1883;PV31
+Heerenveen;Grote gemeente;52.996;5.97803;GM0074;PV21
+Goes;Grote gemeente;51.51518;3.84493;GM0664;PV29
+Terneuzen;Grote gemeente;51.28789;3.84592;GM0715;PV29

@@ -4,7 +4,7 @@
   "position": {
     "x": 16,
     "y": 16,
-    "width": 1334,
+    "width": 1000,
     "height": 736,
     "z": 0,
     "tabOrder": 0
@@ -85,6 +85,25 @@
               },
               "queryRef": "Punten.Locatie",
               "nativeQueryRef": "Locatie",
+              "active": true
+            }
+          ]
+        },
+        "filter": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Punten"
+                    }
+                  },
+                  "Property": "ProvincieStatcode"
+                }
+              },
+              "queryRef": "Punten.ProvincieStatcode",
+              "nativeQueryRef": "ProvincieStatcode",
               "active": true
             }
           ]
