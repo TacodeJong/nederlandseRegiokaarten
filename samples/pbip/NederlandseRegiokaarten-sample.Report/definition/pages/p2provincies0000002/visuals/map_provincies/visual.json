@@ -1,0 +1,128 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "map_provincies",
+  "position": {
+    "x": 16,
+    "y": 16,
+    "width": 1334,
+    "height": 736,
+    "z": 0,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "nederlandseRegiokaarten8EDA3FD18CF8418282BDFCA73E3C5F4A",
+    "query": {
+      "queryState": {
+        "category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Provincies"
+                    }
+                  },
+                  "Property": "Provincie"
+                }
+              },
+              "queryRef": "Provincies.Provincie",
+              "nativeQueryRef": "Provincie",
+              "active": true
+            }
+          ]
+        },
+        "measure": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Provincies"
+                    }
+                  },
+                  "Property": "Provinciescore"
+                }
+              },
+              "queryRef": "Provincies.Provinciescore",
+              "nativeQueryRef": "Provinciescore"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "mapSettings": [
+        {
+          "properties": {
+            "selectedMapSlice": {
+              "expr": {
+                "Literal": {
+                  "Value": "'provincies'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "labelSettings": [
+        {
+          "properties": {
+            "showLabels": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "showValues": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "showRegionName": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Gemiddelde score per provincie'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

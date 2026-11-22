@@ -1,0 +1,1994 @@
+{
+  "gemeenten": [
+    {
+      "Gemeente": "'s-Gravenhage",
+      "Provincie": "Zuid-Holland",
+      "Score": 65
+    },
+    {
+      "Gemeente": "'s-Hertogenbosch",
+      "Provincie": "Noord-Brabant",
+      "Score": 60
+    },
+    {
+      "Gemeente": "Aa en Hunze",
+      "Provincie": "Drenthe",
+      "Score": 111
+    },
+    {
+      "Gemeente": "Aalsmeer",
+      "Provincie": "Noord-Holland",
+      "Score": 73
+    },
+    {
+      "Gemeente": "Aalten",
+      "Provincie": "Gelderland",
+      "Score": 80
+    },
+    {
+      "Gemeente": "Achtkarspelen",
+      "Provincie": "Fryslân",
+      "Score": 87
+    },
+    {
+      "Gemeente": "Alblasserdam",
+      "Provincie": "Zuid-Holland",
+      "Score": 67
+    },
+    {
+      "Gemeente": "Albrandswaard",
+      "Provincie": "Zuid-Holland",
+      "Score": 60
+    },
+    {
+      "Gemeente": "Alkmaar",
+      "Provincie": "Noord-Holland",
+      "Score": 91
+    },
+    {
+      "Gemeente": "Almelo",
+      "Provincie": "Overijssel",
+      "Score": 93
+    },
+    {
+      "Gemeente": "Almere",
+      "Provincie": "Flevoland",
+      "Score": 102
+    },
+    {
+      "Gemeente": "Alphen aan den Rijn",
+      "Provincie": "Zuid-Holland",
+      "Score": 78
+    },
+    {
+      "Gemeente": "Alphen-Chaam",
+      "Provincie": "Noord-Brabant",
+      "Score": 80
+    },
+    {
+      "Gemeente": "Altena",
+      "Provincie": "Noord-Brabant",
+      "Score": 60
+    },
+    {
+      "Gemeente": "Ameland",
+      "Provincie": "Fryslân",
+      "Score": 107
+    },
+    {
+      "Gemeente": "Amersfoort",
+      "Provincie": "Utrecht",
+      "Score": 85
+    },
+    {
+      "Gemeente": "Amstelveen",
+      "Provincie": "Noord-Holland",
+      "Score": 96
+    },
+    {
+      "Gemeente": "Amsterdam",
+      "Provincie": "Noord-Holland",
+      "Score": 78
+    },
+    {
+      "Gemeente": "Apeldoorn",
+      "Provincie": "Gelderland",
+      "Score": 95
+    },
+    {
+      "Gemeente": "Arnhem",
+      "Provincie": "Gelderland",
+      "Score": 63
+    },
+    {
+      "Gemeente": "Assen",
+      "Provincie": "Drenthe",
+      "Score": 111
+    },
+    {
+      "Gemeente": "Asten",
+      "Provincie": "Noord-Brabant",
+      "Score": 74
+    },
+    {
+      "Gemeente": "Baarle-Nassau",
+      "Provincie": "Noord-Brabant",
+      "Score": 73
+    },
+    {
+      "Gemeente": "Baarn",
+      "Provincie": "Utrecht",
+      "Score": 96
+    },
+    {
+      "Gemeente": "Barendrecht",
+      "Provincie": "Zuid-Holland",
+      "Score": 82
+    },
+    {
+      "Gemeente": "Barneveld",
+      "Provincie": "Gelderland",
+      "Score": 83
+    },
+    {
+      "Gemeente": "Beek",
+      "Provincie": "Limburg",
+      "Score": 71
+    },
+    {
+      "Gemeente": "Beekdaelen",
+      "Provincie": "Limburg",
+      "Score": 48
+    },
+    {
+      "Gemeente": "Beesel",
+      "Provincie": "Limburg",
+      "Score": 72
+    },
+    {
+      "Gemeente": "Berg en Dal",
+      "Provincie": "Gelderland",
+      "Score": 89
+    },
+    {
+      "Gemeente": "Bergeijk",
+      "Provincie": "Noord-Brabant",
+      "Score": 53
+    },
+    {
+      "Gemeente": "Bergen (L.)",
+      "Provincie": "Limburg",
+      "Score": 86
+    },
+    {
+      "Gemeente": "Bergen (NH.)",
+      "Provincie": "Noord-Holland",
+      "Score": 81
+    },
+    {
+      "Gemeente": "Bergen op Zoom",
+      "Provincie": "Noord-Brabant",
+      "Score": 66
+    },
+    {
+      "Gemeente": "Berkelland",
+      "Provincie": "Gelderland",
+      "Score": 98
+    },
+    {
+      "Gemeente": "Bernheze",
+      "Provincie": "Noord-Brabant",
+      "Score": 86
+    },
+    {
+      "Gemeente": "Best",
+      "Provincie": "Noord-Brabant",
+      "Score": 68
+    },
+    {
+      "Gemeente": "Beuningen",
+      "Provincie": "Gelderland",
+      "Score": 70
+    },
+    {
+      "Gemeente": "Beverwijk",
+      "Provincie": "Noord-Holland",
+      "Score": 86
+    },
+    {
+      "Gemeente": "Bladel",
+      "Provincie": "Noord-Brabant",
+      "Score": 65
+    },
+    {
+      "Gemeente": "Blaricum",
+      "Provincie": "Noord-Holland",
+      "Score": 85
+    },
+    {
+      "Gemeente": "Bloemendaal",
+      "Provincie": "Noord-Holland",
+      "Score": 81
+    },
+    {
+      "Gemeente": "Bodegraven-Reeuwijk",
+      "Provincie": "Zuid-Holland",
+      "Score": 76
+    },
+    {
+      "Gemeente": "Boekel",
+      "Provincie": "Noord-Brabant",
+      "Score": 85
+    },
+    {
+      "Gemeente": "Borger-Odoorn",
+      "Provincie": "Drenthe",
+      "Score": 96
+    },
+    {
+      "Gemeente": "Borne",
+      "Provincie": "Overijssel",
+      "Score": 87
+    },
+    {
+      "Gemeente": "Borsele",
+      "Provincie": "Zeeland",
+      "Score": 83
+    },
+    {
+      "Gemeente": "Boxtel",
+      "Provincie": "Noord-Brabant",
+      "Score": 89
+    },
+    {
+      "Gemeente": "Breda",
+      "Provincie": "Noord-Brabant",
+      "Score": 65
+    },
+    {
+      "Gemeente": "Bronckhorst",
+      "Provincie": "Gelderland",
+      "Score": 96
+    },
+    {
+      "Gemeente": "Brummen",
+      "Provincie": "Gelderland",
+      "Score": 82
+    },
+    {
+      "Gemeente": "Brunssum",
+      "Provincie": "Limburg",
+      "Score": 57
+    },
+    {
+      "Gemeente": "Bunnik",
+      "Provincie": "Utrecht",
+      "Score": 67
+    },
+    {
+      "Gemeente": "Bunschoten",
+      "Provincie": "Utrecht",
+      "Score": 88
+    },
+    {
+      "Gemeente": "Buren",
+      "Provincie": "Gelderland",
+      "Score": 76
+    },
+    {
+      "Gemeente": "Capelle aan den IJssel",
+      "Provincie": "Zuid-Holland",
+      "Score": 90
+    },
+    {
+      "Gemeente": "Castricum",
+      "Provincie": "Noord-Holland",
+      "Score": 94
+    },
+    {
+      "Gemeente": "Coevorden",
+      "Provincie": "Drenthe",
+      "Score": 85
+    },
+    {
+      "Gemeente": "Cranendonck",
+      "Provincie": "Noord-Brabant",
+      "Score": 60
+    },
+    {
+      "Gemeente": "Culemborg",
+      "Provincie": "Gelderland",
+      "Score": 84
+    },
+    {
+      "Gemeente": "Dalfsen",
+      "Provincie": "Overijssel",
+      "Score": 83
+    },
+    {
+      "Gemeente": "Dantumadiel",
+      "Provincie": "Fryslân",
+      "Score": 87
+    },
+    {
+      "Gemeente": "De Bilt",
+      "Provincie": "Utrecht",
+      "Score": 77
+    },
+    {
+      "Gemeente": "De Fryske Marren",
+      "Provincie": "Fryslân",
+      "Score": 112
+    },
+    {
+      "Gemeente": "De Ronde Venen",
+      "Provincie": "Utrecht",
+      "Score": 83
+    },
+    {
+      "Gemeente": "De Wolden",
+      "Provincie": "Drenthe",
+      "Score": 83
+    },
+    {
+      "Gemeente": "Delft",
+      "Provincie": "Zuid-Holland",
+      "Score": 79
+    },
+    {
+      "Gemeente": "Den Helder",
+      "Provincie": "Noord-Holland",
+      "Score": 97
+    },
+    {
+      "Gemeente": "Deurne",
+      "Provincie": "Noord-Brabant",
+      "Score": 68
+    },
+    {
+      "Gemeente": "Deventer",
+      "Provincie": "Overijssel",
+      "Score": 84
+    },
+    {
+      "Gemeente": "Diemen",
+      "Provincie": "Noord-Holland",
+      "Score": 96
+    },
+    {
+      "Gemeente": "Dijk en Waard",
+      "Provincie": "Noord-Holland",
+      "Score": 96
+    },
+    {
+      "Gemeente": "Dinkelland",
+      "Provincie": "Overijssel",
+      "Score": 70
+    },
+    {
+      "Gemeente": "Doesburg",
+      "Provincie": "Gelderland",
+      "Score": 84
+    },
+    {
+      "Gemeente": "Doetinchem",
+      "Provincie": "Gelderland",
+      "Score": 77
+    },
+    {
+      "Gemeente": "Dongen",
+      "Provincie": "Noord-Brabant",
+      "Score": 91
+    },
+    {
+      "Gemeente": "Dordrecht",
+      "Provincie": "Zuid-Holland",
+      "Score": 60
+    },
+    {
+      "Gemeente": "Drechterland",
+      "Provincie": "Noord-Holland",
+      "Score": 105
+    },
+    {
+      "Gemeente": "Drimmelen",
+      "Provincie": "Noord-Brabant",
+      "Score": 84
+    },
+    {
+      "Gemeente": "Dronten",
+      "Provincie": "Flevoland",
+      "Score": 83
+    },
+    {
+      "Gemeente": "Druten",
+      "Provincie": "Gelderland",
+      "Score": 83
+    },
+    {
+      "Gemeente": "Duiven",
+      "Provincie": "Gelderland",
+      "Score": 71
+    },
+    {
+      "Gemeente": "Echt-Susteren",
+      "Provincie": "Limburg",
+      "Score": 71
+    },
+    {
+      "Gemeente": "Edam-Volendam",
+      "Provincie": "Noord-Holland",
+      "Score": 83
+    },
+    {
+      "Gemeente": "Ede",
+      "Provincie": "Gelderland",
+      "Score": 89
+    },
+    {
+      "Gemeente": "Eemnes",
+      "Provincie": "Utrecht",
+      "Score": 85
+    },
+    {
+      "Gemeente": "Eemsdelta",
+      "Provincie": "Groningen",
+      "Score": 115
+    },
+    {
+      "Gemeente": "Eersel",
+      "Provincie": "Noord-Brabant",
+      "Score": 61
+    },
+    {
+      "Gemeente": "Eijsden-Margraten",
+      "Provincie": "Limburg",
+      "Score": 41
+    },
+    {
+      "Gemeente": "Eindhoven",
+      "Provincie": "Noord-Brabant",
+      "Score": 66
+    },
+    {
+      "Gemeente": "Elburg",
+      "Provincie": "Gelderland",
+      "Score": 101
+    },
+    {
+      "Gemeente": "Emmen",
+      "Provincie": "Drenthe",
+      "Score": 90
+    },
+    {
+      "Gemeente": "Enkhuizen",
+      "Provincie": "Noord-Holland",
+      "Score": 82
+    },
+    {
+      "Gemeente": "Enschede",
+      "Provincie": "Overijssel",
+      "Score": 92
+    },
+    {
+      "Gemeente": "Epe",
+      "Provincie": "Gelderland",
+      "Score": 70
+    },
+    {
+      "Gemeente": "Ermelo",
+      "Provincie": "Gelderland",
+      "Score": 98
+    },
+    {
+      "Gemeente": "Etten-Leur",
+      "Provincie": "Noord-Brabant",
+      "Score": 58
+    },
+    {
+      "Gemeente": "Geertruidenberg",
+      "Provincie": "Noord-Brabant",
+      "Score": 74
+    },
+    {
+      "Gemeente": "Geldrop-Mierlo",
+      "Provincie": "Noord-Brabant",
+      "Score": 59
+    },
+    {
+      "Gemeente": "Gemert-Bakel",
+      "Provincie": "Noord-Brabant",
+      "Score": 83
+    },
+    {
+      "Gemeente": "Gennep",
+      "Provincie": "Limburg",
+      "Score": 86
+    },
+    {
+      "Gemeente": "Gilze en Rijen",
+      "Provincie": "Noord-Brabant",
+      "Score": 87
+    },
+    {
+      "Gemeente": "Goeree-Overflakkee",
+      "Provincie": "Zuid-Holland",
+      "Score": 59
+    },
+    {
+      "Gemeente": "Goes",
+      "Provincie": "Zeeland",
+      "Score": 66
+    },
+    {
+      "Gemeente": "Goirle",
+      "Provincie": "Noord-Brabant",
+      "Score": 64
+    },
+    {
+      "Gemeente": "Gooise Meren",
+      "Provincie": "Noord-Holland",
+      "Score": 75
+    },
+    {
+      "Gemeente": "Gorinchem",
+      "Provincie": "Zuid-Holland",
+      "Score": 82
+    },
+    {
+      "Gemeente": "Gouda",
+      "Provincie": "Zuid-Holland",
+      "Score": 70
+    },
+    {
+      "Gemeente": "Groningen",
+      "Provincie": "Groningen",
+      "Score": 113
+    },
+    {
+      "Gemeente": "Gulpen-Wittem",
+      "Provincie": "Limburg",
+      "Score": 59
+    },
+    {
+      "Gemeente": "Haaksbergen",
+      "Provincie": "Overijssel",
+      "Score": 77
+    },
+    {
+      "Gemeente": "Haarlem",
+      "Provincie": "Noord-Holland",
+      "Score": 102
+    },
+    {
+      "Gemeente": "Haarlemmermeer",
+      "Provincie": "Noord-Holland",
+      "Score": 88
+    },
+    {
+      "Gemeente": "Halderberge",
+      "Provincie": "Noord-Brabant",
+      "Score": 55
+    },
+    {
+      "Gemeente": "Hardenberg",
+      "Provincie": "Overijssel",
+      "Score": 84
+    },
+    {
+      "Gemeente": "Harderwijk",
+      "Provincie": "Gelderland",
+      "Score": 73
+    },
+    {
+      "Gemeente": "Hardinxveld-Giessendam",
+      "Provincie": "Zuid-Holland",
+      "Score": 71
+    },
+    {
+      "Gemeente": "Harlingen",
+      "Provincie": "Fryslân",
+      "Score": 84
+    },
+    {
+      "Gemeente": "Hattem",
+      "Provincie": "Gelderland",
+      "Score": 101
+    },
+    {
+      "Gemeente": "Heemskerk",
+      "Provincie": "Noord-Holland",
+      "Score": 83
+    },
+    {
+      "Gemeente": "Heemstede",
+      "Provincie": "Noord-Holland",
+      "Score": 75
+    },
+    {
+      "Gemeente": "Heerde",
+      "Provincie": "Gelderland",
+      "Score": 104
+    },
+    {
+      "Gemeente": "Heerenveen",
+      "Provincie": "Fryslân",
+      "Score": 85
+    },
+    {
+      "Gemeente": "Heerlen",
+      "Provincie": "Limburg",
+      "Score": 57
+    },
+    {
+      "Gemeente": "Heeze-Leende",
+      "Provincie": "Noord-Brabant",
+      "Score": 84
+    },
+    {
+      "Gemeente": "Heiloo",
+      "Provincie": "Noord-Holland",
+      "Score": 100
+    },
+    {
+      "Gemeente": "Hellendoorn",
+      "Provincie": "Overijssel",
+      "Score": 98
+    },
+    {
+      "Gemeente": "Helmond",
+      "Provincie": "Noord-Brabant",
+      "Score": 54
+    },
+    {
+      "Gemeente": "Hendrik-Ido-Ambacht",
+      "Provincie": "Zuid-Holland",
+      "Score": 94
+    },
+    {
+      "Gemeente": "Hengelo",
+      "Provincie": "Overijssel",
+      "Score": 80
+    },
+    {
+      "Gemeente": "Het Hogeland",
+      "Provincie": "Groningen",
+      "Score": 96
+    },
+    {
+      "Gemeente": "Heumen",
+      "Provincie": "Gelderland",
+      "Score": 75
+    },
+    {
+      "Gemeente": "Heusden",
+      "Provincie": "Noord-Brabant",
+      "Score": 59
+    },
+    {
+      "Gemeente": "Hillegom",
+      "Provincie": "Zuid-Holland",
+      "Score": 87
+    },
+    {
+      "Gemeente": "Hilvarenbeek",
+      "Provincie": "Noord-Brabant",
+      "Score": 71
+    },
+    {
+      "Gemeente": "Hilversum",
+      "Provincie": "Noord-Holland",
+      "Score": 101
+    },
+    {
+      "Gemeente": "Hoeksche Waard",
+      "Provincie": "Zuid-Holland",
+      "Score": 63
+    },
+    {
+      "Gemeente": "Hof van Twente",
+      "Provincie": "Overijssel",
+      "Score": 71
+    },
+    {
+      "Gemeente": "Hollands Kroon",
+      "Provincie": "Noord-Holland",
+      "Score": 106
+    },
+    {
+      "Gemeente": "Hoogeveen",
+      "Provincie": "Drenthe",
+      "Score": 99
+    },
+    {
+      "Gemeente": "Hoorn",
+      "Provincie": "Noord-Holland",
+      "Score": 94
+    },
+    {
+      "Gemeente": "Horst aan de Maas",
+      "Provincie": "Limburg",
+      "Score": 87
+    },
+    {
+      "Gemeente": "Houten",
+      "Provincie": "Utrecht",
+      "Score": 89
+    },
+    {
+      "Gemeente": "Huizen",
+      "Provincie": "Noord-Holland",
+      "Score": 79
+    },
+    {
+      "Gemeente": "Hulst",
+      "Provincie": "Zeeland",
+      "Score": 76
+    },
+    {
+      "Gemeente": "IJsselstein",
+      "Provincie": "Utrecht",
+      "Score": 98
+    },
+    {
+      "Gemeente": "Kaag en Braassem",
+      "Provincie": "Zuid-Holland",
+      "Score": 95
+    },
+    {
+      "Gemeente": "Kampen",
+      "Provincie": "Overijssel",
+      "Score": 73
+    },
+    {
+      "Gemeente": "Kapelle",
+      "Provincie": "Zeeland",
+      "Score": 79
+    },
+    {
+      "Gemeente": "Katwijk",
+      "Provincie": "Zuid-Holland",
+      "Score": 73
+    },
+    {
+      "Gemeente": "Kerkrade",
+      "Provincie": "Limburg",
+      "Score": 60
+    },
+    {
+      "Gemeente": "Koggenland",
+      "Provincie": "Noord-Holland",
+      "Score": 88
+    },
+    {
+      "Gemeente": "Krimpen aan den IJssel",
+      "Provincie": "Zuid-Holland",
+      "Score": 63
+    },
+    {
+      "Gemeente": "Krimpenerwaard",
+      "Provincie": "Zuid-Holland",
+      "Score": 81
+    },
+    {
+      "Gemeente": "Laarbeek",
+      "Provincie": "Noord-Brabant",
+      "Score": 63
+    },
+    {
+      "Gemeente": "Land van Cuijk",
+      "Provincie": "Noord-Brabant",
+      "Score": 83
+    },
+    {
+      "Gemeente": "Landgraaf",
+      "Provincie": "Limburg",
+      "Score": 64
+    },
+    {
+      "Gemeente": "Landsmeer",
+      "Provincie": "Noord-Holland",
+      "Score": 95
+    },
+    {
+      "Gemeente": "Lansingerland",
+      "Provincie": "Zuid-Holland",
+      "Score": 67
+    },
+    {
+      "Gemeente": "Laren",
+      "Provincie": "Noord-Holland",
+      "Score": 90
+    },
+    {
+      "Gemeente": "Leeuwarden",
+      "Provincie": "Fryslân",
+      "Score": 112
+    },
+    {
+      "Gemeente": "Leiden",
+      "Provincie": "Zuid-Holland",
+      "Score": 68
+    },
+    {
+      "Gemeente": "Leiderdorp",
+      "Provincie": "Zuid-Holland",
+      "Score": 85
+    },
+    {
+      "Gemeente": "Leidschendam-Voorburg",
+      "Provincie": "Zuid-Holland",
+      "Score": 73
+    },
+    {
+      "Gemeente": "Lelystad",
+      "Provincie": "Flevoland",
+      "Score": 74
+    },
+    {
+      "Gemeente": "Leudal",
+      "Provincie": "Limburg",
+      "Score": 50
+    },
+    {
+      "Gemeente": "Leusden",
+      "Provincie": "Utrecht",
+      "Score": 77
+    },
+    {
+      "Gemeente": "Lingewaard",
+      "Provincie": "Gelderland",
+      "Score": 74
+    },
+    {
+      "Gemeente": "Lisse",
+      "Provincie": "Zuid-Holland",
+      "Score": 87
+    },
+    {
+      "Gemeente": "Lochem",
+      "Provincie": "Gelderland",
+      "Score": 81
+    },
+    {
+      "Gemeente": "Loon op Zand",
+      "Provincie": "Noord-Brabant",
+      "Score": 83
+    },
+    {
+      "Gemeente": "Lopik",
+      "Provincie": "Utrecht",
+      "Score": 94
+    },
+    {
+      "Gemeente": "Losser",
+      "Provincie": "Overijssel",
+      "Score": 69
+    },
+    {
+      "Gemeente": "Maasdriel",
+      "Provincie": "Gelderland",
+      "Score": 80
+    },
+    {
+      "Gemeente": "Maasgouw",
+      "Provincie": "Limburg",
+      "Score": 67
+    },
+    {
+      "Gemeente": "Maashorst",
+      "Provincie": "Noord-Brabant",
+      "Score": 82
+    },
+    {
+      "Gemeente": "Maassluis",
+      "Provincie": "Zuid-Holland",
+      "Score": 66
+    },
+    {
+      "Gemeente": "Maastricht",
+      "Provincie": "Limburg",
+      "Score": 76
+    },
+    {
+      "Gemeente": "Medemblik",
+      "Provincie": "Noord-Holland",
+      "Score": 94
+    },
+    {
+      "Gemeente": "Meerssen",
+      "Provincie": "Limburg",
+      "Score": 69
+    },
+    {
+      "Gemeente": "Meierijstad",
+      "Provincie": "Noord-Brabant",
+      "Score": 66
+    },
+    {
+      "Gemeente": "Meppel",
+      "Provincie": "Drenthe",
+      "Score": 91
+    },
+    {
+      "Gemeente": "Middelburg",
+      "Provincie": "Zeeland",
+      "Score": 82
+    },
+    {
+      "Gemeente": "Midden-Delfland",
+      "Provincie": "Zuid-Holland",
+      "Score": 84
+    },
+    {
+      "Gemeente": "Midden-Drenthe",
+      "Provincie": "Drenthe",
+      "Score": 92
+    },
+    {
+      "Gemeente": "Midden-Groningen",
+      "Provincie": "Groningen",
+      "Score": 91
+    },
+    {
+      "Gemeente": "Moerdijk",
+      "Provincie": "Noord-Brabant",
+      "Score": 67
+    },
+    {
+      "Gemeente": "Molenlanden",
+      "Provincie": "Zuid-Holland",
+      "Score": 95
+    },
+    {
+      "Gemeente": "Montferland",
+      "Provincie": "Gelderland",
+      "Score": 78
+    },
+    {
+      "Gemeente": "Montfoort",
+      "Provincie": "Utrecht",
+      "Score": 95
+    },
+    {
+      "Gemeente": "Mook en Middelaar",
+      "Provincie": "Limburg",
+      "Score": 60
+    },
+    {
+      "Gemeente": "Neder-Betuwe",
+      "Provincie": "Gelderland",
+      "Score": 71
+    },
+    {
+      "Gemeente": "Nederweert",
+      "Provincie": "Limburg",
+      "Score": 81
+    },
+    {
+      "Gemeente": "Nieuwegein",
+      "Provincie": "Utrecht",
+      "Score": 98
+    },
+    {
+      "Gemeente": "Nieuwkoop",
+      "Provincie": "Zuid-Holland",
+      "Score": 79
+    },
+    {
+      "Gemeente": "Nijkerk",
+      "Provincie": "Gelderland",
+      "Score": 95
+    },
+    {
+      "Gemeente": "Nijmegen",
+      "Provincie": "Gelderland",
+      "Score": 74
+    },
+    {
+      "Gemeente": "Nissewaard",
+      "Provincie": "Zuid-Holland",
+      "Score": 65
+    },
+    {
+      "Gemeente": "Noardeast-Fryslân",
+      "Provincie": "Fryslân",
+      "Score": 95
+    },
+    {
+      "Gemeente": "Noord-Beveland",
+      "Provincie": "Zeeland",
+      "Score": 88
+    },
+    {
+      "Gemeente": "Noordenveld",
+      "Provincie": "Drenthe",
+      "Score": 87
+    },
+    {
+      "Gemeente": "Noordoostpolder",
+      "Provincie": "Flevoland",
+      "Score": 102
+    },
+    {
+      "Gemeente": "Noordwijk",
+      "Provincie": "Zuid-Holland",
+      "Score": 95
+    },
+    {
+      "Gemeente": "Nuenen, Gerwen en Nederwetten",
+      "Provincie": "Noord-Brabant",
+      "Score": 86
+    },
+    {
+      "Gemeente": "Nunspeet",
+      "Provincie": "Gelderland",
+      "Score": 91
+    },
+    {
+      "Gemeente": "Oegstgeest",
+      "Provincie": "Zuid-Holland",
+      "Score": 95
+    },
+    {
+      "Gemeente": "Oirschot",
+      "Provincie": "Noord-Brabant",
+      "Score": 70
+    },
+    {
+      "Gemeente": "Oisterwijk",
+      "Provincie": "Noord-Brabant",
+      "Score": 88
+    },
+    {
+      "Gemeente": "Oldambt",
+      "Provincie": "Groningen",
+      "Score": 90
+    },
+    {
+      "Gemeente": "Oldebroek",
+      "Provincie": "Gelderland",
+      "Score": 105
+    },
+    {
+      "Gemeente": "Oldenzaal",
+      "Provincie": "Overijssel",
+      "Score": 82
+    },
+    {
+      "Gemeente": "Olst-Wijhe",
+      "Provincie": "Overijssel",
+      "Score": 80
+    },
+    {
+      "Gemeente": "Ommen",
+      "Provincie": "Overijssel",
+      "Score": 88
+    },
+    {
+      "Gemeente": "Oost Gelre",
+      "Provincie": "Gelderland",
+      "Score": 94
+    },
+    {
+      "Gemeente": "Oosterhout",
+      "Provincie": "Noord-Brabant",
+      "Score": 59
+    },
+    {
+      "Gemeente": "Ooststellingwerf",
+      "Provincie": "Fryslân",
+      "Score": 84
+    },
+    {
+      "Gemeente": "Oostzaan",
+      "Provincie": "Noord-Holland",
+      "Score": 100
+    },
+    {
+      "Gemeente": "Opmeer",
+      "Provincie": "Noord-Holland",
+      "Score": 75
+    },
+    {
+      "Gemeente": "Opsterland",
+      "Provincie": "Fryslân",
+      "Score": 94
+    },
+    {
+      "Gemeente": "Oss",
+      "Provincie": "Noord-Brabant",
+      "Score": 60
+    },
+    {
+      "Gemeente": "Oude IJsselstreek",
+      "Provincie": "Gelderland",
+      "Score": 78
+    },
+    {
+      "Gemeente": "Ouder-Amstel",
+      "Provincie": "Noord-Holland",
+      "Score": 75
+    },
+    {
+      "Gemeente": "Oudewater",
+      "Provincie": "Utrecht",
+      "Score": 64
+    },
+    {
+      "Gemeente": "Overbetuwe",
+      "Provincie": "Gelderland",
+      "Score": 68
+    },
+    {
+      "Gemeente": "Papendrecht",
+      "Provincie": "Zuid-Holland",
+      "Score": 64
+    },
+    {
+      "Gemeente": "Peel en Maas",
+      "Provincie": "Limburg",
+      "Score": 75
+    },
+    {
+      "Gemeente": "Pekela",
+      "Provincie": "Groningen",
+      "Score": 92
+    },
+    {
+      "Gemeente": "Pijnacker-Nootdorp",
+      "Provincie": "Zuid-Holland",
+      "Score": 81
+    },
+    {
+      "Gemeente": "Purmerend",
+      "Provincie": "Noord-Holland",
+      "Score": 87
+    },
+    {
+      "Gemeente": "Putten",
+      "Provincie": "Gelderland",
+      "Score": 76
+    },
+    {
+      "Gemeente": "Raalte",
+      "Provincie": "Overijssel",
+      "Score": 96
+    },
+    {
+      "Gemeente": "Reimerswaal",
+      "Provincie": "Zeeland",
+      "Score": 73
+    },
+    {
+      "Gemeente": "Renkum",
+      "Provincie": "Gelderland",
+      "Score": 65
+    },
+    {
+      "Gemeente": "Renswoude",
+      "Provincie": "Utrecht",
+      "Score": 82
+    },
+    {
+      "Gemeente": "Reusel-De Mierden",
+      "Provincie": "Noord-Brabant",
+      "Score": 73
+    },
+    {
+      "Gemeente": "Rheden",
+      "Provincie": "Gelderland",
+      "Score": 76
+    },
+    {
+      "Gemeente": "Rhenen",
+      "Provincie": "Utrecht",
+      "Score": 92
+    },
+    {
+      "Gemeente": "Ridderkerk",
+      "Provincie": "Zuid-Holland",
+      "Score": 95
+    },
+    {
+      "Gemeente": "Rijssen-Holten",
+      "Provincie": "Overijssel",
+      "Score": 70
+    },
+    {
+      "Gemeente": "Rijswijk",
+      "Provincie": "Zuid-Holland",
+      "Score": 97
+    },
+    {
+      "Gemeente": "Roerdalen",
+      "Provincie": "Limburg",
+      "Score": 57
+    },
+    {
+      "Gemeente": "Roermond",
+      "Provincie": "Limburg",
+      "Score": 75
+    },
+    {
+      "Gemeente": "Roosendaal",
+      "Provincie": "Noord-Brabant",
+      "Score": 77
+    },
+    {
+      "Gemeente": "Rotterdam",
+      "Provincie": "Zuid-Holland",
+      "Score": 81
+    },
+    {
+      "Gemeente": "Rozendaal",
+      "Provincie": "Gelderland",
+      "Score": 87
+    },
+    {
+      "Gemeente": "Rucphen",
+      "Provincie": "Noord-Brabant",
+      "Score": 54
+    },
+    {
+      "Gemeente": "Schagen",
+      "Provincie": "Noord-Holland",
+      "Score": 78
+    },
+    {
+      "Gemeente": "Scherpenzeel",
+      "Provincie": "Gelderland",
+      "Score": 67
+    },
+    {
+      "Gemeente": "Schiedam",
+      "Provincie": "Zuid-Holland",
+      "Score": 81
+    },
+    {
+      "Gemeente": "Schiermonnikoog",
+      "Provincie": "Fryslân",
+      "Score": 95
+    },
+    {
+      "Gemeente": "Schouwen-Duiveland",
+      "Provincie": "Zeeland",
+      "Score": 64
+    },
+    {
+      "Gemeente": "Simpelveld",
+      "Provincie": "Limburg",
+      "Score": 59
+    },
+    {
+      "Gemeente": "Sint-Michielsgestel",
+      "Provincie": "Noord-Brabant",
+      "Score": 62
+    },
+    {
+      "Gemeente": "Sittard-Geleen",
+      "Provincie": "Limburg",
+      "Score": 78
+    },
+    {
+      "Gemeente": "Sliedrecht",
+      "Provincie": "Zuid-Holland",
+      "Score": 68
+    },
+    {
+      "Gemeente": "Sluis",
+      "Provincie": "Zeeland",
+      "Score": 72
+    },
+    {
+      "Gemeente": "Smallingerland",
+      "Provincie": "Fryslân",
+      "Score": 91
+    },
+    {
+      "Gemeente": "Soest",
+      "Provincie": "Utrecht",
+      "Score": 75
+    },
+    {
+      "Gemeente": "Someren",
+      "Provincie": "Noord-Brabant",
+      "Score": 64
+    },
+    {
+      "Gemeente": "Son en Breugel",
+      "Provincie": "Noord-Brabant",
+      "Score": 57
+    },
+    {
+      "Gemeente": "Stadskanaal",
+      "Provincie": "Groningen",
+      "Score": 93
+    },
+    {
+      "Gemeente": "Staphorst",
+      "Provincie": "Overijssel",
+      "Score": 89
+    },
+    {
+      "Gemeente": "Stede Broec",
+      "Provincie": "Noord-Holland",
+      "Score": 79
+    },
+    {
+      "Gemeente": "Steenbergen",
+      "Provincie": "Noord-Brabant",
+      "Score": 79
+    },
+    {
+      "Gemeente": "Steenwijkerland",
+      "Provincie": "Overijssel",
+      "Score": 107
+    },
+    {
+      "Gemeente": "Stein",
+      "Provincie": "Limburg",
+      "Score": 72
+    },
+    {
+      "Gemeente": "Stichtse Vecht",
+      "Provincie": "Utrecht",
+      "Score": 98
+    },
+    {
+      "Gemeente": "Súdwest-Fryslân",
+      "Provincie": "Fryslân",
+      "Score": 113
+    },
+    {
+      "Gemeente": "Terneuzen",
+      "Provincie": "Zeeland",
+      "Score": 67
+    },
+    {
+      "Gemeente": "Terschelling",
+      "Provincie": "Fryslân",
+      "Score": 108
+    },
+    {
+      "Gemeente": "Texel",
+      "Provincie": "Noord-Holland",
+      "Score": 102
+    },
+    {
+      "Gemeente": "Teylingen",
+      "Provincie": "Zuid-Holland",
+      "Score": 92
+    },
+    {
+      "Gemeente": "Tholen",
+      "Provincie": "Zeeland",
+      "Score": 89
+    },
+    {
+      "Gemeente": "Tiel",
+      "Provincie": "Gelderland",
+      "Score": 63
+    },
+    {
+      "Gemeente": "Tilburg",
+      "Provincie": "Noord-Brabant",
+      "Score": 64
+    },
+    {
+      "Gemeente": "Tubbergen",
+      "Provincie": "Overijssel",
+      "Score": 94
+    },
+    {
+      "Gemeente": "Twenterand",
+      "Provincie": "Overijssel",
+      "Score": 71
+    },
+    {
+      "Gemeente": "Tynaarlo",
+      "Provincie": "Drenthe",
+      "Score": 87
+    },
+    {
+      "Gemeente": "Tytsjerksteradiel",
+      "Provincie": "Fryslân",
+      "Score": 94
+    },
+    {
+      "Gemeente": "Uitgeest",
+      "Provincie": "Noord-Holland",
+      "Score": 100
+    },
+    {
+      "Gemeente": "Uithoorn",
+      "Provincie": "Noord-Holland",
+      "Score": 70
+    },
+    {
+      "Gemeente": "Urk",
+      "Provincie": "Flevoland",
+      "Score": 88
+    },
+    {
+      "Gemeente": "Utrecht",
+      "Provincie": "Utrecht",
+      "Score": 87
+    },
+    {
+      "Gemeente": "Utrechtse Heuvelrug",
+      "Provincie": "Utrecht",
+      "Score": 65
+    },
+    {
+      "Gemeente": "Vaals",
+      "Provincie": "Limburg",
+      "Score": 58
+    },
+    {
+      "Gemeente": "Valkenburg aan de Geul",
+      "Provincie": "Limburg",
+      "Score": 44
+    },
+    {
+      "Gemeente": "Valkenswaard",
+      "Provincie": "Noord-Brabant",
+      "Score": 54
+    },
+    {
+      "Gemeente": "Veendam",
+      "Provincie": "Groningen",
+      "Score": 88
+    },
+    {
+      "Gemeente": "Veenendaal",
+      "Provincie": "Utrecht",
+      "Score": 80
+    },
+    {
+      "Gemeente": "Veere",
+      "Provincie": "Zeeland",
+      "Score": 66
+    },
+    {
+      "Gemeente": "Veldhoven",
+      "Provincie": "Noord-Brabant",
+      "Score": 65
+    },
+    {
+      "Gemeente": "Velsen",
+      "Provincie": "Noord-Holland",
+      "Score": 100
+    },
+    {
+      "Gemeente": "Venlo",
+      "Provincie": "Limburg",
+      "Score": 85
+    },
+    {
+      "Gemeente": "Venray",
+      "Provincie": "Limburg",
+      "Score": 87
+    },
+    {
+      "Gemeente": "Vijfheerenlanden",
+      "Provincie": "Utrecht",
+      "Score": 93
+    },
+    {
+      "Gemeente": "Vlaardingen",
+      "Provincie": "Zuid-Holland",
+      "Score": 73
+    },
+    {
+      "Gemeente": "Vlieland",
+      "Provincie": "Fryslân",
+      "Score": 106
+    },
+    {
+      "Gemeente": "Vlissingen",
+      "Provincie": "Zeeland",
+      "Score": 75
+    },
+    {
+      "Gemeente": "Voerendaal",
+      "Provincie": "Limburg",
+      "Score": 59
+    },
+    {
+      "Gemeente": "Voorne aan Zee",
+      "Provincie": "Zuid-Holland",
+      "Score": 80
+    },
+    {
+      "Gemeente": "Voorschoten",
+      "Provincie": "Zuid-Holland",
+      "Score": 76
+    },
+    {
+      "Gemeente": "Voorst",
+      "Provincie": "Gelderland",
+      "Score": 92
+    },
+    {
+      "Gemeente": "Vught",
+      "Provincie": "Noord-Brabant",
+      "Score": 66
+    },
+    {
+      "Gemeente": "Waadhoeke",
+      "Provincie": "Fryslân",
+      "Score": 113
+    },
+    {
+      "Gemeente": "Waalre",
+      "Provincie": "Noord-Brabant",
+      "Score": 64
+    },
+    {
+      "Gemeente": "Waalwijk",
+      "Provincie": "Noord-Brabant",
+      "Score": 59
+    },
+    {
+      "Gemeente": "Waddinxveen",
+      "Provincie": "Zuid-Holland",
+      "Score": 92
+    },
+    {
+      "Gemeente": "Wageningen",
+      "Provincie": "Gelderland",
+      "Score": 89
+    },
+    {
+      "Gemeente": "Wassenaar",
+      "Provincie": "Zuid-Holland",
+      "Score": 83
+    },
+    {
+      "Gemeente": "Waterland",
+      "Provincie": "Noord-Holland",
+      "Score": 85
+    },
+    {
+      "Gemeente": "Weert",
+      "Provincie": "Limburg",
+      "Score": 64
+    },
+    {
+      "Gemeente": "West Betuwe",
+      "Provincie": "Gelderland",
+      "Score": 87
+    },
+    {
+      "Gemeente": "West Maas en Waal",
+      "Provincie": "Gelderland",
+      "Score": 93
+    },
+    {
+      "Gemeente": "Westerkwartier",
+      "Provincie": "Groningen",
+      "Score": 108
+    },
+    {
+      "Gemeente": "Westerveld",
+      "Provincie": "Drenthe",
+      "Score": 85
+    },
+    {
+      "Gemeente": "Westervoort",
+      "Provincie": "Gelderland",
+      "Score": 92
+    },
+    {
+      "Gemeente": "Westerwolde",
+      "Provincie": "Groningen",
+      "Score": 83
+    },
+    {
+      "Gemeente": "Westland",
+      "Provincie": "Zuid-Holland",
+      "Score": 81
+    },
+    {
+      "Gemeente": "Weststellingwerf",
+      "Provincie": "Fryslân",
+      "Score": 91
+    },
+    {
+      "Gemeente": "Wierden",
+      "Provincie": "Overijssel",
+      "Score": 89
+    },
+    {
+      "Gemeente": "Wijchen",
+      "Provincie": "Gelderland",
+      "Score": 80
+    },
+    {
+      "Gemeente": "Wijdemeren",
+      "Provincie": "Noord-Holland",
+      "Score": 88
+    },
+    {
+      "Gemeente": "Wijk bij Duurstede",
+      "Provincie": "Utrecht",
+      "Score": 92
+    },
+    {
+      "Gemeente": "Winterswijk",
+      "Provincie": "Gelderland",
+      "Score": 96
+    },
+    {
+      "Gemeente": "Woensdrecht",
+      "Provincie": "Noord-Brabant",
+      "Score": 68
+    },
+    {
+      "Gemeente": "Woerden",
+      "Provincie": "Utrecht",
+      "Score": 76
+    },
+    {
+      "Gemeente": "Wormerland",
+      "Provincie": "Noord-Holland",
+      "Score": 100
+    },
+    {
+      "Gemeente": "Woudenberg",
+      "Provincie": "Utrecht",
+      "Score": 77
+    },
+    {
+      "Gemeente": "Zaanstad",
+      "Provincie": "Noord-Holland",
+      "Score": 81
+    },
+    {
+      "Gemeente": "Zaltbommel",
+      "Provincie": "Gelderland",
+      "Score": 85
+    },
+    {
+      "Gemeente": "Zandvoort",
+      "Provincie": "Noord-Holland",
+      "Score": 69
+    },
+    {
+      "Gemeente": "Zeewolde",
+      "Provincie": "Flevoland",
+      "Score": 80
+    },
+    {
+      "Gemeente": "Zeist",
+      "Provincie": "Utrecht",
+      "Score": 72
+    },
+    {
+      "Gemeente": "Zevenaar",
+      "Provincie": "Gelderland",
+      "Score": 81
+    },
+    {
+      "Gemeente": "Zoetermeer",
+      "Provincie": "Zuid-Holland",
+      "Score": 69
+    },
+    {
+      "Gemeente": "Zoeterwoude",
+      "Provincie": "Zuid-Holland",
+      "Score": 90
+    },
+    {
+      "Gemeente": "Zuidplas",
+      "Provincie": "Zuid-Holland",
+      "Score": 68
+    },
+    {
+      "Gemeente": "Zundert",
+      "Provincie": "Noord-Brabant",
+      "Score": 73
+    },
+    {
+      "Gemeente": "Zutphen",
+      "Provincie": "Gelderland",
+      "Score": 75
+    },
+    {
+      "Gemeente": "Zwartewaterland",
+      "Provincie": "Overijssel",
+      "Score": 101
+    },
+    {
+      "Gemeente": "Zwijndrecht",
+      "Provincie": "Zuid-Holland",
+      "Score": 76
+    },
+    {
+      "Gemeente": "Zwolle",
+      "Provincie": "Overijssel",
+      "Score": 92
+    }
+  ],
+  "provincies": [
+    {
+      "Provincie": "Groningen",
+      "Score": 97,
+      "Gemeenten": 10
+    },
+    {
+      "Provincie": "Fryslân",
+      "Score": 98,
+      "Gemeenten": 18
+    },
+    {
+      "Provincie": "Drenthe",
+      "Score": 93,
+      "Gemeenten": 12
+    },
+    {
+      "Provincie": "Overijssel",
+      "Score": 85,
+      "Gemeenten": 25
+    },
+    {
+      "Provincie": "Flevoland",
+      "Score": 88,
+      "Gemeenten": 6
+    },
+    {
+      "Provincie": "Gelderland",
+      "Score": 83,
+      "Gemeenten": 51
+    },
+    {
+      "Provincie": "Utrecht",
+      "Score": 84,
+      "Gemeenten": 26
+    },
+    {
+      "Provincie": "Noord-Holland",
+      "Score": 88,
+      "Gemeenten": 44
+    },
+    {
+      "Provincie": "Zuid-Holland",
+      "Score": 78,
+      "Gemeenten": 50
+    },
+    {
+      "Provincie": "Zeeland",
+      "Score": 75,
+      "Gemeenten": 13
+    },
+    {
+      "Provincie": "Noord-Brabant",
+      "Score": 69,
+      "Gemeenten": 56
+    },
+    {
+      "Provincie": "Limburg",
+      "Score": 67,
+      "Gemeenten": 31
+    }
+  ],
+  "punten": [
+    {
+      "Locatie": "Groningen",
+      "Type": "Provinciehoofdstad",
+      "Latitude": 53.21859,
+      "Longitude": 6.62065
+    },
+    {
+      "Locatie": "Leeuwarden",
+      "Type": "Provinciehoofdstad",
+      "Latitude": 53.17,
+      "Longitude": 5.79788
+    },
+    {
+      "Locatie": "Assen",
+      "Type": "Provinciehoofdstad",
+      "Latitude": 53.00126,
+      "Longitude": 6.5525
+    },
+    {
+      "Locatie": "Zwolle",
+      "Type": "Provinciehoofdstad",
+      "Latitude": 52.51863,
+      "Longitude": 6.11839
+    },
+    {
+      "Locatie": "Lelystad",
+      "Type": "Provinciehoofdstad",
+      "Latitude": 52.47809,
+      "Longitude": 5.47199
+    },
+    {
+      "Locatie": "Arnhem",
+      "Type": "Provinciehoofdstad",
+      "Latitude": 52.00106,
+      "Longitude": 5.89264
+    },
+    {
+      "Locatie": "Utrecht",
+      "Type": "Provinciehoofdstad",
+      "Latitude": 52.09115,
+      "Longitude": 5.07475
+    },
+    {
+      "Locatie": "Haarlem",
+      "Type": "Provinciehoofdstad",
+      "Latitude": 52.38343,
+      "Longitude": 4.64755
+    },
+    {
+      "Locatie": "'s-Gravenhage",
+      "Type": "Provinciehoofdstad",
+      "Latitude": 52.06856,
+      "Longitude": 4.3003
+    },
+    {
+      "Locatie": "Middelburg",
+      "Type": "Provinciehoofdstad",
+      "Latitude": 51.50184,
+      "Longitude": 3.64784
+    },
+    {
+      "Locatie": "'s-Hertogenbosch",
+      "Type": "Provinciehoofdstad",
+      "Latitude": 51.7168,
+      "Longitude": 5.35199
+    },
+    {
+      "Locatie": "Maastricht",
+      "Type": "Provinciehoofdstad",
+      "Latitude": 50.85298,
+      "Longitude": 5.6995
+    },
+    {
+      "Locatie": "Amsterdam",
+      "Type": "Grote gemeente",
+      "Latitude": 52.36502,
+      "Longitude": 4.90853
+    },
+    {
+      "Locatie": "Rotterdam",
+      "Type": "Grote gemeente",
+      "Latitude": 51.92693,
+      "Longitude": 4.30443
+    },
+    {
+      "Locatie": "Eindhoven",
+      "Type": "Grote gemeente",
+      "Latitude": 51.45014,
+      "Longitude": 5.45854
+    },
+    {
+      "Locatie": "Tilburg",
+      "Type": "Grote gemeente",
+      "Latitude": 51.58343,
+      "Longitude": 5.07737
+    },
+    {
+      "Locatie": "Almere",
+      "Type": "Grote gemeente",
+      "Latitude": 52.36718,
+      "Longitude": 5.24666
+    },
+    {
+      "Locatie": "Breda",
+      "Type": "Grote gemeente",
+      "Latitude": 51.58509,
+      "Longitude": 4.76148
+    },
+    {
+      "Locatie": "Nijmegen",
+      "Type": "Grote gemeente",
+      "Latitude": 51.83853,
+      "Longitude": 5.83683
+    },
+    {
+      "Locatie": "Apeldoorn",
+      "Type": "Grote gemeente",
+      "Latitude": 52.18985,
+      "Longitude": 5.92194
+    },
+    {
+      "Locatie": "Enschede",
+      "Type": "Grote gemeente",
+      "Latitude": 52.22079,
+      "Longitude": 6.87777
+    },
+    {
+      "Locatie": "Amersfoort",
+      "Type": "Grote gemeente",
+      "Latitude": 52.17361,
+      "Longitude": 5.38468
+    },
+    {
+      "Locatie": "Zaanstad",
+      "Type": "Grote gemeente",
+      "Latitude": 52.46292,
+      "Longitude": 4.77302
+    },
+    {
+      "Locatie": "Haarlemmermeer",
+      "Type": "Grote gemeente",
+      "Latitude": 52.30809,
+      "Longitude": 4.68646
+    },
+    {
+      "Locatie": "Den Helder",
+      "Type": "Grote gemeente",
+      "Latitude": 52.92261,
+      "Longitude": 4.75402
+    },
+    {
+      "Locatie": "Emmen",
+      "Type": "Grote gemeente",
+      "Latitude": 52.74964,
+      "Longitude": 6.96192
+    },
+    {
+      "Locatie": "Venlo",
+      "Type": "Grote gemeente",
+      "Latitude": 51.39094,
+      "Longitude": 6.15911
+    },
+    {
+      "Locatie": "Deventer",
+      "Type": "Grote gemeente",
+      "Latitude": 52.26824,
+      "Longitude": 6.23575
+    },
+    {
+      "Locatie": "Leiden",
+      "Type": "Grote gemeente",
+      "Latitude": 52.15498,
+      "Longitude": 4.48512
+    },
+    {
+      "Locatie": "Dordrecht",
+      "Type": "Grote gemeente",
+      "Latitude": 51.78205,
+      "Longitude": 4.70953
+    },
+    {
+      "Locatie": "Alkmaar",
+      "Type": "Grote gemeente",
+      "Latitude": 52.60181,
+      "Longitude": 4.80331
+    },
+    {
+      "Locatie": "Hoorn",
+      "Type": "Grote gemeente",
+      "Latitude": 52.65612,
+      "Longitude": 5.07004
+    },
+    {
+      "Locatie": "Sittard-Geleen",
+      "Type": "Grote gemeente",
+      "Latitude": 51.00486,
+      "Longitude": 5.82821
+    },
+    {
+      "Locatie": "Heerenveen",
+      "Type": "Grote gemeente",
+      "Latitude": 52.996,
+      "Longitude": 5.97803
+    },
+    {
+      "Locatie": "Goes",
+      "Type": "Grote gemeente",
+      "Latitude": 51.51518,
+      "Longitude": 3.84493
+    },
+    {
+      "Locatie": "Terneuzen",
+      "Type": "Grote gemeente",
+      "Latitude": 51.28789,
+      "Longitude": 3.84592
+    }
+  ]
+}

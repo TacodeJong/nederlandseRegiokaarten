@@ -1,0 +1,108 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "map_gemeenten",
+  "position": {
+    "x": 16,
+    "y": 16,
+    "width": 1000,
+    "height": 736,
+    "z": 0,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "nederlandseRegiokaarten8EDA3FD18CF8418282BDFCA73E3C5F4A",
+    "query": {
+      "queryState": {
+        "category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Gemeenten"
+                    }
+                  },
+                  "Property": "Gemeente"
+                }
+              },
+              "queryRef": "Gemeenten.Gemeente",
+              "nativeQueryRef": "Gemeente",
+              "active": true
+            }
+          ]
+        },
+        "measure": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Gemeenten"
+                    }
+                  },
+                  "Property": "Gemiddelde score"
+                }
+              },
+              "queryRef": "Gemeenten.Gemiddelde score",
+              "nativeQueryRef": "Gemiddelde score"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "mapSettings": [
+        {
+          "properties": {
+            "selectedMapSlice": {
+              "expr": {
+                "Literal": {
+                  "Value": "'gemeenten 2023'"
+                }
+              }
+            },
+            "useMidColorSlice": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Score per gemeente (fictieve waarden)'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

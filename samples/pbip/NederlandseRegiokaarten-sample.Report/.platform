@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "NederlandseRegiokaarten-sample"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "4520e64b-e080-42c5-b61d-4fc8e715fcc7"
+  }
+}

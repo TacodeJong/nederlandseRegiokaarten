@@ -1,6 +1,7 @@
 node_modules/
 .tmp/
 dist/
+demo/preview.js
 webpack.statistics.*.html
 .DS_Store
 ._*

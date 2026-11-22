@@ -1,0 +1,55 @@
+table Provincies
+	lineageTag: 36b278bb-6051-6476-4761-a24b3f44a76b
+
+	measure 'Provinciescore' = AVERAGE ( Provincies[Score] )
+		formatString: #,0
+		lineageTag: 6a368d06-1f5e-7176-d316-3614b57ade02
+
+	column Provincie
+		dataType: string
+		lineageTag: e11f0223-dfbf-cbb4-f317-9cad07dd530e
+		summarizeBy: none
+		sourceColumn: Provincie
+		dataCategory: StateOrProvince
+
+		annotation SummarizationSetBy = Automatic
+
+	column Score
+		dataType: int64
+		lineageTag: 2303061f-0000-4ce7-62f7-47e1a4526a96
+		summarizeBy: sum
+		sourceColumn: Score
+
+		annotation SummarizationSetBy = Automatic
+
+	column Gemeenten
+		dataType: int64
+		lineageTag: f6fc4b26-2132-72ce-85b7-9cd973cc6f56
+		summarizeBy: sum
+		sourceColumn: Gemeenten
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Provincies = m
+		mode: import
+		source = ```
+				let
+				    Source = #table(type table [Provincie = text, Score = Int64.Type, Gemeenten = Int64.Type], {
+					{"Groningen", 97, 10},
+					{"Fryslân", 98, 18},
+					{"Drenthe", 93, 12},
+					{"Overijssel", 85, 25},
+					{"Flevoland", 88, 6},
+					{"Gelderland", 83, 51},
+					{"Utrecht", 84, 26},
+					{"Noord-Holland", 88, 44},
+					{"Zuid-Holland", 78, 50},
+					{"Zeeland", 75, 13},
+					{"Noord-Brabant", 69, 56},
+					{"Limburg", 67, 31}
+				})
+				in
+				    Source
+				```
+
+	annotation PBI_ResultType = Table

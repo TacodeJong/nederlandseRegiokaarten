@@ -1,0 +1,174 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "map_punten",
+  "position": {
+    "x": 16,
+    "y": 16,
+    "width": 1334,
+    "height": 736,
+    "z": 0,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "nederlandseRegiokaarten8EDA3FD18CF8418282BDFCA73E3C5F4A",
+    "query": {
+      "queryState": {
+        "latitude": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Punten"
+                    }
+                  },
+                  "Property": "Latitude"
+                }
+              },
+              "queryRef": "Punten.Latitude",
+              "nativeQueryRef": "Latitude",
+              "active": true
+            }
+          ]
+        },
+        "longitude": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Punten"
+                    }
+                  },
+                  "Property": "Longitude"
+                }
+              },
+              "queryRef": "Punten.Longitude",
+              "nativeQueryRef": "Longitude",
+              "active": true
+            }
+          ]
+        },
+        "pointCategory": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Punten"
+                    }
+                  },
+                  "Property": "Type"
+                }
+              },
+              "queryRef": "Punten.Type",
+              "nativeQueryRef": "Type",
+              "active": true
+            }
+          ]
+        },
+        "pointTooltip": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Punten"
+                    }
+                  },
+                  "Property": "Locatie"
+                }
+              },
+              "queryRef": "Punten.Locatie",
+              "nativeQueryRef": "Locatie",
+              "active": true
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "mapSettings": [
+        {
+          "properties": {
+            "selectedMapSlice": {
+              "expr": {
+                "Literal": {
+                  "Value": "'provincies'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "pointSettings": [
+        {
+          "properties": {
+            "showPoints": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "useLegendColors": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "showPointLegend": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "pointSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "8D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Locaties als punten op de kaart'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}
