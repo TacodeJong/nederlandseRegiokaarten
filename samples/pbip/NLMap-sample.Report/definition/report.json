@@ -28,14 +28,9 @@
       "type": "CustomVisual",
       "items": [
         {
-          "name": "package.json",
-          "path": "package.json",
-          "type": "CustomVisualMetadata"
-        },
-        {
           "name": "nederlandseRegiokaarten8EDA3FD18CF8418282BDFCA73E3C5F4A.pbiviz.json",
-          "path": "resources/nederlandseRegiokaarten8EDA3FD18CF8418282BDFCA73E3C5F4A.pbiviz.json",
-          "type": "CustomVisualJavascript"
+          "path": "nederlandseRegiokaarten8EDA3FD18CF8418282BDFCA73E3C5F4A.pbiviz.json",
+          "type": "CustomVisualMetadata"
         }
       ]
     }

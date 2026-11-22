@@ -1,11 +1,11 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
   "metadata": {
-    "type": "SemanticModel",
-    "displayName": "NederlandseRegiokaarten-sample"
+    "type": "Report",
+    "displayName": "NLMap-sample"
   },
   "config": {
     "version": "2.0",
-    "logicalId": "07e2c218-da70-4f3b-8339-fbd07ff8bbb8"
+    "logicalId": "1f8afae8-a7c2-4bd4-8ccf-4c6d1a7d147f"
   }
 }

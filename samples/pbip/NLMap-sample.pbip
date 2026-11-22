@@ -4,7 +4,7 @@
   "artifacts": [
     {
       "report": {
-        "path": "NederlandseRegiokaarten-sample.Report"
+        "path": "NLMap-sample.Report"
       }
     }
   ],

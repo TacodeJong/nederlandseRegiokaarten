@@ -24,7 +24,7 @@ Power BI custom visual with **Dutch regional maps**: municipalities (gemeenten),
 | [`samples/gemeenten-sample.csv`](samples/gemeenten-sample.csv) | Scores per gemeente |
 | [`samples/provincies-sample.csv`](samples/provincies-sample.csv) | Scores per provincie |
 | [`samples/punten-sample.csv`](samples/punten-sample.csv) | Point locations |
-| [`samples/pbip/`](samples/pbip/) | Power BI Project (`.pbip`) with the visual embedded |
+| [`samples/pbip/NLMap-sample.pbip`](samples/pbip/NLMap-sample.pbip) | Power BI Project with the visual embedded |
 
 ## Screenshots
 

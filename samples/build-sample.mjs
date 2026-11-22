@@ -10,7 +10,8 @@ import { feature } from "topojson-client";
 
 const here = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(here, "..");
-const name = "NederlandseRegiokaarten-sample";
+// Keep names short: Windows MAX_PATH (260) breaks Power BI on nested CustomVisuals paths.
+const name = "NLMap-sample";
 const out = path.join(here, "pbip");
 const report = path.join(out, `${name}.Report`);
 const model = path.join(out, `${name}.SemanticModel`);
@@ -150,6 +151,7 @@ if (!packageFile) throw new Error("Run `npx pbiviz package` first.");
 const visualFolder = path.join(report, "CustomVisuals", guid);
 fs.mkdirSync(visualFolder, { recursive: true });
 execFileSync("tar", ["-xf", path.join(root, "dist", packageFile), "-C", visualFolder]);
+// report.json paths are basenames; Power BI resolves them via package.json → resources/.
 const resources = fs.readdirSync(path.join(visualFolder, "resources"));
 
 const literal = value => ({ expr: { Literal: { Value: typeof value === "string" ? `'${value}'` : typeof value === "number" ? `${value}D` : String(value) } } });
