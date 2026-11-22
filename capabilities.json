@@ -1,0 +1,249 @@
+{
+  "privileges": [
+    { "name": "LocalStorage", "essential": true }
+  ],
+  "supportsMultiVisualSelection": true,
+  "supportsKeyboardFocus": true,
+  "tooltips": {
+  "supportedTypes": {
+      "default": true,
+      "canvas": true
+    },
+    "roles": ["tooltip"]
+  },
+  "dataRoles": [
+    {
+      "displayName": "Regio",
+      "name": "category",
+      "kind": "Grouping",
+      "preferredTypes": [{ "text": true }]
+    },
+    {
+      "displayName": "Waarde",
+      "name": "measure",
+      "kind": "Measure",
+      "preferredTypes": [{ "numeric": true }]
+    },
+    {
+      "displayName": "Tooltip",
+      "name": "tooltip",
+      "kind": "Measure",
+      "preferredTypes": [{ "numeric": true }, { "text": true }]
+    },
+    {
+      "displayName": "Aangepast label",
+      "name": "labelMeasure",
+      "kind": "Measure",
+      "preferredTypes": [{ "numeric": true }, { "text": true }]
+    },
+    {
+      "displayName": "Filter",
+      "name": "filter",
+      "kind": "Grouping",
+      "preferredTypes": [{ "text": true }]
+    },
+    {
+      "displayName": "Latitude",
+      "name": "latitude",
+      "kind": "Grouping",
+      "preferredTypes": [{ "numeric": true }],
+      "description": "Latitude coordinates for point data"
+    },
+    {
+      "displayName": "Longitude",
+      "name": "longitude",
+      "kind": "Grouping",
+      "preferredTypes": [{ "numeric": true }],
+      "description": "Longitude coordinates for point data"
+    },
+    {
+      "displayName": "Punt categorie",
+      "name": "pointCategory",
+      "kind": "Grouping",
+      "preferredTypes": [{ "text": true }],
+      "description": "Legend categories for point data"
+    },
+      {
+        "displayName": "Punt Tooltip",
+        "name": "pointTooltip",
+        "kind": "Grouping",
+        "preferredTypes": [{ "numeric": true }, { "text": true }],
+        "description": "Additional fields to display in point tooltips"
+      }
+  ],
+  "dataViewMappings": [
+    {
+      "conditions": [
+        {
+          "category": { "min": 0, "max": 1 },
+          "measure": { "min": 0, "max": 1 },
+          "tooltip": { "min": 0, "max": 10 },
+          "labelMeasure": { "min": 0, "max": 1 },
+          "filter": { "min": 0, "max": 1 },
+          "latitude": { "min": 0, "max": 1 },
+          "longitude": { "min": 0, "max": 1 },
+          "pointCategory": { "min": 0, "max": 1 },
+          "pointTooltip": { "min": 0, "max": 10 }
+        }
+      ],
+      "categorical": {
+        "categories": {
+          "select": [
+            { "for": { "in": "category" } },
+            { "for": { "in": "filter" } },
+            { "for": { "in": "latitude" } },
+            { "for": { "in": "longitude" } },
+            { "for": { "in": "pointCategory" } },
+            { "for": { "in": "pointTooltip" } }
+          ],
+          "dataReductionAlgorithm": { "top": { "count": 10000 } }
+        },
+        "values": {
+          "select": [
+            { "for": { "in": "measure" } },
+            { "for": { "in": "labelMeasure" } },
+            { "for": { "in": "tooltip" } }
+          ]
+        }
+      }
+    }
+  ],
+  "objects": {
+    "mapSettings": {
+      "properties": {
+        "selectedMapSlice": {
+          "type": { 
+            "enumeration": [
+              { "displayName": "Provincies", "value": "provincies" },
+              { "displayName": "Wijken", "value": "wijken" },
+              { "displayName": "Gemeenten 2023", "value": "gemeenten 2023" },
+              { "displayName": "Gemeenten 2021", "value": "gemeenten 2021" },
+              { "displayName": "Gemeenten 2020", "value": "gemeenten 2020" },
+              { "displayName": "Gemeenten 2019", "value": "gemeenten 2019" },
+              { "displayName": "Gemeenten 2016", "value": "gemeenten 2016" },
+              { "displayName": "Gemeenten 2012", "value": "gemeenten 2012" },
+              { "displayName": "GGD Regios", "value": "ggdregios" },
+              { "displayName": "Veiligheidsregios", "value": "veiligheidsregios" },
+              { "displayName": "Politieregios", "value": "politieregios" }
+            ]
+          }
+        },
+        "showExtraFeatures": { "type": { "bool": true } },
+        "minColorSlice": { "type": { "fill": { "solid": { "color": true } } } },
+        "minPosition": { "type": { "numeric": true } },
+        "useMidColorSlice": { "type": { "bool": true } },
+        "midColorSlice": { "type": { "fill": { "solid": { "color": true } } } },
+        "midPosition": { "type": { "numeric": true } },
+        "maxColorSlice": { "type": { "fill": { "solid": { "color": true } } } },
+        "maxPosition": { "type": { "numeric": true } },
+        "useAbsoluteValues": { "type": { "bool": true } },
+        "showRegionBorder": { "type": { "bool": true } },
+        "regionBorderColor": { "type": { "fill": { "solid": { "color": true } } } },
+        "regionBorderThickness": { "type": { "numeric": true } }}},
+    "labelSettings":{
+      "properties": {
+        "showLabels": { "type": { "bool": true } },
+        "showValues": { "type": { "bool": true } },
+        "useCustomLabel": { "type": { "bool": true } },
+        "showRegionName": { "type": { "bool": true } },
+        "fontSize": { "type": { "numeric": true } },
+        "numOfDigits": { "type": { "numeric": true } },
+        "showLabelBackground": { "type": { "bool": true } },
+        "labelBackgroundColor": { "type": { "fill": { "solid": { "color": true } } } },
+        "labelBackgroundOpacity": { "type": { "numeric": true } },
+        "showLabelBorder": { "type": { "bool": true } },
+        "labelBorderColor": { "type": { "fill": { "solid": { "color": true } } } },
+        "labelBorderThickness": { "type": { "numeric": true } }}},
+    "tooltipSettings":{
+      "properties": {
+        "showTooltip": { "type": { "bool": true } },
+        "showPointTooltip": { "type": { "bool": true } },
+        "showPointCategory": { "type": { "bool": true } },
+        "showPointCoordinates": { "type": { "bool": true } },
+        "showPointLegend": { "type": { "bool": true } }}},
+    "cockpitSettings":{
+      "properties": {
+        "enableCockpit": { "type": { "bool": true } },
+        "showLabelsToggle": { "type": { "bool": true } },
+        "showRegionNamesToggle": { "type": { "bool": true } },
+        "showValuesToggle": { "type": { "bool": true } },
+        "showLegendToggle": { "type": { "bool": true } },
+        "showPointLegendToggle": { "type": { "bool": true } },
+        "startCockpitCollapsed": { "type": { "bool": true } }
+      }
+    },
+    "legendSettings":{
+      "properties": {
+        "showLegend": { "type": { "bool": true } },
+        "legendPosition": { 
+          "type": { 
+            "enumeration": [
+              { "displayName": "Links onder", "value": "bottom-left" },
+              { "displayName": "Rechts onder", "value": "bottom-right" },
+              { "displayName": "Links boven", "value": "top-left" },
+              { "displayName": "Rechts boven", "value": "top-right" }
+            ]
+          }
+        }
+      }
+    },
+    "pointSettings":{
+      "properties": {
+        "showPoints": { "type": { "bool": true } },
+        "pointColor": { "type": { "fill": { "solid": { "color": true } } } },
+        "pointSize": { "type": { "numeric": true } },
+        "pointBorderColor": { "type": { "fill": { "solid": { "color": true } } } },
+        "pointBorderThickness": { "type": { "numeric": true } },
+        "pointOpacity": { "type": { "numeric": true } },
+        "useLegendColors": { "type": { "bool": true } },
+        "enableClustering": { "type": { "bool": true } },
+        "clusterColor": { "type": { "fill": { "solid": { "color": true } } } },
+        "clusterBorderColor": { "type": { "fill": { "solid": { "color": true } } } },
+        "clusterBorderThickness": { "type": { "numeric": true } },
+        "clusterOpacity": { "type": { "numeric": true } },
+        "minClusterSize": { "type": { "numeric": true } },
+        "maxClusterSize": { "type": { "numeric": true } },
+        "showClusterCount": { "type": { "bool": true } },
+        "clusterCountColor": { "type": { "fill": { "solid": { "color": true } } } },
+        "clusterCountSize": { "type": { "numeric": true } },
+        "showPointLegend": { "type": { "bool": true } },
+        "pointLegendPosition": { 
+          "type": { 
+            "enumeration": [
+              { "displayName": "Links onder", "value": "bottom-left" },
+              { "displayName": "Rechts onder", "value": "bottom-right" },
+              { "displayName": "Links boven", "value": "top-left" },
+              { "displayName": "Rechts boven", "value": "top-right" }
+            ]
+          }
+        }
+      }
+    },
+    "legendColors": {
+      "properties": {
+        "fill": {
+          "type": {
+            "fill": {
+              "solid": {
+                "color": true
+              }
+            }
+          }
+        },
+        "color1": { "type": { "fill": { "solid": { "color": true } } } },
+        "color2": { "type": { "fill": { "solid": { "color": true } } } },
+        "color3": { "type": { "fill": { "solid": { "color": true } } } },
+        "color4": { "type": { "fill": { "solid": { "color": true } } } },
+        "color5": { "type": { "fill": { "solid": { "color": true } } } },
+        "color6": { "type": { "fill": { "solid": { "color": true } } } },
+        "color7": { "type": { "fill": { "solid": { "color": true } } } },
+        "color8": { "type": { "fill": { "solid": { "color": true } } } },
+        "color9": { "type": { "fill": { "solid": { "color": true } } } },
+        "color10": { "type": { "fill": { "solid": { "color": true } } } },
+        "color11": { "type": { "fill": { "solid": { "color": true } } } },
+        "color12": { "type": { "fill": { "solid": { "color": true } } } },
+        "categoryOrder": { "type": { "text": true } }
+      }
+    }
+  }
+}
