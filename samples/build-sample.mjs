@@ -390,4 +390,24 @@ write(path.join(out, `${name}.pbip`), {
     artifacts: [{ report: { path: `${name}.Report` } }],
     settings: { enableAutoRecovery: true }
 });
+
+// Keep samples/*.pbix in sync when a shell exists (DataModel from a prior Desktop save).
+const pbixPath = path.join(here, `${name}.pbix`);
+if (fs.existsSync(pbixPath)) {
+    const staging = path.join(here, ".pbix-staging");
+    fs.rmSync(staging, { recursive: true, force: true });
+    fs.mkdirSync(staging, { recursive: true });
+    execFileSync("tar", ["-xf", pbixPath, "-C", staging]);
+    const shellReport = path.join(staging, "Report");
+    fs.rmSync(path.join(shellReport, "definition"), { recursive: true, force: true });
+    fs.rmSync(path.join(shellReport, "CustomVisuals"), { recursive: true, force: true });
+    fs.cpSync(path.join(report, "definition"), path.join(shellReport, "definition"), { recursive: true });
+    fs.cpSync(path.join(report, "CustomVisuals"), path.join(shellReport, "CustomVisuals"), { recursive: true });
+    const packed = path.join(staging, "packed.zip");
+    const entries = fs.readdirSync(staging).filter(entry => entry !== "packed.zip");
+    execFileSync("tar", ["-a", "-cf", packed, "-C", staging, ...entries]);
+    fs.copyFileSync(packed, pbixPath);
+    fs.rmSync(staging, { recursive: true, force: true });
+    console.log(`Updated ${pbixPath}`);
+}
 console.log(`Wrote ${path.join(out, name + ".pbip")} (${gemeenten.length} gemeenten, ${punten.length} punten, ${locaties.length} locaties / ${ggd.length} GGD)`);

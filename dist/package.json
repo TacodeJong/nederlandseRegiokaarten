@@ -1,0 +1,17 @@
+{
+		"version": "1.0.0.0",
+		"author": {"name":"T. de Jong","email":"taco@tictaco.nl"},
+		"resources": [
+			{
+				"resourceId": "rId0",
+				"sourceType": 5,
+				"file": "resources/nederlandseRegiokaarten8EDA3FD18CF8418282BDFCA73E3C5F4A.pbiviz.json"
+			}
+		],
+		"visual": {"name":"nederlandseRegiokaarten","displayName":"NederlandseRegiokaarten","guid":"nederlandseRegiokaarten8EDA3FD18CF8418282BDFCA73E3C5F4A","visualClassName":"Visual","version":"1.0.0.0","description":"Regios in Nederland.","supportUrl":"localhost","gitHubUrl":"https://github.com/TacodeJong/nederlandseRegiokaarten"},
+		"metadata": {
+			"pbivizjson": {
+				"resourceId": "rId0"
+			}
+		}
+	}

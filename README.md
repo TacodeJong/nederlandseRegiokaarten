@@ -16,20 +16,21 @@ Power BI custom visual with **Dutch regional maps**: municipalities (gemeenten),
 
 ## Install
 
-1. Download the latest `.pbiviz` from [Releases](https://github.com/TacodeJong/nederlandseRegiokaarten/releases) or build locally (`npm install` → `pbiviz package`).
+1. Download [`dist/*.pbiviz`](dist/) from this repo (or [Releases](https://github.com/TacodeJong/nederlandseRegiokaarten/releases) / `npm install` → `pbiviz package`).
 2. In Power BI Desktop: **Insert → More visuals → From a file** and select the `.pbiviz`.
 
-## Sample data
+## Sample report
 
 | File | Description |
 |------|-------------|
+| [`samples/NLMap-sample.pbix`](samples/NLMap-sample.pbix) | Ready-to-open sample report |
+| [`samples/pbip/NLMap-sample.pbip`](samples/pbip/NLMap-sample.pbip) | Same report as a Power BI Project |
 | [`samples/kaarten-sample.csv`](samples/kaarten-sample.csv) | Catalog of available map layers |
 | [`samples/gemeenten-sample.csv`](samples/gemeenten-sample.csv) | Scores per gemeente (statcode) |
 | [`samples/provincies-sample.csv`](samples/provincies-sample.csv) | Scores per provincie (statcode) |
 | [`samples/punten-sample.csv`](samples/punten-sample.csv) | Point locations |
 | [`samples/ggd-sample.csv`](samples/ggd-sample.csv) | GGD regions (CBS `GG####` from topojson) |
 | [`samples/locaties-sample.csv`](samples/locaties-sample.csv) | Fictitious locations linked to GGD |
-| [`samples/pbip/NLMap-sample.pbip`](samples/pbip/NLMap-sample.pbip) | Power BI Project with the visual embedded |
 
 The sample report opens on **Puntdata**: GGD basemap + locations (status legend) + GGD slicer. **Clusterbubbles** is the same setup with clustering on. Locaties relate to GGD on `GGDStatcode` → `Statcode`, so the slicer filters points without putting GGD fields in the visual wells.
 

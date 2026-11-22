@@ -1,6 +1,9 @@
 node_modules/
 .tmp/
-dist/
+dist/**
+!dist/
+!dist/*.pbiviz
+!dist/package.json
 demo/preview.js
 webpack.statistics.*.html
 .DS_Store
